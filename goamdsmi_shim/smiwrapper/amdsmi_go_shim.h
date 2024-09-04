@@ -41,11 +41,11 @@
 /**
  *  @brief Go language stub to initialize the AMDSMI library
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::bool value of true upon success
+ *  @retval false is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmicpu_init();
+bool go_shim_amdsmicpu_init();
 
 /**
  *  @brief Go language stub to get the core energy for a given core
@@ -55,13 +55,12 @@ goamdsmi_status_t go_shim_amdsmicpu_init();
  *  This value is then passed as a uint64_t val to the Go routine that called it.
  *
  *  @param[in] num is the core index
- *  @param[in] ::uint64_t* value of the penergy in micro Joules.
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t value of the penergy in micro Joules.
+ *  @retval zero is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmicpu_core_energy_get(uint32_t num, uint64_t* core_energy);
+uint64_t go_shim_amdsmicpu_core_energy_get(uint32_t num);
 
 /**
  *  @brief Go language stub to get the socket energy for a given socket
@@ -72,13 +71,12 @@ goamdsmi_status_t go_shim_amdsmicpu_core_energy_get(uint32_t num, uint64_t* core
  *  the Go routine that called it.
  *
  *  @param[in] socket_idx is the socket index
- *  @param[in] ::uint64_t* value of the socket energy counter
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t value of the socket energy counter
+ *  @retval zero is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmicpu_socket_energy_get(uint32_t socket_idx, uint64_t* socket_energy);
+uint64_t go_shim_amdsmicpu_socket_energy_get(uint32_t socket_idx);
 
 /**
  *  @brief Go language stub to get normalized status of 
@@ -89,13 +87,12 @@ goamdsmi_status_t go_shim_amdsmicpu_socket_energy_get(uint32_t socket_idx, uint6
  *  PROCHOT at @p prochot.
  *
  *  @param[in] socket_idx a socket index
- *  @param[in] ::uint32_t* value of the prochot status
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint32_t value of the prochot status
+ *  @retval -1 is returned upon failure or if status is inactive.
  *
  */
-goamdsmi_status_t go_shim_amdsmicpu_prochot_status_get(uint32_t socket_idx, uint32_t* prochot);
+uint32_t go_shim_amdsmicpu_prochot_status_get(uint32_t socket_idx);
 
 /**
  *  @brief Go language stub to get the instantaneous power 
@@ -105,13 +102,12 @@ goamdsmi_status_t go_shim_amdsmicpu_prochot_status_get(uint32_t socket_idx, uint
  *  get the current power consumption (in milliwatts).
  *
  *  @param[in] sock_ind a socket index
- *  @param[in] ::uint32_t* value of the socket power
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint32_t value of the socket power
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmicpu_socket_power_get(uint32_t sock_ind, uint32_t* socket_power);
+uint32_t go_shim_amdsmicpu_socket_power_get(uint32_t sock_ind);
 
 /**
  *  @brief Go language stub to get the current power cap value 
@@ -121,14 +117,13 @@ goamdsmi_status_t go_shim_amdsmicpu_socket_power_get(uint32_t sock_ind, uint32_t
  *  socket @p sock_ind, this value will be used by the system to limit
  *  the power usage (in milliwatts).
  *
- *  @param[in] socket index
- *  @param[in] ::uint32_t* value of the socket power cap
+ *  @param[in] sock_ind a socket index
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint32_t value of the socket power cap
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmicpu_socket_power_cap_get(uint32_t sock_ind, uint32_t* socket_power_cap);
+uint32_t go_shim_amdsmicpu_socket_power_cap_get(uint32_t sock_ind);
 
 /**
  *  @brief Go language stub to get the boostlimit value for a given core
@@ -136,65 +131,75 @@ goamdsmi_status_t go_shim_amdsmicpu_socket_power_cap_get(uint32_t sock_ind, uint
  *  @details This function will return the core's current boost limit
  *  @p boostlimit for a particular @p socket
  *
- *  @param[in] socket index
- *  @param[in] ::uint32_t* value of the boostlimit
+ *  @param[in] socket a socket index
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint32_t value of the boostlimit
+ *  @retval -1 is returned upon failure..
  *
  */
-goamdsmi_status_t go_shim_amdsmicpu_core_boostlimit_get(uint32_t socket, uint32_t* core_boostlimit);
+uint32_t go_shim_amdsmicpu_core_boostlimit_get(uint32_t socket);
 
 /**
  *  @brief Go stub to get the number of threads per core in the system
  *
- *  @param[in] ::uint32_t* Number of threads per core
- *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::Number of threads per core
+ *  @retval Zero is returned upon failure.
  */
-goamdsmi_status_t go_shim_amdsmicpu_threads_per_core_get(uint32_t* threads_per_core);
+uint32_t go_shim_amdsmicpu_threads_per_core_get();
 
 /**
  *  @brief Go stub to get the number of threads available in the system
  *
- *  @param[in] ::uint32_t* Number of threads
- *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::Number of threads
+ *  @retval Zero is returned upon failure.
  */
-goamdsmi_status_t go_shim_amdsmicpu_number_of_threads_get(uint32_t* number_of_threads);
+uint32_t go_shim_amdsmicpu_number_of_threads_get();
 
 /**
  *  @brief Go stub to get the total number of processor sockets 
  *  available in the system
  *
- *  @param[in] ::uint32_t* value of num of cpu sockets
- *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::Number of threads per core
+ *  @retval Zero is returned upon failure.
  */
-goamdsmi_status_t go_shim_amdsmicpu_number_of_sockets_get(uint32_t* number_of_sockets);
+uint32_t goamdsmi_cpu_threads_per_core_get();
+
+/**
+ *  @brief Go stub to get the number of threads available in the system
+ *
+ *  @retval ::Number of threads
+ *  @retval Zero is returned upon failure.
+ */
+uint32_t goamdsmi_cpu_number_of_threads_get();
+
+/**
+ *  @brief Go stub to get the total number of processor sockets 
+ *  available in the system
+ *
+ *  @retval ::uint32_t value of the socket number
+ *  @retval Zero is returned upon failure.
+ */
+uint32_t go_shim_amdsmicpu_number_of_sockets_get();
 
 ////////////////////////////////////////////////------------GPU------------////////////////////////////////////////////////
 /**
  *  @brief Go language stub to initialize the ROCm-SMI library
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::bool value of true upon success
+ *  @retval false is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_init();
+bool go_shim_amdsmigpu_init();
 
 /**
  *  @brief Go language stub to shut down the ROCm-SMI library
  *  and do necessary clean up
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::bool value of true upon success
+ *  @retval false is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_shutdown();
+bool go_shim_amdsmigpu_shutdown();
 
 /**
  *  @brief Go language stub to get the number of GPU devices
@@ -204,13 +209,11 @@ goamdsmi_status_t go_shim_amdsmigpu_shutdown();
  *  This value is then passed as a uint val to the Go routine that
  *  called it.
  *
- *  @param[in] ::uint32_t* value of num GPUs
- *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint32_t value of num GPUs
+ *  @retval zero is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_num_monitor_devices(uint32_t* gpu_num_monitor_devices);
+uint32_t go_shim_amdsmigpu_num_monitor_devices();
 
 /**
  *  @brief Go language stub to get the gpu device name string
@@ -222,13 +225,12 @@ goamdsmi_status_t go_shim_amdsmigpu_num_monitor_devices(uint32_t* gpu_num_monito
  *  function must free the allocated buffer for the device name.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::char** value of gpu device name
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::char* VBIOS identifier
+ *  @retval NA is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_name_get(uint32_t dv_ind, char** gpu_dev_name);
+char* go_shim_amdsmigpu_dev_name_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the GPU device id
@@ -239,13 +241,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_name_get(uint32_t dv_ind, char** gpu_dev
  *  called it.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::uint16_t* value of gpu deviceID
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint16_t value of num GPUs
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_id_get(uint32_t dv_ind, uint16_t* gpu_dev_id);
+uint16_t go_shim_amdsmigpu_dev_id_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the GPU unique pci id
@@ -256,13 +257,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_id_get(uint32_t dv_ind, uint16_t* gpu_de
  *  a uint64_t val to the Go routine that called it.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::uint64_t* value of pci id
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t value of pci id
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_pci_id_get(uint32_t dv_ind, uint64_t* gpu_pci_id);
+uint64_t go_shim_amdsmigpu_dev_pci_id_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the VBIOS identifier string
@@ -275,13 +275,13 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_pci_id_get(uint32_t dv_ind, uint64_t* gp
  *  identifier
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::char** GPU vendor name
+ *  @param[in] ::char* vbios buffer of length
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::char* VBIOS identifier
+ *  @retval NA is returned upon failure
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_vbios_version_get(uint32_t dv_ind, char** vbios_version);
+char* go_shim_amdsmigpu_dev_vbios_version_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the vendor
@@ -294,13 +294,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_vbios_version_get(uint32_t dv_ind, char*
  *  buffer for the vbios identifier
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::char** GPU vendor name
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::char* vendor name
+ *  @retval NA is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_vendor_name_get(uint32_t dv_ind, char** gpu_vendor_name);
+char* go_shim_amdsmigpu_dev_vendor_name_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the GPU power cap
@@ -311,13 +310,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_vendor_name_get(uint32_t dv_ind, char** 
  *  called it.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::uint64_t* GPU power cap
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t GPU power cap
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_power_cap_get(uint32_t dv_ind, uint64_t* gpu_power_cap);
+uint64_t go_shim_amdsmigpu_dev_power_cap_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the GPU power
@@ -328,13 +326,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_power_cap_get(uint32_t dv_ind, uint64_t*
  *  called it.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::uint64_t* GPU power
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t GPU power
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_power_get(uint32_t dv_ind, uint64_t* gpu_power);
+uint64_t go_shim_amdsmigpu_dev_power_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the GPU current temperature
@@ -345,13 +342,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_power_get(uint32_t dv_ind, uint64_t* gpu
  *  called it.
  *
  *  @param[in] ::uint32_t device index, uint32_t sensor, uint32_t metric
- *  @param[in] ::uint64_t* GPU current temperature
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t GPU current temperature
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_temp_metric_get(uint32_t dv_ind, uint32_t sensor, uint32_t metric, uint64_t* gpu_temperature);
+uint64_t go_shim_amdsmigpu_dev_temp_metric_get(uint32_t dv_ind, uint32_t sensor, uint32_t metric);
 
 /**
  *  @brief Go language stub to get the overdrive level of the device
@@ -362,13 +358,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_temp_metric_get(uint32_t dv_ind, uint32_
  *  called it.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::uint32_t* overdrive level
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint32_t overdrive level
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_overdrive_level_get(uint32_t dv_ind, uint32_t* gpu_overdrive_level);
+uint32_t go_shim_amdsmigpu_dev_overdrive_level_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the memory overdrive level of the device
@@ -379,13 +374,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_overdrive_level_get(uint32_t dv_ind, uin
  *  called it.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::uint32_t* memory overdrive level
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint32_t memory overdrive level
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_mem_overdrive_level_get(uint32_t dv_ind, uint32_t* gpu_mem_overdrive_level);
+uint32_t go_shim_amdsmigpu_dev_mem_overdrive_level_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the performance level of the device
@@ -396,13 +390,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_mem_overdrive_level_get(uint32_t dv_ind,
  *  called it.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::uint32_t* performance level (rsmi_dev_perf_level_t)
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint32_t performance level (rsmi_dev_perf_level_t)
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_perf_level_get(uint32_t dv_ind, uint32_t *gpu_perf);
+uint32_t go_shim_amdsmigpu_dev_perf_level_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the GPU SCLK limit
@@ -413,13 +406,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_perf_level_get(uint32_t dv_ind, uint32_t
  *  called it.
  *
  *  @param[in] ::uint32_t device index, flag, ptr to rsmi_frequencies_t
- *  @param[in] ::uint64_t* GPU SCLK Limit
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t GPU SCLK Limit
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_sclk(uint32_t dv_ind, uint64_t* gpu_sclk_freq);
+uint64_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_sclk(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the GPU MCLK limit
@@ -430,13 +422,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_sclk(uint32_t dv_ind, u
  *  called it.
  *
  *  @param[in] ::uint32_t device index, flag, ptr to rsmi_frequencies_t
- *  @param[in] ::uint64_t* GPU MCLK Limit
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t GPU MCLK Limit
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_mclk(uint32_t dv_ind, uint64_t* gpu_memclk_freq);
+uint64_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_mclk(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the minimum supported SCLK frequency
@@ -447,13 +438,12 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_mclk(uint32_t dv_ind, u
  *  called it.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::uint64_t* mimimum supported sclk frequency
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t mimimum supported sclk frequency
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_min_get_sclk(uint32_t dv_ind, uint64_t* gpu_min_sclk);
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_min_get_sclk(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the minimum supported MCLK frequency
@@ -464,13 +454,12 @@ goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_min_get_sclk(uint32_t dv_
  *  called it.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::uint64_t* mimimum supported mclk sfrequency
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t mimimum supported mclk sfrequency
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_min_get_mclk(uint32_t dv_ind, uint64_t* gpu_min_memclk);
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_min_get_mclk(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the maximum supported SCLK frequency
@@ -481,13 +470,12 @@ goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_min_get_mclk(uint32_t dv_
  *  called it.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::uint64_t* maximum supported sclk frequency
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t maximum supported sclk frequency
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_max_get_sclk(uint32_t dv_ind, uint64_t* gpu_max_sclk);
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_max_get_sclk(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the maximum supported MCLK frequency
@@ -498,13 +486,12 @@ goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_max_get_sclk(uint32_t dv_
  *  called it.
  *
  *  @param[in] ::uint32_t device index
- *  @param[in] ::uint64_t* maximum supported mclk sfrequency
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t maximum supported mclk sfrequency
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_max_get_mclk(uint32_t dv_ind, uint64_t* gpu_max_memclk);
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_max_get_mclk(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the GPU Activity
@@ -515,13 +502,12 @@ goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_max_get_mclk(uint32_t dv_
  *  called it.
  *
  *  @param[in] ::uint32_t device index, flag, ptr to rsmi_frequencies_t
- *  @param[in] ::uint64_t* GPU Activity use
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint32_t GPU Activity use
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_busy_percent_get(uint32_t dv_ind, uint32_t* gpu_busy_percent);
+uint32_t go_shim_amdsmigpu_dev_gpu_busy_percent_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the GPU Memory Use percent
@@ -532,13 +518,28 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_busy_percent_get(uint32_t dv_ind, ui
  *  called it.
  *
  *  @param[in] ::uint32_t device index, flag, ptr to rsmi_frequencies_t
- *  @param[in] ::uint64_t* GPU memory use percent
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint32_t GPU Activity use
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_memory_busy_percent_get(uint32_t dv_ind, uint64_t* gpu_memory_busy_percent);
+uint32_t goamdsmi_gpu_dev_gpu_busy_percent_get(uint32_t dv_ind);
+
+/**
+ *  @brief Go language stub to get the GPU Memory Use percent
+ *
+ *  @details This function will call the rsmi_dev_memory_busy_percent_get()
+ *  function to return the current device memory use percent. This value is then
+ *  passed as a uint64_t val to the Go routine that
+ *  called it.
+ *
+ *  @param[in] ::uint32_t device index, flag, ptr to rsmi_frequencies_t
+ *
+ *  @retval ::uint64_t GPU memory use percent
+ *  @retval -1 is returned upon failure.
+ *
+ */
+uint64_t go_shim_amdsmigpu_dev_gpu_memory_busy_percent_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the GPU Memory Usage
@@ -548,14 +549,13 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_memory_busy_percent_get(uint32_t dv_
  *  passed as a uint64_t val to the Go routine that
  *  called it.
  *
- *  @param[in] ::uint32_t  device index, flag, ptr to rsmi_frequencies_t
- *  @param[in] ::uint64_t* GPU memory usage
+ *  @param[in] ::uint32_t device index, flag, ptr to rsmi_frequencies_t
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t GPU memory usage
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_memory_usage_get(uint32_t dv_ind, uint64_t* gpu_memory_usage);
+uint64_t go_shim_amdsmigpu_dev_gpu_memory_usage_get(uint32_t dv_ind);
 
 /**
  *  @brief Go language stub to get the Total amount of GPU Memory
@@ -566,10 +566,9 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_memory_usage_get(uint32_t dv_ind, ui
  *  called it.
  *
  *  @param[in] ::uint32_t device index, flag, ptr to rsmi_frequencies_t
- *  @param[in] ::uint64_t* Total GPU memory
  *
- *  @retval GOAMDSMI_STATUS_SUCCESS is returned upon success.
- *  @retval GOAMDSMI_STATUS_FAILURE is returned upon failure.
+ *  @retval ::uint64_t Total GPU memory
+ *  @retval -1 is returned upon failure.
  *
  */
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_memory_total_get(uint32_t dv_ind, uint64_t* gpu_memory_total);
+uint64_t go_shim_amdsmigpu_dev_gpu_memory_total_get(uint32_t dv_ind);

@@ -64,16 +64,16 @@
 #define AMDHSMP_DRIVER_NAME    "AMDHSMPDriver"
 #define AMDHSMP_INITSTATE_FILE "/sys/module/amd_hsmp/initstate"
 
-static uint32_t num_apuSockets              = 0;
-static uint32_t num_cpuSockets              = 0;
-static uint32_t num_gpuSockets              = 0;
+static uint32_t num_apuSockets              = GOAMDSMI_VALUE_0;
+static uint32_t num_cpuSockets              = GOAMDSMI_VALUE_0;
+static uint32_t num_gpuSockets              = GOAMDSMI_VALUE_0;
 static uint32_t cpuInitCompleted            = false;
 static uint32_t gpuInitCompleted            = false;
 static uint32_t apuInitCompleted            = false;
 
-static uint32_t num_cpu_inAllSocket                = 0;
-static uint32_t num_cpu_physicalCore_inAllSocket   = 0;
-static uint32_t num_gpu_devices_inAllSocket        = 0;
+static uint32_t num_cpu_inAllSocket                = GOAMDSMI_VALUE_0;
+static uint32_t num_cpu_physicalCore_inAllSocket   = GOAMDSMI_VALUE_0;
+static uint32_t num_gpu_devices_inAllSocket        = GOAMDSMI_VALUE_0;
 
 static amdsmi_socket_handle     amdsmi_apusocket_handle_all_socket[MAX_SOCKET_ACROSS_SYSTEM+MAX_GPU_DEVICE_ACROSS_SYSTEM]    = {0};
 static amdsmi_socket_handle     amdsmi_cpusocket_handle_all_socket[MAX_SOCKET_ACROSS_SYSTEM]                                 = {0};
@@ -116,7 +116,7 @@ goamdsmi_status_t go_shim_amdsmiapu_init(goamdsmi_Init_t goamdsmi_Init)
 {
     if((GOAMDSMI_CPU_INIT == goamdsmi_Init) && (true == cpuInitCompleted))
     {
-        if((0 == num_cpuSockets)||(0 == num_cpu_inAllSocket)||(0 == num_cpu_physicalCore_inAllSocket))
+        if((GOAMDSMI_VALUE_0 == num_cpuSockets)||(GOAMDSMI_VALUE_0 == num_cpu_inAllSocket)||(GOAMDSMI_VALUE_0 == num_cpu_physicalCore_inAllSocket))
         {
             if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Failed, Returns previous enumurated AMDSMICPUInit:%d, CpuSocketCount:%d, CpuCount:%d, CpuPhysicalCoreCount:%d\n", GOAMDSMI_STATUS_FAILURE, num_cpuSockets, num_cpu_inAllSocket, num_cpu_physicalCore_inAllSocket);}
             return GOAMDSMI_STATUS_FAILURE;
@@ -130,7 +130,7 @@ goamdsmi_status_t go_shim_amdsmiapu_init(goamdsmi_Init_t goamdsmi_Init)
     
     if((GOAMDSMI_GPU_INIT == goamdsmi_Init) && (true == gpuInitCompleted))
     {
-        if((0 == num_gpuSockets)||(0 == num_gpu_devices_inAllSocket))
+        if((GOAMDSMI_VALUE_0 == num_gpuSockets)||(GOAMDSMI_VALUE_0 == num_gpu_devices_inAllSocket))
         {
             if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Failed, Returns previous enumurated AMDSMIGPUInit:%d, GpuSocketCount:%d, GpuCount:%d\n", GOAMDSMI_STATUS_FAILURE, num_gpuSockets, num_gpu_devices_inAllSocket);}
             return GOAMDSMI_STATUS_FAILURE;
@@ -157,7 +157,7 @@ goamdsmi_status_t go_shim_amdsmiapu_init(goamdsmi_Init_t goamdsmi_Init)
         if( (AMDSMI_STATUS_SUCCESS == amdsmi_init(AMDSMI_INIT_AMD_APUS)) &&
             (AMDSMI_STATUS_SUCCESS == amdsmi_get_socket_handles(&num_apuSockets, nullptr)) &&
             (AMDSMI_STATUS_SUCCESS == amdsmi_get_socket_handles(&num_apuSockets, &amdsmi_apusocket_handle_all_socket[0])) &&
-            (0 != num_apuSockets))
+            (GOAMDSMI_VALUE_0 != num_apuSockets))
         {
             cpuInitCompleted = true;
             gpuInitCompleted = true;
@@ -165,19 +165,19 @@ goamdsmi_status_t go_shim_amdsmiapu_init(goamdsmi_Init_t goamdsmi_Init)
             if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success, Identified APU machine ApuNumSockets=%d\n",num_apuSockets);}
             for(uint32_t socket_counter = 0; socket_counter < num_apuSockets; socket_counter++)
             {
-                uint32_t num_cpu               = 0;
-                uint32_t num_cpu_physicalCores = 0;
-                uint32_t num_gpu_devices       = 0;
+                uint32_t num_cpu               = GOAMDSMI_VALUE_0;
+                uint32_t num_cpu_physicalCores = GOAMDSMI_VALUE_0;
+                uint32_t num_gpu_devices       = GOAMDSMI_VALUE_0;
 
                 //CPU
                 processor_type_t cpu_processor_type         = AMDSMI_PROCESSOR_TYPE_AMD_CPU;
                 processor_type_t cpu_core_processor_type    = AMDSMI_PROCESSOR_TYPE_AMD_CPU_CORE;
                 if( (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_apusocket_handle_all_socket[socket_counter], cpu_processor_type, nullptr, &num_cpu)) &&
-                    (0 != num_cpu) &&
+                    (GOAMDSMI_VALUE_0 != num_cpu) &&
                     (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_apusocket_handle_all_socket[socket_counter], cpu_processor_type, &amdsmi_processor_handle_all_cpu_across_socket[num_cpu_inAllSocket], &num_cpu)))
                 {
                     if( (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_apusocket_handle_all_socket[socket_counter], cpu_core_processor_type, nullptr, &num_cpu_physicalCores)) &&
-                        (0 != num_cpu_physicalCores) &&
+                        (GOAMDSMI_VALUE_0 != num_cpu_physicalCores) &&
                         (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_apusocket_handle_all_socket[socket_counter], cpu_core_processor_type, &amdsmi_processor_handle_all_cpu_physicalCore_across_socket[num_cpu_physicalCore_inAllSocket], &num_cpu_physicalCores)))
                     {
                         num_cpu_physicalCore_inAllSocket = num_cpu_physicalCore_inAllSocket+num_cpu_physicalCores;
@@ -189,7 +189,7 @@ goamdsmi_status_t go_shim_amdsmiapu_init(goamdsmi_Init_t goamdsmi_Init)
                 //GPU
                 processor_type_t gpu_device_processor_type    = AMDSMI_PROCESSOR_TYPE_AMD_GPU;
                 if( (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_apusocket_handle_all_socket[socket_counter], gpu_device_processor_type, nullptr, &num_gpu_devices)) &&
-                    (0 != num_gpu_devices) &&
+                    (GOAMDSMI_VALUE_0 != num_gpu_devices) &&
                     (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_apusocket_handle_all_socket[socket_counter], gpu_device_processor_type, &amdsmi_processor_handle_all_gpu_device_across_socket[num_gpu_devices_inAllSocket], &num_gpu_devices)))
                 {
                      num_gpu_devices_inAllSocket = num_gpu_devices_inAllSocket+num_gpu_devices;
@@ -210,7 +210,7 @@ goamdsmi_status_t go_shim_amdsmiapu_init(goamdsmi_Init_t goamdsmi_Init)
             if( (AMDSMI_STATUS_SUCCESS != amdsmi_init(AMDSMI_INIT_AMD_CPUS)) ||
                 (AMDSMI_STATUS_SUCCESS != amdsmi_get_socket_handles(&num_cpuSockets, nullptr)) || 
                 (AMDSMI_STATUS_SUCCESS != amdsmi_get_socket_handles(&num_cpuSockets, &amdsmi_cpusocket_handle_all_socket[0])) ||
-                (0 == num_cpuSockets))
+                (GOAMDSMI_VALUE_0 == num_cpuSockets))
             {
                 if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Failed, AMDSMICPUInit:0, CpuNumSockets=0\n");}
                 return GOAMDSMI_STATUS_FAILURE;
@@ -223,17 +223,17 @@ goamdsmi_status_t go_shim_amdsmiapu_init(goamdsmi_Init_t goamdsmi_Init)
         //CPU
         for(uint32_t cpu_socket_counter = 0; cpu_socket_counter < num_cpuSockets; cpu_socket_counter++)
         {
-            uint32_t num_cpu               = 0;
-            uint32_t num_cpu_physicalCores = 0;
+            uint32_t num_cpu               = GOAMDSMI_VALUE_0;
+            uint32_t num_cpu_physicalCores = GOAMDSMI_VALUE_0;
 
             processor_type_t cpu_processor_type         = AMDSMI_PROCESSOR_TYPE_AMD_CPU;
             processor_type_t cpu_core_processor_type    = AMDSMI_PROCESSOR_TYPE_AMD_CPU_CORE;
             if( (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_cpusocket_handle_all_socket[cpu_socket_counter], cpu_processor_type, nullptr, &num_cpu)) &&
-                (0 != num_cpu) &&
+                (GOAMDSMI_VALUE_0 != num_cpu) &&
                 (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_cpusocket_handle_all_socket[cpu_socket_counter], cpu_processor_type, &amdsmi_processor_handle_all_cpu_across_socket[num_cpu_inAllSocket], &num_cpu)))
             {
                 if( (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_cpusocket_handle_all_socket[cpu_socket_counter], cpu_core_processor_type, nullptr, &num_cpu_physicalCores)) &&
-                    (0 != num_cpu_physicalCores) &&
+                    (GOAMDSMI_VALUE_0 != num_cpu_physicalCores) &&
                     (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_cpusocket_handle_all_socket[cpu_socket_counter], cpu_core_processor_type, &amdsmi_processor_handle_all_cpu_physicalCore_across_socket[num_cpu_physicalCore_inAllSocket], &num_cpu_physicalCores)))
                 {
                     num_cpu_physicalCore_inAllSocket = num_cpu_physicalCore_inAllSocket+num_cpu_physicalCores;
@@ -254,7 +254,7 @@ goamdsmi_status_t go_shim_amdsmiapu_init(goamdsmi_Init_t goamdsmi_Init)
             if( (AMDSMI_STATUS_SUCCESS != amdsmi_init(AMDSMI_INIT_AMD_GPUS)) ||
                 (AMDSMI_STATUS_SUCCESS != amdsmi_get_socket_handles(&num_gpuSockets, nullptr)) || 
                 (AMDSMI_STATUS_SUCCESS != amdsmi_get_socket_handles(&num_gpuSockets, &amdsmi_gpusocket_handle_all_socket[0])) ||
-                (0 == num_gpuSockets))
+                (GOAMDSMI_VALUE_0 == num_gpuSockets))
             {
                 if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Failed, AMDSMIGPUInit:0, GpuNumSockets=0\n");}
                 return GOAMDSMI_STATUS_FAILURE;
@@ -268,11 +268,11 @@ goamdsmi_status_t go_shim_amdsmiapu_init(goamdsmi_Init_t goamdsmi_Init)
         //GPU
         for(uint32_t gpu_socket_counter = 0; gpu_socket_counter < num_gpuSockets; gpu_socket_counter++)
         {
-            uint32_t num_gpu_devices       = 0;
+            uint32_t num_gpu_devices       = GOAMDSMI_VALUE_0;
             
             processor_type_t gpu_device_processor_type    = AMDSMI_PROCESSOR_TYPE_AMD_GPU;
             if( (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_gpusocket_handle_all_socket[gpu_socket_counter], gpu_device_processor_type, nullptr, &num_gpu_devices)) &&
-                (0 != num_gpu_devices) &&
+                (GOAMDSMI_VALUE_0 != num_gpu_devices) &&
                 (AMDSMI_STATUS_SUCCESS == amdsmi_get_processor_handles_by_type(amdsmi_gpusocket_handle_all_socket[gpu_socket_counter], gpu_device_processor_type, &amdsmi_processor_handle_all_gpu_device_across_socket[num_gpu_devices_inAllSocket], &num_gpu_devices)))
             {
                 num_gpu_devices_inAllSocket = num_gpu_devices_inAllSocket+num_gpu_devices;
@@ -281,14 +281,14 @@ goamdsmi_status_t go_shim_amdsmiapu_init(goamdsmi_Init_t goamdsmi_Init)
     }
     
     //CPU
-    if((GOAMDSMI_CPU_INIT == goamdsmi_Init) && ((0 == num_cpuSockets)||(0 == num_cpu_inAllSocket)||(0 == num_cpu_physicalCore_inAllSocket)))
+    if((GOAMDSMI_CPU_INIT == goamdsmi_Init) && ((GOAMDSMI_VALUE_0 == num_cpuSockets)||(GOAMDSMI_VALUE_0 == num_cpu_inAllSocket)||(GOAMDSMI_VALUE_0 == num_cpu_physicalCore_inAllSocket)))
     {
         if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Failed, CPU Enumuration Failed AMDSMICPUInit:%d, CpuSocketCount:%d, CpuCount:%d, CpuPhysicalCoreCount:%d,\n", GOAMDSMI_STATUS_FAILURE, num_cpuSockets, num_cpu_inAllSocket, num_cpu_physicalCore_inAllSocket);}
         return GOAMDSMI_STATUS_FAILURE;
     }
     
     //GPU
-    if((GOAMDSMI_GPU_INIT == goamdsmi_Init) && ((0 == num_gpuSockets)||(0 == num_gpu_devices_inAllSocket)))
+    if((GOAMDSMI_GPU_INIT == goamdsmi_Init) && ((GOAMDSMI_VALUE_0 == num_gpuSockets)||(GOAMDSMI_VALUE_0 == num_gpu_devices_inAllSocket)))
     {
         if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Failed, GPU Enumuration Failed AMDSMIGPUInit:%d, GpuSocketCount:%d, GpuCount:%d\n", GOAMDSMI_STATUS_FAILURE, num_gpuSockets, num_gpu_devices_inAllSocket);}
         return GOAMDSMI_STATUS_FAILURE;
@@ -303,215 +303,210 @@ goamdsmi_status_t go_shim_amdsmiapu_init(goamdsmi_Init_t goamdsmi_Init)
     return GOAMDSMI_STATUS_SUCCESS;
 }
 ////////////////////////////////////////////////------------CPU------------////////////////////////////////////////////////
-goamdsmi_status_t go_shim_amdsmicpu_init()    
+bool go_shim_amdsmicpu_init()    
 {
+	bool cpu_init_success = false;
     if(GOAMDSMI_STATUS_SUCCESS == go_shim_amdsmiapu_init(GOAMDSMI_CPU_INIT))
     {
         if((num_cpu_inAllSocket) && (num_cpu_physicalCore_inAllSocket))
         {
             if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success, InitAMDSMICPUInit:%d, CpuSocketCount:%d, CpuCount:%d, CpuPhysicalCoreCount:%d,\n", GOAMDSMI_STATUS_SUCCESS, num_cpuSockets, num_cpu_inAllSocket, num_cpu_physicalCore_inAllSocket);}
-            return GOAMDSMI_STATUS_SUCCESS;
+            cpu_init_success = true;
         }
     }
-    return GOAMDSMI_STATUS_FAILURE;
+    return cpu_init_success;
 }
 
-goamdsmi_status_t go_shim_amdsmicpu_threads_per_core_get(uint32_t* threads_per_core)
+uint32_t go_shim_amdsmicpu_threads_per_core_get()
 {
-    *threads_per_core               = 0;
-    uint32_t threads_per_core_temp  = 0;
+    uint32_t threads_per_core_temp  = GOAMDSMI_VALUE_0;
 
     if((AMDSMI_STATUS_SUCCESS == amdsmi_get_threads_per_core(&threads_per_core_temp)))
     {
-        *threads_per_core = threads_per_core_temp;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success, CpuThreadsPerCore:%lu\n", (unsigned long)(*threads_per_core));}
-        return GOAMDSMI_STATUS_SUCCESS;
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success, CpuThreadsPerCore:%lu\n", (unsigned long)(threads_per_core_temp));}
     }
     
-    return GOAMDSMI_STATUS_FAILURE;
+    return threads_per_core_temp;
 }
 
-goamdsmi_status_t go_shim_amdsmicpu_number_of_threads_get(uint32_t* number_of_threads)
+uint32_t go_shim_amdsmicpu_number_of_threads_get()
 {
-    *number_of_threads            = 0;
-    uint32_t num_threads_per_core = 0;
+    uint32_t number_of_threads    = GOAMDSMI_VALUE_0;
+    uint32_t num_threads_per_core = GOAMDSMI_VALUE_0;
     if(GOAMDSMI_STATUS_SUCCESS == go_shim_amdsmicpu_threads_per_core_get(&num_threads_per_core))
     {
-        *number_of_threads = num_cpu_physicalCore_inAllSocket*num_threads_per_core;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success, CpuNumThreads:%lu\n", (unsigned long)(*number_of_threads));}
-        return GOAMDSMI_STATUS_SUCCESS;
+        number_of_threads = num_cpu_physicalCore_inAllSocket*num_threads_per_core;
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success, CpuNumThreads:%lu\n", (unsigned long)(number_of_threads));}
     }
-    return GOAMDSMI_STATUS_FAILURE;
+    return number_of_threads;
 }
 
-goamdsmi_status_t go_shim_amdsmicpu_number_of_sockets_get(uint32_t* number_of_sockets)
+uint32_t go_shim_amdsmicpu_number_of_sockets_get()
 {
-    *number_of_sockets = num_cpuSockets;
-    if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success, CpuNumSockets:%lu\n", (unsigned long)(*number_of_sockets));}
-    return GOAMDSMI_STATUS_SUCCESS;
+	uint32_t number_of_sockets = num_cpuSockets;
+    if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success, CpuNumSockets:%lu\n", (unsigned long)(number_of_sockets));}
+    return number_of_sockets;
 }
 
-goamdsmi_status_t go_shim_amdsmicpu_core_energy_get(uint32_t thread_index, uint64_t* core_energy)
+uint64_t go_shim_amdsmicpu_core_energy_get(uint32_t thread_index)
 {
-    *core_energy                 = 0;
-    uint64_t core_energy_temp    = 0;
+    uint64_t core_energy_temp    = GOAMDSMI_UINT64_MAX;
     uint32_t physicalCore_index  = thread_index%num_cpu_physicalCore_inAllSocket;
 
     if(AMDSMI_STATUS_SUCCESS == amdsmi_get_cpu_core_energy(amdsmi_processor_handle_all_cpu_physicalCore_across_socket[physicalCore_index], &core_energy_temp))
     {
-        *core_energy = core_energy_temp;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Thread:%d PC:%d, CpuCoreEnergy:%llu, CpuCoreEnergyJoules:%.6f, CpuCoreEnergyKJoules:%.9f\n", thread_index, physicalCore_index, (unsigned long long)(*core_energy), ((double)(*core_energy))/1000000, ((double)(*core_energy))/1000000000);}
-        return GOAMDSMI_STATUS_SUCCESS;
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Thread:%d PC:%d, CpuCoreEnergy:%llu, CpuCoreEnergyJoules:%.6f, CpuCoreEnergyKJoules:%.9f\n", thread_index, physicalCore_index, (unsigned long long)(core_energy_temp), ((double)(core_energy_temp))/1000000, ((double)(core_energy_temp))/1000000000);}
     }
-    return GOAMDSMI_STATUS_FAILURE;
+    return core_energy_temp;
 }
 
-goamdsmi_status_t go_shim_amdsmicpu_socket_energy_get(uint32_t socket_index, uint64_t* socket_energy)
+uint64_t go_shim_amdsmicpu_socket_energy_get(uint32_t socket_index)
 {
-    *socket_energy              = 0;
-    uint64_t socket_energy_temp = 0;
+    uint64_t socket_energy_temp = GOAMDSMI_UINT64_MAX;
     if((AMDSMI_STATUS_SUCCESS == amdsmi_get_cpu_socket_energy(amdsmi_processor_handle_all_cpu_across_socket[socket_index], &socket_energy_temp)))
     {
-        *socket_energy = socket_energy_temp;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Socket:%d, CpuSocketEnergy:%llu, CpuSocketEnergyJoules:%.6f, CpuSocketEnergyKJoules:%.9f\n", socket_index, (unsigned long long)(*socket_energy), ((double)(*socket_energy))/1000000, ((double)(*socket_energy))/1000000000);}
-        return GOAMDSMI_STATUS_SUCCESS;
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Socket:%d, CpuSocketEnergy:%llu, CpuSocketEnergyJoules:%.6f, CpuSocketEnergyKJoules:%.9f\n", socket_index, (unsigned long long)(socket_energy_temp), ((double)(socket_energy_temp))/1000000, ((double)(socket_energy_temp))/1000000000);}
     }
-    return GOAMDSMI_STATUS_FAILURE;
+    return socket_energy_temp;
 }
 
-goamdsmi_status_t go_shim_amdsmicpu_prochot_status_get(uint32_t socket_index, uint32_t* prochot)
+uint32_t go_shim_amdsmicpu_prochot_status_get(uint32_t socket_index)
 {
-    *prochot               = 0;
-    uint32_t prochot_temp  = 0;
+    uint32_t prochot_temp  = GOAMDSMI_UINT32_MAX;
     if((AMDSMI_STATUS_SUCCESS == amdsmi_get_cpu_prochot_status(amdsmi_processor_handle_all_cpu_across_socket[socket_index], &prochot_temp)))
     {
-        *prochot = prochot_temp;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Socket:%d, CpuProchotStatus:%lu\n", socket_index, (unsigned long)(*prochot));}
-        return GOAMDSMI_STATUS_SUCCESS;
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Socket:%d, CpuProchotStatus:%lu\n", socket_index, (unsigned long)(prochot_temp));}
     }
-    return GOAMDSMI_STATUS_FAILURE;
+    return prochot_temp;
 }
 
-goamdsmi_status_t go_shim_amdsmicpu_socket_power_get(uint32_t socket_index, uint32_t* socket_power)
+uint32_t go_shim_amdsmicpu_socket_power_get(uint32_t socket_index)
 {
-    *socket_power              = 0;
-    uint32_t socket_power_temp = 0;
+    uint32_t socket_power_temp = GOAMDSMI_UINT32_MAX;
     if((AMDSMI_STATUS_SUCCESS == amdsmi_get_cpu_socket_power(amdsmi_processor_handle_all_cpu_across_socket[socket_index], &socket_power_temp)))
     {
-        *socket_power = socket_power_temp;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Socket:%d, CpuSocketPower:%lu, CpuSocketPowerWatt:%.3f\n", socket_index, (unsigned long)(*socket_power), ((double)(*socket_power))/1000);}
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Socket:%d, CpuSocketPower:%lu, CpuSocketPowerWatt:%.3f\n", socket_index, (unsigned long)(socket_power_temp), ((double)(socket_power_temp))/1000);}
         return GOAMDSMI_STATUS_SUCCESS;
     }
-    return GOAMDSMI_STATUS_FAILURE;
+    return socket_power_temp;
 }
 
-goamdsmi_status_t go_shim_amdsmicpu_socket_power_cap_get(uint32_t socket_index, uint32_t* socket_power_cap)
+uint32_t go_shim_amdsmicpu_socket_power_cap_get(uint32_t socket_index)
 {
-    *socket_power_cap              = 0;
-    uint32_t socket_power_cap_temp = 0;
+    uint32_t socket_power_cap_temp = GOAMDSMI_UINT32_MAX;
     if((AMDSMI_STATUS_SUCCESS == amdsmi_get_cpu_socket_power_cap(amdsmi_processor_handle_all_cpu_across_socket[socket_index], &socket_power_cap_temp)))
     {
-        *socket_power_cap = socket_power_cap_temp;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Socket:%d, CpuSocketPowerCap:%lu, CpuSocketPowerCapWatt:%.3f\n", socket_index, (unsigned long)(*socket_power_cap), ((double)(*socket_power_cap))/1000);}
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Socket:%d, CpuSocketPowerCap:%lu, CpuSocketPowerCapWatt:%.3f\n", socket_index, (unsigned long)(socket_power_cap_temp), ((double)(socket_power_cap_temp))/1000);}
         return GOAMDSMI_STATUS_SUCCESS;
     }
     return GOAMDSMI_STATUS_FAILURE;
 }
 
-goamdsmi_status_t go_shim_amdsmicpu_core_boostlimit_get(uint32_t thread_index, uint32_t* core_boostlimit)
+uint32_t go_shim_amdsmicpu_core_boostlimit_get(uint32_t thread_index)
 {
-    *core_boostlimit               = 0;
-    uint32_t core_boostlimit_temp  = 0;
+    uint32_t core_boostlimit_temp  = GOAMDSMI_UINT32_MAX;
     uint32_t physicalCore_index    = thread_index%num_cpu_physicalCore_inAllSocket;
 
     if(AMDSMI_STATUS_SUCCESS == amdsmi_get_cpu_core_boostlimit(amdsmi_processor_handle_all_cpu_physicalCore_across_socket[physicalCore_index], &core_boostlimit_temp))
     {
-        *core_boostlimit = core_boostlimit_temp;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Thread:%d PC:%d, CpuCoreBoostLimit:%lu\n", thread_index, physicalCore_index, (unsigned long)(*core_boostlimit));}
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Thread:%d PC:%d, CpuCoreBoostLimit:%lu\n", thread_index, physicalCore_index, (unsigned long)(core_boostlimit_temp));}
         return GOAMDSMI_STATUS_SUCCESS;
     }
     return GOAMDSMI_STATUS_FAILURE;
 }
 
 ////////////////////////////////////////////////------------GPU------------////////////////////////////////////////////////
-goamdsmi_status_t go_shim_amdsmigpu_init()
+bool go_shim_amdsmigpu_init()
 {
+	bool gpu_init_success = false;
     if(GOAMDSMI_STATUS_SUCCESS == go_shim_amdsmiapu_init(GOAMDSMI_GPU_INIT))
     {
         if((num_gpu_devices_inAllSocket))
         {
             if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success, InitAMDSMIGPUInit:%d, GpuSocketCount:%d, GpuCount:%d\n", GOAMDSMI_STATUS_SUCCESS, num_gpuSockets, num_gpu_devices_inAllSocket);}
-            return GOAMDSMI_STATUS_SUCCESS;
+            gpu_init_success = true;
         }
     }
-    if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_2)) {printf("AMDSMI, Failed, InitAMDSMIGPUInit:%d, GpuSocketCount:%d, GpuCount:%d\n", GOAMDSMI_STATUS_FAILURE, num_gpuSockets, num_gpu_devices_inAllSocket);}
-    return GOAMDSMI_STATUS_FAILURE;
+    if(false == gpu_init_success)
+	{
+		if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_2)) {printf("AMDSMI, Failed, InitAMDSMIGPUInit:%d, GpuSocketCount:%d, GpuCount:%d\n", GOAMDSMI_STATUS_FAILURE, num_gpuSockets, num_gpu_devices_inAllSocket);}
+	}
+    return gpu_init_success;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_shutdown()
+bool go_shim_amdsmigpu_shutdown()
 {
-    return GOAMDSMI_STATUS_FAILURE;
+    return false;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_num_monitor_devices(uint32_t* gpu_num_monitor_devices)
+uint32_t go_shim_amdsmigpu_num_monitor_devices()
 {
-    *gpu_num_monitor_devices = num_gpu_devices_inAllSocket;
-    if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success, GpuNumMonitorDevices:%lu\n", (unsigned long)(*gpu_num_monitor_devices));}
-    return GOAMDSMI_STATUS_SUCCESS;
+    uint32_t gpu_num_monitor_devices = num_gpu_devices_inAllSocket;
+    if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success, GpuNumMonitorDevices:%lu\n", (unsigned long)(gpu_num_monitor_devices));}
+    return gpu_num_monitor_devices;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_name_get(uint32_t dv_ind, char** gpu_dev_name)
+char* go_shim_amdsmigpu_dev_name_get(uint32_t dv_ind)
 {
-    return GOAMDSMI_STATUS_FAILURE;
+	uint32_t len = 256;
+    dev_name = (char*)malloc(sizeof(char)*len);dev_name[0] = '\0';
+    strcpy(dev_name, GOAMDSMI_STRING_NA);
+	
+    return dev_name;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_id_get(uint32_t dv_ind, uint16_t* gpu_dev_id)
+uint16_t go_shim_amdsmigpu_dev_id_get(uint32_t dv_ind)
 {
-    *gpu_dev_id              = 0;
-    uint16_t gpu_dev_id_temp = 0;
+    uint16_t gpu_dev_id_temp = GOAMDSMI_UINT16_MAX;
     
     if((dv_ind < num_gpu_devices_inAllSocket) && (AMDSMI_STATUS_SUCCESS == amdsmi_get_gpu_id(amdsmi_processor_handle_all_gpu_device_across_socket[dv_ind], &gpu_dev_id_temp)))
     {
-        *gpu_dev_id = gpu_dev_id_temp;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuDevId:%d\n", dv_ind, *gpu_dev_id);}
-        return GOAMDSMI_STATUS_SUCCESS;
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuDevId:%d\n", dv_ind, gpu_dev_id_temp);}
     }
-    return GOAMDSMI_STATUS_FAILURE;
+    return gpu_dev_id_temp;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_pci_id_get(uint32_t dv_ind, uint64_t* gpu_pci_id)
+uint64_t go_shim_amdsmigpu_dev_pci_id_get(uint32_t dv_ind)
 {
-    return GOAMDSMI_STATUS_FAILURE;
+	uint64_t gpu_pci_id = GOAMDSMI_UINT64_MAX;
+    return gpu_pci_id;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_vendor_name_get(uint32_t dv_ind, char** gpu_vendor_name)
+char* go_shim_amdsmigpu_dev_vendor_name_get(uint32_t dv_ind)
 {
-    return GOAMDSMI_STATUS_FAILURE;
+    uint32_t len = 256;
+    gpu_vendor_name = (char*)malloc(sizeof(char)*len);gpu_vendor_name[0] = '\0';
+    strcpy(gpu_vendor_name, GOAMDSMI_STRING_NA);
+    
+    return gpu_vendor_name;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_vbios_version_get(uint32_t dv_ind, char** vbios_version)
+char* go_shim_amdsmigpu_dev_vbios_version_get(uint32_t dv_ind)
 {
-    return GOAMDSMI_STATUS_FAILURE;
+    uint32_t len = 256;
+    vbios_version = (char*)malloc(sizeof(char)*len);vbios_version[0] = '\0';
+    strcpy(vbios_version, GOAMDSMI_STRING_NA);
+    
+    return vbios_version;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_power_cap_get(uint32_t dv_ind, uint64_t* gpu_power_cap)
+uint64_t go_shim_amdsmigpu_dev_power_cap_get(uint32_t dv_ind)
 {
-    *gpu_power_cap                                      = 0;
+    uint64_t gpu_power_cap                              = GOAMDSMI_UINT64_MAX;
     amdsmi_power_cap_info_t amdsmi_power_cap_info_temp  = {0};
 
     if((dv_ind < num_gpu_devices_inAllSocket) && (AMDSMI_STATUS_SUCCESS == amdsmi_get_power_cap_info(amdsmi_processor_handle_all_gpu_device_across_socket[dv_ind], GPU_SENSOR_0, &amdsmi_power_cap_info_temp)))
     {
-        *gpu_power_cap = amdsmi_power_cap_info_temp.power_cap;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuPowerCap:%llu, GpuPowerCapInWatt:%.6f\n", dv_ind, (unsigned long long)(*gpu_power_cap), ((double)(*gpu_power_cap))/1000000);}
-        return GOAMDSMI_STATUS_SUCCESS;
+        gpu_power_cap = amdsmi_power_cap_info_temp.power_cap;
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuPowerCap:%llu, GpuPowerCapInWatt:%.6f\n", dv_ind, (unsigned long long)(gpu_power_cap), ((double)(gpu_power_cap))/1000000);}
     }
-    return GOAMDSMI_STATUS_FAILURE;
+    return gpu_power_cap;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_power_get(uint32_t dv_ind, uint64_t* gpu_power)
+uint64_t go_shim_amdsmigpu_dev_power_get(uint32_t dv_ind)
 {
-    *gpu_power                                  = 0;
-    uint64_t gpu_power_temp                     = 0;
+    uint64_t gpu_power                          = GOAMDSMI_UINT64_MAX;
+    uint64_t gpu_power_temp                     = GOAMDSMI_UINT64_MAX;
     amdsmi_power_info_t amdsmi_power_info_temp  = {0};
 
     if((dv_ind < num_gpu_devices_inAllSocket) && (AMDSMI_STATUS_SUCCESS == amdsmi_get_power_info(amdsmi_processor_handle_all_gpu_device_across_socket[dv_ind], &amdsmi_power_info_temp)))
@@ -524,10 +519,10 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_power_get(uint32_t dv_ind, uint64_t* gpu
             gpu_power_temp = amdsmi_power_info_temp.current_socket_power;
             if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_2)) {printf("AMDSMI, Success for Gpu:%d, GpuPowerCurrent:%llu, GpuPowerCurrentinWatt:%.6f\n", dv_ind, (unsigned long long)(gpu_power_temp), ((double)(gpu_power_temp))/1000000);}
         }
-        *gpu_power = gpu_power_temp;
-        *gpu_power = (*gpu_power)*1000000;//to maintain backward compatibity with old ROCM SMI
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuPower:%llu, GpuPowerinWatt:%.6f\n", dv_ind, (unsigned long long)(*gpu_power), ((double)(*gpu_power))/1000000);}
-        return GOAMDSMI_STATUS_SUCCESS;
+        gpu_power = gpu_power_temp;
+        gpu_power = (gpu_power)*1000000;//to maintain backward compatibity with old ROCM SMI
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuPower:%llu, GpuPowerinWatt:%.6f\n", dv_ind, (unsigned long long)(gpu_power), ((double)(gpu_power))/1000000);}
+        return gpu_power;
     }
 
     amdsmi_gpu_metrics_t metrics = {0};
@@ -541,190 +536,196 @@ goamdsmi_status_t go_shim_amdsmigpu_dev_power_get(uint32_t dv_ind, uint64_t* gpu
             gpu_power_temp = metrics.current_socket_power;
             if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_2)) {printf("AMDSMI, Success for Gpu:%d, GpuPowerCurrentFromMetrics:%llu, GpuPowerCurrentFromMetricsinWatt:%.6f\n", dv_ind, (unsigned long long)gpu_power_temp, ((double)(gpu_power_temp))/1000000);}
         }
-        *gpu_power = gpu_power_temp;
-        *gpu_power = (*gpu_power)*1000000;//to maintain backward compatibity with old ROCM SMI
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuPowerFromMetrics:%llu, GpuPowerFromMetricsinWatt:%.6f\n", dv_ind, (unsigned long long)(*gpu_power), ((double)(*gpu_power))/1000000);}
-        return GOAMDSMI_STATUS_SUCCESS;
+        gpu_power = gpu_power_temp;
+        gpu_power = (*gpu_power)*1000000;//to maintain backward compatibity with old ROCM SMI
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuPowerFromMetrics:%llu, GpuPowerFromMetricsinWatt:%.6f\n", dv_ind, (unsigned long long)(gpu_power), ((double)(gpu_power))/1000000);}
+        return gpu_power;
     }
 
-    return GOAMDSMI_STATUS_FAILURE;
+    return gpu_power;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_temp_metric_get(uint32_t dv_ind, uint32_t sensor, uint32_t metric, uint64_t* gpu_temperature)
+uint64_t go_shim_amdsmigpu_dev_temp_metric_get(uint32_t dv_ind, uint32_t sensor, uint32_t metric)
 {
-    *gpu_temperature              = 0;
-    uint64_t gpu_temperature_temp = 0;
+    uint64_t gpu_temperature      = GOAMDSMI_UINT64_MAX;
+    uint64_t gpu_temperature_temp = GOAMDSMI_UINT64_MAX;
 
     if((dv_ind < num_gpu_devices_inAllSocket) && (AMDSMI_STATUS_SUCCESS == amdsmi_get_temp_metric(amdsmi_processor_handle_all_gpu_device_across_socket[dv_ind], sensor, metric, &gpu_temperature_temp)))
     {
-        *gpu_temperature = gpu_temperature_temp;
-        *gpu_temperature = (*gpu_temperature)*1000;//to maintain backward compatibity with old ROCM SMI
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d Sensor:%d Metric:%d, GpuTemperature:%llu, GpuTemperatureInDegree:%.3f\n", dv_ind, sensor, metric, (unsigned long long)(*gpu_temperature), ((double)(*gpu_temperature))/1000);}
-        return GOAMDSMI_STATUS_SUCCESS;
+        gpu_temperature = gpu_temperature_temp;
+        gpu_temperature = (gpu_temperature)*1000;//to maintain backward compatibity with old ROCM SMI
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d Sensor:%d Metric:%d, GpuTemperature:%llu, GpuTemperatureInDegree:%.3f\n", dv_ind, sensor, metric, (unsigned long long)(gpu_temperature), ((double)(gpu_temperature))/1000);}
     }
-    return GOAMDSMI_STATUS_FAILURE;
+    return gpu_temperature;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_overdrive_level_get(uint32_t dv_ind, uint32_t* gpu_overdrive_level)
+uint32_t go_shim_amdsmigpu_dev_overdrive_level_get(uint32_t dv_ind)
 {
-    return GOAMDSMI_STATUS_FAILURE;
+	uint32_t gpu_overdrive_level = GOAMDSMI_UINT32_MAX;
+    return gpu_overdrive_level;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_mem_overdrive_level_get(uint32_t dv_ind, uint32_t* gpu_mem_overdrive_level)
+uint32_t go_shim_amdsmigpu_dev_mem_overdrive_level_get(uint32_t dv_ind)
 {
-    return GOAMDSMI_STATUS_FAILURE;
+	uint32_t gpu_mem_overdrive_level = GOAMDSMI_UINT32_MAX;
+    return gpu_mem_overdrive_level;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_perf_level_get(uint32_t dv_ind, uint32_t *gpu_perf)
+uint32_t go_shim_amdsmigpu_dev_perf_level_get(uint32_t dv_ind)
 {
-    return GOAMDSMI_STATUS_FAILURE;
+	uint32_t gpu_perf = GOAMDSMI_UINT32_MAX;
+    return gpu_perf;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_sclk(uint32_t dv_ind, uint64_t* gpu_sclk_freq)
+uint64_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_sclk(uint32_t dv_ind)
 {
-    *gpu_sclk_freq            = 0;
+    uint64_t gpu_sclk_freq    = GOAMDSMI_UINT64_MAX;
     amdsmi_frequencies_t freq = {0};
 
     if((dv_ind < num_gpu_devices_inAllSocket) && (AMDSMI_STATUS_SUCCESS == amdsmi_get_clk_freq(amdsmi_processor_handle_all_gpu_device_across_socket[dv_ind], AMDSMI_CLK_TYPE_SYS, &freq)))
     {
-        *gpu_sclk_freq = freq.frequency[freq.current];
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuSclkFreq:%llu, GpuSclkFreqMhz:%.6f\n", dv_ind, (unsigned long long)(*gpu_sclk_freq), ((double)(*gpu_sclk_freq))/1000000);}
-        return GOAMDSMI_STATUS_SUCCESS;
+        gpu_sclk_freq = freq.frequency[freq.current];
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuSclkFreq:%llu, GpuSclkFreqMhz:%.6f\n", dv_ind, (unsigned long long)(gpu_sclk_freq), ((double)(gpu_sclk_freq))/1000000);}
     }
-    return GOAMDSMI_STATUS_FAILURE;
+    return gpu_sclk_freq;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_mclk(uint32_t dv_ind, uint64_t* gpu_memclk_freq)
+uint64_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_mclk(uint32_t dv_ind, uint64_t* gpu_memclk_freq)
 {
-    *gpu_memclk_freq          = 0;
+    uint64_t gpu_memclk_freq  = GOAMDSMI_UINT64_MAX;
     amdsmi_frequencies_t freq = {0};
 
     if((dv_ind < num_gpu_devices_inAllSocket) && (AMDSMI_STATUS_SUCCESS == amdsmi_get_clk_freq(amdsmi_processor_handle_all_gpu_device_across_socket[dv_ind], AMDSMI_CLK_TYPE_MEM, &freq)))
     {
-        *gpu_memclk_freq = freq.frequency[freq.current];
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuMclkFreq:%llu, GpuMclkFreqMhz:%.6f\n", dv_ind, (unsigned long long)(*gpu_memclk_freq), ((double)(*gpu_memclk_freq))/1000000);}
-        return GOAMDSMI_STATUS_SUCCESS;
+        gpu_memclk_freq = freq.frequency[freq.current];
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuMclkFreq:%llu, GpuMclkFreqMhz:%.6f\n", dv_ind, (unsigned long long)(gpu_memclk_freq), ((double)(gpu_memclk_freq))/1000000);}
     }
-    return GOAMDSMI_STATUS_FAILURE;
+    return gpu_memclk_freq;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_min_get_sclk(uint32_t dv_ind, uint64_t* gpu_min_sclk)
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_min_get_sclk(uint32_t dv_ind)
 {
-    return GOAMDSMI_STATUS_FAILURE;
+	uint64_t gpu_min_sclk = GOAMDSMI_UINT64_MAX;
+    return gpu_min_sclk;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_min_get_mclk(uint32_t dv_ind, uint64_t* gpu_min_memclk)
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_min_get_mclk(uint32_t dv_ind)
 {
-    return GOAMDSMI_STATUS_FAILURE;
+    uint64_t gpu_min_memclk = GOAMDSMI_UINT64_MAX;
+    return gpu_min_memclk
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_max_get_sclk(uint32_t dv_ind, uint64_t* gpu_max_sclk)
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_max_get_sclk(uint32_t dv_ind)
 {
-    return GOAMDSMI_STATUS_FAILURE;
+    uint64_t gpu_max_sclk = GOAMDSMI_UINT64_MAX;
+    return gpu_max_sclk
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_max_get_mclk(uint32_t dv_ind, uint64_t* gpu_max_memclk)
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_max_get_mclk(uint32_t dv_ind)
 {
-    return GOAMDSMI_STATUS_FAILURE;
+    uint64_t gpu_max_memclk = GOAMDSMI_UINT64_MAX;
+    return gpu_max_memclk
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_busy_percent_get(uint32_t dv_ind, uint32_t* gpu_busy_percent)
+uint32_t go_shim_amdsmigpu_dev_gpu_busy_percent_get(uint32_t dv_ind)
 {
-    *gpu_busy_percent       = 0;
-     amdsmi_engine_usage_t amdsmi_engine_usage_temp;
+    uint32_t gpu_busy_percent       = GOAMDSMI_UINT32_MAX;
+    amdsmi_engine_usage_t amdsmi_engine_usage_temp;
 
     if(AMDSMI_STATUS_SUCCESS == amdsmi_get_gpu_activity(amdsmi_processor_handle_all_gpu_device_across_socket[dv_ind], &amdsmi_engine_usage_temp))
     {
-        *gpu_busy_percent = amdsmi_engine_usage_temp.gfx_activity;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuBusyPerc:%lu\n", dv_ind, (unsigned long)(*gpu_busy_percent));}
-        return GOAMDSMI_STATUS_SUCCESS;
+        gpu_busy_percent = amdsmi_engine_usage_temp.gfx_activity;
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuBusyPerc:%lu\n", dv_ind, (unsigned long)(gpu_busy_percent));}
     }
-    if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_3)) {printf("AMDSMI, Failed for Gpu:%d, GpuBusyPerc:%lu\n", dv_ind, (unsigned long)(*gpu_busy_percent));}
-    return GOAMDSMI_STATUS_FAILURE;
+    else
+    {
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_3)) {printf("AMDSMI, Failed for Gpu:%d, GpuBusyPerc:%lu\n", dv_ind, (unsigned long)(gpu_busy_percent));}
+    }
+    return gpu_busy_percent;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_memory_busy_percent_get(uint32_t dv_ind, uint64_t* gpu_memory_busy_percent)
+uint64_t go_shim_amdsmigpu_dev_gpu_memory_busy_percent_get(uint32_t dv_ind)
 {
-    *gpu_memory_busy_percent       = 0;
-    uint64_t gpu_memory_usage_temp = 0;
-    uint64_t gpu_memory_total_temp = 0;
+    uint64_t gpu_memory_busy_percent = GOAMDSMI_UINT64_MAX;
+    uint64_t gpu_memory_usage_temp   = GOAMDSMI_UINT64_MAX;
+    uint64_t gpu_memory_total_temp   = GOAMDSMI_UINT64_MAX;
 
     if( (AMDSMI_STATUS_SUCCESS == amdsmi_get_gpu_memory_usage(amdsmi_processor_handle_all_gpu_device_across_socket[dv_ind], AMDSMI_MEM_TYPE_VRAM, &gpu_memory_usage_temp))&&
         (AMDSMI_STATUS_SUCCESS == amdsmi_get_gpu_memory_total(amdsmi_processor_handle_all_gpu_device_across_socket[dv_ind], AMDSMI_MEM_TYPE_VRAM, &gpu_memory_total_temp)))
     {
-        *gpu_memory_busy_percent = (uint64_t)(gpu_memory_usage_temp*100)/gpu_memory_total_temp;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuMemoryBusyPerc:%llu\n", dv_ind, (unsigned long long)(*gpu_memory_busy_percent));}
-        return GOAMDSMI_STATUS_SUCCESS;
+        gpu_memory_busy_percent = (uint64_t)(gpu_memory_usage_temp*100)/gpu_memory_total_temp;
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuMemoryBusyPerc:%llu\n", dv_ind, (unsigned long long)(gpu_memory_busy_percent));}
     }
-    if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_3)) {printf("AMDSMI, Failed for Gpu:%d, GpuMemoryBusyPerc:%llu\n", dv_ind, (unsigned long long)(*gpu_memory_busy_percent));}
-    return GOAMDSMI_STATUS_FAILURE;
+	else
+    {
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_3)) {printf("AMDSMI, Failed for Gpu:%d, GpuMemoryBusyPerc:%llu\n", dv_ind, (unsigned long long)(gpu_memory_busy_percent));}
+    }
+    return gpu_memory_busy_percent;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_memory_usage_get(uint32_t dv_ind, uint64_t* gpu_memory_usage)
+uint64_t go_shim_amdsmigpu_dev_gpu_memory_usage_get(uint32_t dv_ind)
 {
-    *gpu_memory_usage               = 0;
-     uint64_t gpu_memory_usage_temp = 0;
+    uint64_t gpu_memory_usage      = GOAMDSMI_UINT64_MAX;
+    uint64_t gpu_memory_usage_temp = GOAMDSMI_UINT64_MAX;
 
     if(AMDSMI_STATUS_SUCCESS == amdsmi_get_gpu_memory_usage(amdsmi_processor_handle_all_gpu_device_across_socket[dv_ind], AMDSMI_MEM_TYPE_VRAM, &gpu_memory_usage_temp))
     {
-        *gpu_memory_usage = (uint64_t)gpu_memory_usage_temp;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuMemoryUsage:%llu\n", dv_ind, (unsigned long long)(*gpu_memory_usage));}
-        return GOAMDSMI_STATUS_SUCCESS;
+        gpu_memory_usage = (uint64_t)gpu_memory_usage_temp;
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuMemoryUsage:%llu\n", dv_ind, (unsigned long long)(gpu_memory_usage));}
     }
         
-    return GOAMDSMI_STATUS_FAILURE;
+    return gpu_memory_usage;
 }
 
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_memory_total_get(uint32_t dv_ind, uint64_t* gpu_memory_total)
+uint64_t go_shim_amdsmigpu_dev_gpu_memory_total_get(uint32_t dv_ind)
 {
-    *gpu_memory_total        = 0;
-    uint64_t gpu_memory_total_temp    = 0;
+    uint64_t gpu_memory_total      = GOAMDSMI_UINT64_MAX;
+    uint64_t gpu_memory_total_temp = GOAMDSMI_UINT64_MAX;
 
     if(AMDSMI_STATUS_SUCCESS == amdsmi_get_gpu_memory_total(amdsmi_processor_handle_all_gpu_device_across_socket[dv_ind], AMDSMI_MEM_TYPE_VRAM, &gpu_memory_total_temp))
     {
-        *gpu_memory_total = (uint64_t)gpu_memory_total_temp;
-        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuMemoryTotal:%llu\n", dv_ind, (unsigned long long)(*gpu_memory_total));}
-        return GOAMDSMI_STATUS_SUCCESS;
+        gpu_memory_total = (uint64_t)gpu_memory_total_temp;
+        if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuMemoryTotal:%llu\n", dv_ind, (unsigned long long)(gpu_memory_total));}
     }
         
-    return GOAMDSMI_STATUS_FAILURE;
+    return gpu_memory_total;
 }
 #else
 ////////////////////////////////////////////////------------CPU------------////////////////////////////////////////////////
-goamdsmi_status_t go_shim_amdsmicpu_init()                                                                 {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmicpu_threads_per_core_get(uint32_t* threads_per_core)                       {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmicpu_number_of_threads_get(uint32_t* number_of_threads)                     {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmicpu_number_of_sockets_get(uint32_t* number_of_sockets)                     {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmicpu_core_energy_get(uint32_t thread_index, uint64_t* core_energy)          {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmicpu_socket_energy_get(uint32_t socket_index, uint64_t* socket_energy)      {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmicpu_prochot_status_get(uint32_t socket_index, uint32_t* prochot)           {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmicpu_socket_power_get(uint32_t socket_index, uint32_t* socket_power)        {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmicpu_socket_power_cap_get(uint32_t socket_index, uint32_t* socket_power_cap){return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmicpu_core_boostlimit_get(uint32_t thread_index, uint32_t* core_boostlimit)  {return GOAMDSMI_STATUS_FAILURE;}
+bool go_shim_amdsmicpu_init()                                           {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmicpu_threads_per_core_get()                       {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmicpu_number_of_threads_get()                      {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmicpu_number_of_sockets_get()                      {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmicpu_core_energy_get(uint32_t thread_index)       {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmicpu_socket_energy_get(uint32_t socket_index)     {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmicpu_prochot_status_get(uint32_t socket_index)    {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmicpu_socket_power_get(uint32_t socket_index)      {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmicpu_socket_power_cap_get(uint32_t socket_index)  {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmicpu_core_boostlimit_get(uint32_t thread_index)   {return GOAMDSMI_STATUS_FAILURE;}
 
 ////////////////////////////////////////////////------------GPU------------////////////////////////////////////////////////
-goamdsmi_status_t go_shim_amdsmigpu_init()                                                        {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_shutdown()                                                    {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_num_monitor_devices(uint32_t* gpu_num_monitor_devices)        {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_name_get(uint32_t dv_ind, char** gpu_dev_name)            {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_id_get(uint32_t dv_ind, uint16_t* gpu_dev_id)             {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_pci_id_get(uint32_t dv_ind, uint64_t* gpu_pci_id)         {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_vendor_name_get(uint32_t dv_ind, char** gpu_vendor_name)  {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_vbios_version_get(uint32_t dv_ind, char** vbios_version)  {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_power_cap_get(uint32_t dv_ind, uint64_t* gpu_power_cap)   {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_power_get(uint32_t dv_ind, uint64_t* gpu_power)           {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_temp_metric_get(uint32_t dv_ind, uint32_t sensor, uint32_t metric, uint64_t* gpu_temperature)    {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_overdrive_level_get(uint32_t dv_ind, uint32_t* gpu_overdrive_level)            {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_mem_overdrive_level_get(uint32_t dv_ind, uint32_t* gpu_mem_overdrive_level)    {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_perf_level_get(uint32_t dv_ind, uint32_t *gpu_perf)                            {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_sclk(uint32_t dv_ind, uint64_t* gpu_sclk_freq)                {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_mclk(uint32_t dv_ind, uint64_t* gpu_memclk_freq)              {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_min_get_sclk(uint32_t dv_ind, uint64_t* gpu_min_sclk)           {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_min_get_mclk(uint32_t dv_ind, uint64_t* gpu_min_memclk)         {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_max_get_sclk(uint32_t dv_ind, uint64_t* gpu_max_sclk)           {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_od_volt_freq_range_max_get_mclk(uint32_t dv_ind, uint64_t* gpu_max_memclk)         {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_busy_percent_get(uint32_t dv_ind, uint32_t* gpu_busy_percent)              {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_memory_busy_percent_get(uint32_t dv_ind, uint64_t* gpu_memory_busy_percent)                    {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_memory_usage_get(uint32_t dv_ind, uint64_t* gpu_memory_usage)              {return GOAMDSMI_STATUS_FAILURE;}
-goamdsmi_status_t go_shim_amdsmigpu_dev_gpu_memory_total_get(uint32_t dv_ind, uint64_t* gpu_memory_total)              {return GOAMDSMI_STATUS_FAILURE;}
+bool go_shim_amdsmigpu_init()                                           {return GOAMDSMI_STATUS_FAILURE;}
+bool go_shim_amdsmigpu_shutdown()                                       {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmigpu_num_monitor_devices()                        {return GOAMDSMI_STATUS_FAILURE;}
+char* go_shim_amdsmigpu_dev_name_get(uint32_t dv_ind)                   {return GOAMDSMI_STATUS_FAILURE;}
+uint16_t go_shim_amdsmigpu_dev_id_get(uint32_t dv_ind)                  {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_dev_pci_id_get(uint32_t dv_ind)              {return GOAMDSMI_STATUS_FAILURE;}
+char* go_shim_amdsmigpu_dev_vendor_name_get(uint32_t dv_ind)            {return GOAMDSMI_STATUS_FAILURE;}
+char* go_shim_amdsmigpu_dev_vbios_version_get(uint32_t dv_ind)          {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_dev_power_cap_get(uint32_t dv_ind)           {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_dev_power_get(uint32_t dv_ind)               {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_dev_temp_metric_get(uint32_t dv_ind, uint32_t sensor, uint32_t metric)    {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmigpu_dev_overdrive_level_get(uint32_t dv_ind)     {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmigpu_dev_mem_overdrive_level_get(uint32_t dv_ind) {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmigpu_dev_perf_level_get(uint32_t dv_ind)          {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_sclk(uint32_t dv_ind, * gpu_sclk_freq)               {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_mclk(uint32_t dv_ind, uint64_t* gpu_memclk_freq)     {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_min_get_sclk(uint32_t dv_ind)     {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_min_get_mclk(uint32_t dv_ind)     {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_max_get_sclk(uint32_t dv_ind)     {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_od_volt_freq_range_max_get_mclk(uint32_t dv_ind)     {return GOAMDSMI_STATUS_FAILURE;}
+uint32_t go_shim_amdsmigpu_dev_gpu_busy_percent_get(uint32_t dv_ind)            {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_dev_gpu_memory_busy_percent_get(uint32_t dv_ind)     {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_dev_gpu_memory_usage_get(uint32_t dv_ind)            {return GOAMDSMI_STATUS_FAILURE;}
+uint64_t go_shim_amdsmigpu_dev_gpu_memory_total_get(uint32_t dv_ind)            {return GOAMDSMI_STATUS_FAILURE;}
 #endif

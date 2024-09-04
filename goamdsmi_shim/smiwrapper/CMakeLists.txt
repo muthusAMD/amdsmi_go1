@@ -2,6 +2,7 @@
 # Copyright (c) 2024, Advanced Micro Devices, Inc.
 
 set(go_amd_smi_headers
+  ${CMAKE_CURRENT_SOURCE_DIR}/../include/goamdsmi.h
   ${CMAKE_CURRENT_SOURCE_DIR}/amdsmi_go_shim.h
   CACHE INTERNAL "")
 

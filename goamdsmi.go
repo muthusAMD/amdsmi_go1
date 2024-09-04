@@ -43,106 +43,105 @@ package goamdsmi
 #cgo LDFLAGS: -L/opt/rocm/lib -lgoamdsmi_shim64 -Wl,--unresolved-symbols=ignore-in-object-files
 #include <stdint.h>
 #include <goamdsmi.h>
-#include <goamdsmi_shim.h>
 #include <amdsmi_go_shim.h>
 */
 import "C"
 
 //GPU ROCM or AMDSMI calls
 func GO_gpu_init() (bool) {
-	return bool(C.goamdsmi_gpu_init())
+	return bool(C.go_shim_amdsmigpu_init())
 }
 
 func GO_gpu_shutdown() (bool) {
-	return bool(C.goamdsmi_gpu_shutdown())
+	return bool(C.go_shim_amdsmigpu_shutdown())
 }
 
 func GO_gpu_num_monitor_devices() (uint) {
-	return uint(C.goamdsmi_gpu_num_monitor_devices())
+	return uint(C.go_shim_amdsmigpu_num_monitor_devices())
 }
 
 func GO_gpu_dev_name_get(i int) (*C.char) {
-	return C.goamdsmi_gpu_dev_name_get(C.uint(i))
+	return C.go_shim_amdsmigpu_dev_name_get(C.uint(i))
 }
 
 func GO_gpu_dev_id_get(i int) (C.uint16_t) {
-	return C.uint16_t(C.goamdsmi_gpu_dev_id_get(C.uint(i)))
+	return C.uint16_t(C.go_shim_amdsmigpu_dev_id_get(C.uint(i)))
 }
 
 func GO_gpu_dev_pci_id_get(i int) (C.uint64_t) {
-	return C.goamdsmi_gpu_dev_pci_id_get(C.uint(i))
+	return C.go_shim_amdsmigpu_dev_pci_id_get(C.uint(i))
 }
 
 func GO_gpu_dev_vbios_version_get(i int) (*C.char) {
-	return C.goamdsmi_gpu_dev_vbios_version_get(C.uint(i))
+	return C.go_shim_amdsmigpu_dev_vbios_version_get(C.uint(i))
 }
 
 func GO_gpu_dev_vendor_name_get(i int) (*C.char) {
-	return C.goamdsmi_gpu_dev_vendor_name_get(C.uint(i))
+	return C.go_shim_amdsmigpu_dev_vendor_name_get(C.uint(i))
 }
 
 func GO_gpu_dev_power_cap_get(i int) (C.uint64_t) {
-    return C.goamdsmi_gpu_dev_power_cap_get(C.uint(i))
+    return C.go_shim_amdsmigpu_dev_power_cap_get(C.uint(i))
 }
 
 func GO_gpu_dev_power_get(i int) (C.uint64_t) {
-    return C.goamdsmi_gpu_dev_power_get(C.uint(i))
+    return C.go_shim_amdsmigpu_dev_power_get(C.uint(i))
 }
 
 func GO_gpu_dev_temp_metric_get(i int, sensor int, metric int) (C.uint64_t) {
-    return C.goamdsmi_gpu_dev_temp_metric_get(C.uint(i), C.uint(sensor), C.uint(metric))
+    return C.go_shim_amdsmigpu_dev_temp_metric_get(C.uint(i), C.uint(sensor), C.uint(metric))
 }
 
 func GO_gpu_dev_perf_level_get(i int) (C.uint32_t) {
-	return C.goamdsmi_gpu_dev_perf_level_get(C.uint(i))
+	return C.go_shim_amdsmigpu_dev_perf_level_get(C.uint(i))
 }
 
 func GO_gpu_dev_overdrive_level_get(i int) (C.uint32_t) {
-	return C.goamdsmi_gpu_dev_overdrive_level_get(C.uint(i))
+	return C.go_shim_amdsmigpu_dev_perf_level_get(C.uint(i))
 }
 
 func GO_gpu_dev_mem_overdrive_level_get(i int) (C.uint32_t) {
-	return C.goamdsmi_gpu_dev_mem_overdrive_level_get(C.uint(i))
+	return C.go_shim_amdsmi_gpu_dev_mem_overdrive_level_get(C.uint(i))
 }
 
 func GO_gpu_dev_gpu_clk_freq_get_sclk(i int) (C.uint64_t) {
-	return C.goamdsmi_gpu_dev_gpu_clk_freq_get_sclk(C.uint(i))
+	return C.go_shim_amdsmigpu_dev_gpu_clk_freq_get_sclk(C.uint(i))
 }
 
 func GO_gpu_dev_gpu_clk_freq_get_mclk(i int) (C.uint64_t) {
-    return C.goamdsmi_gpu_dev_gpu_clk_freq_get_mclk(C.uint(i))
+    return C.go_shim_amdsmigpu_dev_gpu_clk_freq_get_mclk(C.uint(i))
 }
 
 func GO_gpu_od_volt_freq_range_min_get_sclk(i int) (C.uint64_t) {
-	return C.goamdsmi_gpu_od_volt_freq_range_min_get_sclk(C.uint(i))
+	return C.go_shim_amdsmigpu_od_volt_freq_range_min_get_sclk(C.uint(i))
 }
 
 func GO_gpu_od_volt_freq_range_min_get_mclk(i int) (C.uint64_t) {
-	return C.goamdsmi_gpu_od_volt_freq_range_min_get_mclk(C.uint(i))
+	return C.go_shim_amdsmigpu_od_volt_freq_range_min_get_mclk(C.uint(i))
 }
 
 func GO_gpu_od_volt_freq_range_max_get_sclk(i int) (C.uint64_t) {
-	return C.goamdsmi_gpu_od_volt_freq_range_max_get_sclk(C.uint(i))
+	return C.go_shim_amdsmigpu_od_volt_freq_range_max_get_sclk(C.uint(i))
 }
 
 func GO_gpu_od_volt_freq_range_max_get_mclk(i int) (C.uint64_t) {
-	return C.goamdsmi_gpu_od_volt_freq_range_max_get_mclk(C.uint(i))
+	return C.go_shim_amdsmigpu_od_volt_freq_range_max_get_mclk(C.uint(i))
 }
 
 func GO_gpu_dev_gpu_busy_percent_get(i int) (C.uint32_t) {
-	return C.goamdsmi_gpu_dev_gpu_busy_percent_get(C.uint(i))
+	return C.go_shim_amdsmigpu_dev_gpu_busy_percent_get(C.uint(i))
 }
 
 func GO_gpu_dev_gpu_memory_busy_percent_get(i int) (C.uint64_t) {
-	return C.goamdsmi_gpu_dev_gpu_memory_busy_percent_get(C.uint(i))
+	return C.go_shim_amdsmigpu_dev_gpu_memory_busy_percent_get(C.uint(i))
 }
 
 func GO_gpu_dev_gpu_memory_usage_get (i int) (C.uint64_t) {
-	return C.goamdsmi_gpu_dev_gpu_memory_usage_get(C.uint(i))
+	return C.go_shim_amdsmigpu_dev_gpu_memory_usage_get(C.uint(i))
 }
 
 func GO_gpu_dev_gpu_memory_total_get (i int) (C.uint64_t) {
-	return C.goamdsmi_gpu_dev_gpu_memory_total_get(C.uint(i))
+	return C.go_shim_amdsmigpu_dev_gpu_memory_total_get(C.uint(i))
 }
 
 //CPU ESMI or AMDSMI calls
