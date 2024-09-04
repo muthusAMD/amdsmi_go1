@@ -537,7 +537,7 @@ uint64_t go_shim_amdsmigpu_dev_power_get(uint32_t dv_ind)
             if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_2)) {printf("AMDSMI, Success for Gpu:%d, GpuPowerCurrentFromMetrics:%llu, GpuPowerCurrentFromMetricsinWatt:%.6f\n", dv_ind, (unsigned long long)gpu_power_temp, ((double)(gpu_power_temp))/1000000);}
         }
         gpu_power = gpu_power_temp;
-        gpu_power = (*gpu_power)*1000000;//to maintain backward compatibity with old ROCM SMI
+        gpu_power = (gpu_power)*1000000;//to maintain backward compatibity with old ROCM SMI
         if (enable_debug_level(GOAMDSMI_DEBUG_LEVEL_1)) {printf("AMDSMI, Success for Gpu:%d, GpuPowerFromMetrics:%llu, GpuPowerFromMetricsinWatt:%.6f\n", dv_ind, (unsigned long long)(gpu_power), ((double)(gpu_power))/1000000);}
         return gpu_power;
     }
@@ -590,7 +590,7 @@ uint64_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_sclk(uint32_t dv_ind)
     return gpu_sclk_freq;
 }
 
-uint64_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_mclk(uint32_t dv_ind, uint64_t* gpu_memclk_freq)
+uint64_t go_shim_amdsmigpu_dev_gpu_clk_freq_get_mclk(uint32_t dv_ind)
 {
     uint64_t gpu_memclk_freq  = GOAMDSMI_UINT64_MAX;
     amdsmi_frequencies_t freq = {0};
@@ -612,19 +612,19 @@ uint64_t go_shim_amdsmigpu_od_volt_freq_range_min_get_sclk(uint32_t dv_ind)
 uint64_t go_shim_amdsmigpu_od_volt_freq_range_min_get_mclk(uint32_t dv_ind)
 {
     uint64_t gpu_min_memclk = GOAMDSMI_UINT64_MAX;
-    return gpu_min_memclk
+    return gpu_min_memclk;
 }
 
 uint64_t go_shim_amdsmigpu_od_volt_freq_range_max_get_sclk(uint32_t dv_ind)
 {
     uint64_t gpu_max_sclk = GOAMDSMI_UINT64_MAX;
-    return gpu_max_sclk
+    return gpu_max_sclk;
 }
 
 uint64_t go_shim_amdsmigpu_od_volt_freq_range_max_get_mclk(uint32_t dv_ind)
 {
     uint64_t gpu_max_memclk = GOAMDSMI_UINT64_MAX;
-    return gpu_max_memclk
+    return gpu_max_memclk;
 }
 
 uint32_t go_shim_amdsmigpu_dev_gpu_busy_percent_get(uint32_t dv_ind)
