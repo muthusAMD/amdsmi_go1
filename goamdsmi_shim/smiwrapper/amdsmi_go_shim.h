@@ -162,7 +162,7 @@ uint32_t go_shim_amdsmicpu_number_of_threads_get();
  *  @retval ::Number of threads per core
  *  @retval Zero is returned upon failure.
  */
-uint32_t goamdsmi_cpu_threads_per_core_get();
+uint32_t go_shim_amdsmicpu_threads_per_core_get();
 
 /**
  *  @brief Go stub to get the number of threads available in the system
@@ -170,7 +170,7 @@ uint32_t goamdsmi_cpu_threads_per_core_get();
  *  @retval ::Number of threads
  *  @retval Zero is returned upon failure.
  */
-uint32_t goamdsmi_cpu_number_of_threads_get();
+uint32_t go_shim_amdsmicpu_number_of_threads_get();
 
 /**
  *  @brief Go stub to get the total number of processor sockets 
