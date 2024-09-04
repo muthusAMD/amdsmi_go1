@@ -449,7 +449,7 @@ uint32_t go_shim_amdsmigpu_num_monitor_devices()
 char* go_shim_amdsmigpu_dev_name_get(uint32_t dv_ind)
 {
 	uint32_t len = 256;
-    dev_name = (char*)malloc(sizeof(char)*len);dev_name[0] = '\0';
+    char* dev_name = (char*)malloc(sizeof(char)*len);dev_name[0] = '\0';
     strcpy(dev_name, GOAMDSMI_STRING_NA);
 	
     return dev_name;
@@ -475,7 +475,7 @@ uint64_t go_shim_amdsmigpu_dev_pci_id_get(uint32_t dv_ind)
 char* go_shim_amdsmigpu_dev_vendor_name_get(uint32_t dv_ind)
 {
     uint32_t len = 256;
-    gpu_vendor_name = (char*)malloc(sizeof(char)*len);gpu_vendor_name[0] = '\0';
+    char* gpu_vendor_name = (char*)malloc(sizeof(char)*len);gpu_vendor_name[0] = '\0';
     strcpy(gpu_vendor_name, GOAMDSMI_STRING_NA);
     
     return gpu_vendor_name;
@@ -484,7 +484,7 @@ char* go_shim_amdsmigpu_dev_vendor_name_get(uint32_t dv_ind)
 char* go_shim_amdsmigpu_dev_vbios_version_get(uint32_t dv_ind)
 {
     uint32_t len = 256;
-    vbios_version = (char*)malloc(sizeof(char)*len);vbios_version[0] = '\0';
+    char* vbios_version = (char*)malloc(sizeof(char)*len);vbios_version[0] = '\0';
     strcpy(vbios_version, GOAMDSMI_STRING_NA);
     
     return vbios_version;
