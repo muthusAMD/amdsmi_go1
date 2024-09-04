@@ -128,7 +128,7 @@ if ("${CMAKE_BUILD_TYPE}" STREQUAL Release)
 endif ()
 
 set(go_amd_smi_install_headers
-    include/goamdsmi.h
+    smiwrapper/goamdsmi.h
     smiwrapper/amdsmi_go_shim.h
 )
 
