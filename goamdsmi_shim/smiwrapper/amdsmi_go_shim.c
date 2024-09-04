@@ -37,6 +37,7 @@
  */
 
 #include <stdint.h>
+#include <string.h>
 #include "amdsmi_go_shim.h"
 #ifdef AMDSMI_BUILD
 #include <amd_smi/amdsmi.h>

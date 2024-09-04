@@ -36,7 +36,7 @@
  *
  */
 
-#include "goamdsmi.h"
+#include "../include/goamdsmi.h"
 ////////////////////////////////////////////////------------CPU------------////////////////////////////////////////////////
 /**
  *  @brief Go language stub to initialize the AMDSMI library
