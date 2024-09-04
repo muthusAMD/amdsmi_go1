@@ -97,9 +97,7 @@ set(go_amd_smi_includes)
 
 
 add_subdirectory(smiwrapper)
-list(APPEND go_amd_smi_headers include/goamdsmi.h ${go_amd_smi_headers})
-list(APPEND go_amd_smi_includes ${CMAKE_CURRENT_SOURCE_DIR}/include)
-
+list(APPEND go_amd_smi_headers smiwrapper/goamdsmi.h ${go_amd_smi_headers})
 list(APPEND go_amd_smi_headers smiwrapper/amdsmi_go_shim.h ${go_amd_smi_headers})
 list(APPEND go_amd_smi_sources smiwrapper/amdsmi_go_shim.c)
 list(APPEND go_amd_smi_includes ${CMAKE_CURRENT_SOURCE_DIR}/smiwrapper)
