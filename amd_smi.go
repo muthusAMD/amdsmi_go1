@@ -13,6 +13,8 @@
 package amd_smi
 
 /*
+#cgo CFLAGS: -Wall -I/opt/rocm/include
+#cgo LDFLAGS: -L/opt/rocm/lib -L/opt/rocm/lib64 -lamd_smi -Wl,--unresolved-symbols=ignore-in-object-files
 #define intgo swig_intgo
 typedef void *swig_voidp;
 
