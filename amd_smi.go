@@ -8995,7 +8995,7 @@ type Amdsmi_process_info_t interface {
 	GetCu_occupancy() (_swig_ret Uint32_t)
 }
 
-const AMDSMI_DEFAULT_VARIANT int = 0xFFFFFFFFFFFFFFFF
+const AMDSMI_DEFAULT_VARIANT int = 0xFFFFFFFF
 type SwigcptrAmdsmi_smu_fw_version_t uintptr
 
 func (p SwigcptrAmdsmi_smu_fw_version_t) Swigcptr() uintptr {
