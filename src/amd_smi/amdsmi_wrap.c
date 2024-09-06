@@ -16775,21 +16775,6 @@ intgo _wrap_amdsmi_get_socket_handles_amd_smi_bdd6da097c4a93d9(uint32_t *_swig_g
 }
 
 
-intgo _wrap_amdsmi_get_cpusocket_handles_amd_smi_bdd6da097c4a93d9(uint32_t *_swig_go_0, amdsmi_cpusocket_handle *_swig_go_1) {
-  uint32_t *arg1 = (uint32_t *) 0 ;
-  amdsmi_cpusocket_handle *arg2 = (amdsmi_cpusocket_handle *) 0 ;
-  amdsmi_status_t result;
-  intgo _swig_go_result;
-  
-  arg1 = *(uint32_t **)&_swig_go_0; 
-  arg2 = *(amdsmi_cpusocket_handle **)&_swig_go_1; 
-  
-  result = (amdsmi_status_t)amdsmi_get_cpusocket_handles(arg1,arg2);
-  _swig_go_result = (intgo)result; 
-  return _swig_go_result;
-}
-
-
 intgo _wrap_amdsmi_get_socket_info_amd_smi_bdd6da097c4a93d9(amdsmi_socket_handle _swig_go_0, long long _swig_go_1, _gostring_ _swig_go_2) {
   amdsmi_socket_handle arg1 = (amdsmi_socket_handle) 0 ;
   size_t arg2 ;
@@ -16886,23 +16871,6 @@ intgo _wrap_amdsmi_get_processor_handles_amd_smi_bdd6da097c4a93d9(amdsmi_socket_
   arg3 = *(amdsmi_processor_handle **)&_swig_go_2; 
   
   result = (amdsmi_status_t)amdsmi_get_processor_handles(arg1,arg2,arg3);
-  _swig_go_result = (intgo)result; 
-  return _swig_go_result;
-}
-
-
-intgo _wrap_amdsmi_get_cpucore_handles_amd_smi_bdd6da097c4a93d9(amdsmi_cpusocket_handle _swig_go_0, uint32_t *_swig_go_1, amdsmi_processor_handle *_swig_go_2) {
-  amdsmi_cpusocket_handle arg1 = (amdsmi_cpusocket_handle) 0 ;
-  uint32_t *arg2 = (uint32_t *) 0 ;
-  amdsmi_processor_handle *arg3 = (amdsmi_processor_handle *) 0 ;
-  amdsmi_status_t result;
-  intgo _swig_go_result;
-  
-  arg1 = *(amdsmi_cpusocket_handle *)&_swig_go_0; 
-  arg2 = *(uint32_t **)&_swig_go_1; 
-  arg3 = *(amdsmi_processor_handle **)&_swig_go_2; 
-  
-  result = (amdsmi_status_t)amdsmi_get_cpucore_handles(arg1,arg2,arg3);
   _swig_go_result = (intgo)result; 
   return _swig_go_result;
 }

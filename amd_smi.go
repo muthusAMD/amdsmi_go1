@@ -1213,13 +1213,11 @@ extern swig_voidp _wrap_amdsmi_hsmp_freqlimit_src_names_get_amd_smi_bdd6da097c4a
 extern swig_intgo _wrap_amdsmi_init_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
 extern swig_intgo _wrap_amdsmi_shut_down_amd_smi_bdd6da097c4a93d9(void);
 extern swig_intgo _wrap_amdsmi_get_socket_handles_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_voidp arg2);
-extern swig_intgo _wrap_amdsmi_get_cpusocket_handles_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_voidp arg2);
 extern swig_intgo _wrap_amdsmi_get_socket_info_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_45 arg2, swig_type_46 arg3);
 extern swig_intgo _wrap_amdsmi_get_processor_info_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_47 arg2, swig_type_48 arg3);
 extern swig_intgo _wrap_amdsmi_get_processor_count_from_handles_amd_smi_bdd6da097c4a93d9(swig_voidp arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5);
 extern swig_intgo _wrap_amdsmi_get_processor_handles_by_type_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_intgo arg2, swig_voidp arg3, uintptr_t arg4);
 extern swig_intgo _wrap_amdsmi_get_processor_handles_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, swig_voidp arg3);
-extern swig_intgo _wrap_amdsmi_get_cpucore_handles_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, swig_voidp arg3);
 extern swig_intgo _wrap_amdsmi_get_processor_type_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_voidp arg2);
 extern swig_intgo _wrap_amdsmi_get_processor_handle_from_bdf_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_voidp arg2);
 extern swig_intgo _wrap_amdsmi_get_gpu_id_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
@@ -10423,14 +10421,6 @@ func Amdsmi_get_socket_handles(arg1 Uint32_t, arg2 *uintptr) (_swig_ret Amdsmi_s
 	return swig_r
 }
 
-func Amdsmi_get_cpusocket_handles(arg1 Uint32_t, arg2 *uintptr) (_swig_ret Amdsmi_status_t) {
-	var swig_r Amdsmi_status_t
-	_swig_i_0 := arg1.Swigcptr()
-	_swig_i_1 := arg2
-	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpusocket_handles_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.swig_voidp(_swig_i_1)))
-	return swig_r
-}
-
 func Amdsmi_get_socket_info(arg1 uintptr, arg2 int64, arg3 string) (_swig_ret Amdsmi_status_t) {
 	var swig_r Amdsmi_status_t
 	_swig_i_0 := arg1
@@ -10482,15 +10472,6 @@ func Amdsmi_get_processor_handles(arg1 uintptr, arg2 Uint32_t, arg3 *uintptr) (_
 	_swig_i_1 := arg2.Swigcptr()
 	_swig_i_2 := arg3
 	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_processor_handles_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_voidp(_swig_i_2)))
-	return swig_r
-}
-
-func Amdsmi_get_cpucore_handles(arg1 uintptr, arg2 Uint32_t, arg3 *uintptr) (_swig_ret Amdsmi_status_t) {
-	var swig_r Amdsmi_status_t
-	_swig_i_0 := arg1
-	_swig_i_1 := arg2.Swigcptr()
-	_swig_i_2 := arg3
-	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpucore_handles_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_voidp(_swig_i_2)))
 	return swig_r
 }
 
