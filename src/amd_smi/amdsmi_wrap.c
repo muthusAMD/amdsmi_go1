@@ -176,10 +176,10 @@ swiggo_size_assert(double, 8)
 #ifdef __cplusplus
 extern "C" {
 #endif
-//extern void crosscall2(void (*fn)(void *, int), void *, int);
+extern void crosscall2(void (*fn)(void *, int), void *, int);
 extern char* _cgo_topofstack(void) __attribute__ ((weak));
 extern void _cgo_allocate(void *, int);
-//extern void _cgo_panic(void *, int);
+extern void _cgo_panic(void *, int);
 #ifdef __cplusplus
 }
 #endif
@@ -197,7 +197,7 @@ static void _swig_gopanic(const char *p) {
     const char *p;
   } SWIGSTRUCTPACKED a;
   a.p = p;
-  //crosscall2(_cgo_panic, &a, (int) sizeof a);
+  crosscall2(_cgo_panic, &a, (int) sizeof a);
 }
 
 
@@ -13838,6 +13838,2897 @@ void _wrap_delete_amdsmi_process_info_t_amd_smi_bdd6da097c4a93d9(amdsmi_process_
 }
 
 
+void _wrap_amdsmi_smu_fw_version_t_debug_set_amd_smi_bdd6da097c4a93d9(amdsmi_smu_fw_version_t *_swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_smu_fw_version_t *arg1 = (amdsmi_smu_fw_version_t *) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  
+  arg1 = *(amdsmi_smu_fw_version_t **)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  if (arg1) (arg1)->debug = arg2;
+  
+}
+
+
+uint8_t *_wrap_amdsmi_smu_fw_version_t_debug_get_amd_smi_bdd6da097c4a93d9(amdsmi_smu_fw_version_t *_swig_go_0) {
+  amdsmi_smu_fw_version_t *arg1 = (amdsmi_smu_fw_version_t *) 0 ;
+  uint8_t result;
+  uint8_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_smu_fw_version_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->debug);
+  {
+    uint8_t * resultptr = (uint8_t *)malloc(sizeof(uint8_t));
+    memmove(resultptr, &result, sizeof(uint8_t));
+    *(uint8_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_smu_fw_version_t_minor_set_amd_smi_bdd6da097c4a93d9(amdsmi_smu_fw_version_t *_swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_smu_fw_version_t *arg1 = (amdsmi_smu_fw_version_t *) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  
+  arg1 = *(amdsmi_smu_fw_version_t **)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  if (arg1) (arg1)->minor = arg2;
+  
+}
+
+
+uint8_t *_wrap_amdsmi_smu_fw_version_t_minor_get_amd_smi_bdd6da097c4a93d9(amdsmi_smu_fw_version_t *_swig_go_0) {
+  amdsmi_smu_fw_version_t *arg1 = (amdsmi_smu_fw_version_t *) 0 ;
+  uint8_t result;
+  uint8_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_smu_fw_version_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->minor);
+  {
+    uint8_t * resultptr = (uint8_t *)malloc(sizeof(uint8_t));
+    memmove(resultptr, &result, sizeof(uint8_t));
+    *(uint8_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_smu_fw_version_t_major_set_amd_smi_bdd6da097c4a93d9(amdsmi_smu_fw_version_t *_swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_smu_fw_version_t *arg1 = (amdsmi_smu_fw_version_t *) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  
+  arg1 = *(amdsmi_smu_fw_version_t **)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  if (arg1) (arg1)->major = arg2;
+  
+}
+
+
+uint8_t *_wrap_amdsmi_smu_fw_version_t_major_get_amd_smi_bdd6da097c4a93d9(amdsmi_smu_fw_version_t *_swig_go_0) {
+  amdsmi_smu_fw_version_t *arg1 = (amdsmi_smu_fw_version_t *) 0 ;
+  uint8_t result;
+  uint8_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_smu_fw_version_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->major);
+  {
+    uint8_t * resultptr = (uint8_t *)malloc(sizeof(uint8_t));
+    memmove(resultptr, &result, sizeof(uint8_t));
+    *(uint8_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_smu_fw_version_t_unused_set_amd_smi_bdd6da097c4a93d9(amdsmi_smu_fw_version_t *_swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_smu_fw_version_t *arg1 = (amdsmi_smu_fw_version_t *) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  
+  arg1 = *(amdsmi_smu_fw_version_t **)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  if (arg1) (arg1)->unused = arg2;
+  
+}
+
+
+uint8_t *_wrap_amdsmi_smu_fw_version_t_unused_get_amd_smi_bdd6da097c4a93d9(amdsmi_smu_fw_version_t *_swig_go_0) {
+  amdsmi_smu_fw_version_t *arg1 = (amdsmi_smu_fw_version_t *) 0 ;
+  uint8_t result;
+  uint8_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_smu_fw_version_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->unused);
+  {
+    uint8_t * resultptr = (uint8_t *)malloc(sizeof(uint8_t));
+    memmove(resultptr, &result, sizeof(uint8_t));
+    *(uint8_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+amdsmi_smu_fw_version_t *_wrap_new_amdsmi_smu_fw_version_t_amd_smi_bdd6da097c4a93d9() {
+  amdsmi_smu_fw_version_t *result = 0 ;
+  amdsmi_smu_fw_version_t *_swig_go_result;
+  
+  
+  result = (amdsmi_smu_fw_version_t *)calloc(1, sizeof(amdsmi_smu_fw_version_t));
+  *(amdsmi_smu_fw_version_t **)&_swig_go_result = (amdsmi_smu_fw_version_t *)result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_delete_amdsmi_smu_fw_version_t_amd_smi_bdd6da097c4a93d9(amdsmi_smu_fw_version_t *_swig_go_0) {
+  amdsmi_smu_fw_version_t *arg1 = (amdsmi_smu_fw_version_t *) 0 ;
+  
+  arg1 = *(amdsmi_smu_fw_version_t **)&_swig_go_0; 
+  
+  free((char *) arg1);
+  
+}
+
+
+void _wrap_amdsmi_ddr_bw_metrics_t_max_bw_set_amd_smi_bdd6da097c4a93d9(amdsmi_ddr_bw_metrics_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_ddr_bw_metrics_t *arg1 = (amdsmi_ddr_bw_metrics_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_ddr_bw_metrics_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_bw = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_ddr_bw_metrics_t_max_bw_get_amd_smi_bdd6da097c4a93d9(amdsmi_ddr_bw_metrics_t *_swig_go_0) {
+  amdsmi_ddr_bw_metrics_t *arg1 = (amdsmi_ddr_bw_metrics_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_ddr_bw_metrics_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_bw);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_ddr_bw_metrics_t_utilized_bw_set_amd_smi_bdd6da097c4a93d9(amdsmi_ddr_bw_metrics_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_ddr_bw_metrics_t *arg1 = (amdsmi_ddr_bw_metrics_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_ddr_bw_metrics_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->utilized_bw = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_ddr_bw_metrics_t_utilized_bw_get_amd_smi_bdd6da097c4a93d9(amdsmi_ddr_bw_metrics_t *_swig_go_0) {
+  amdsmi_ddr_bw_metrics_t *arg1 = (amdsmi_ddr_bw_metrics_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_ddr_bw_metrics_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->utilized_bw);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_ddr_bw_metrics_t_utilized_pct_set_amd_smi_bdd6da097c4a93d9(amdsmi_ddr_bw_metrics_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_ddr_bw_metrics_t *arg1 = (amdsmi_ddr_bw_metrics_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_ddr_bw_metrics_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->utilized_pct = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_ddr_bw_metrics_t_utilized_pct_get_amd_smi_bdd6da097c4a93d9(amdsmi_ddr_bw_metrics_t *_swig_go_0) {
+  amdsmi_ddr_bw_metrics_t *arg1 = (amdsmi_ddr_bw_metrics_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_ddr_bw_metrics_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->utilized_pct);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+amdsmi_ddr_bw_metrics_t *_wrap_new_amdsmi_ddr_bw_metrics_t_amd_smi_bdd6da097c4a93d9() {
+  amdsmi_ddr_bw_metrics_t *result = 0 ;
+  amdsmi_ddr_bw_metrics_t *_swig_go_result;
+  
+  
+  result = (amdsmi_ddr_bw_metrics_t *)calloc(1, sizeof(amdsmi_ddr_bw_metrics_t));
+  *(amdsmi_ddr_bw_metrics_t **)&_swig_go_result = (amdsmi_ddr_bw_metrics_t *)result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_delete_amdsmi_ddr_bw_metrics_t_amd_smi_bdd6da097c4a93d9(amdsmi_ddr_bw_metrics_t *_swig_go_0) {
+  amdsmi_ddr_bw_metrics_t *arg1 = (amdsmi_ddr_bw_metrics_t *) 0 ;
+  
+  arg1 = *(amdsmi_ddr_bw_metrics_t **)&_swig_go_0; 
+  
+  free((char *) arg1);
+  
+}
+
+
+void _wrap_amdsmi_temp_range_refresh_rate_t_Xrange_set_amd_smi_bdd6da097c4a93d9(amdsmi_temp_range_refresh_rate_t *_swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_temp_range_refresh_rate_t *arg1 = (amdsmi_temp_range_refresh_rate_t *) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  
+  arg1 = *(amdsmi_temp_range_refresh_rate_t **)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  if (arg1) (arg1)->range = arg2;
+  
+}
+
+
+uint8_t *_wrap_amdsmi_temp_range_refresh_rate_t_Xrange_get_amd_smi_bdd6da097c4a93d9(amdsmi_temp_range_refresh_rate_t *_swig_go_0) {
+  amdsmi_temp_range_refresh_rate_t *arg1 = (amdsmi_temp_range_refresh_rate_t *) 0 ;
+  uint8_t result;
+  uint8_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_temp_range_refresh_rate_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->range);
+  {
+    uint8_t * resultptr = (uint8_t *)malloc(sizeof(uint8_t));
+    memmove(resultptr, &result, sizeof(uint8_t));
+    *(uint8_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_temp_range_refresh_rate_t_ref_rate_set_amd_smi_bdd6da097c4a93d9(amdsmi_temp_range_refresh_rate_t *_swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_temp_range_refresh_rate_t *arg1 = (amdsmi_temp_range_refresh_rate_t *) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  
+  arg1 = *(amdsmi_temp_range_refresh_rate_t **)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  if (arg1) (arg1)->ref_rate = arg2;
+  
+}
+
+
+uint8_t *_wrap_amdsmi_temp_range_refresh_rate_t_ref_rate_get_amd_smi_bdd6da097c4a93d9(amdsmi_temp_range_refresh_rate_t *_swig_go_0) {
+  amdsmi_temp_range_refresh_rate_t *arg1 = (amdsmi_temp_range_refresh_rate_t *) 0 ;
+  uint8_t result;
+  uint8_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_temp_range_refresh_rate_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->ref_rate);
+  {
+    uint8_t * resultptr = (uint8_t *)malloc(sizeof(uint8_t));
+    memmove(resultptr, &result, sizeof(uint8_t));
+    *(uint8_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+amdsmi_temp_range_refresh_rate_t *_wrap_new_amdsmi_temp_range_refresh_rate_t_amd_smi_bdd6da097c4a93d9() {
+  amdsmi_temp_range_refresh_rate_t *result = 0 ;
+  amdsmi_temp_range_refresh_rate_t *_swig_go_result;
+  
+  
+  result = (amdsmi_temp_range_refresh_rate_t *)calloc(1, sizeof(amdsmi_temp_range_refresh_rate_t));
+  *(amdsmi_temp_range_refresh_rate_t **)&_swig_go_result = (amdsmi_temp_range_refresh_rate_t *)result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_delete_amdsmi_temp_range_refresh_rate_t_amd_smi_bdd6da097c4a93d9(amdsmi_temp_range_refresh_rate_t *_swig_go_0) {
+  amdsmi_temp_range_refresh_rate_t *arg1 = (amdsmi_temp_range_refresh_rate_t *) 0 ;
+  
+  arg1 = *(amdsmi_temp_range_refresh_rate_t **)&_swig_go_0; 
+  
+  free((char *) arg1);
+  
+}
+
+
+void _wrap_amdsmi_dimm_power_t_power_set_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_power_t *_swig_go_0, uint16_t *_swig_go_1) {
+  amdsmi_dimm_power_t *arg1 = (amdsmi_dimm_power_t *) 0 ;
+  uint16_t arg2 ;
+  uint16_t *argp2 ;
+  
+  arg1 = *(amdsmi_dimm_power_t **)&_swig_go_0; 
+  
+  argp2 = (uint16_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint16_t");
+  }
+  arg2 = (uint16_t)*argp2;
+  
+  
+  if (arg1) (arg1)->power = arg2;
+  
+}
+
+
+uint16_t *_wrap_amdsmi_dimm_power_t_power_get_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_power_t *_swig_go_0) {
+  amdsmi_dimm_power_t *arg1 = (amdsmi_dimm_power_t *) 0 ;
+  uint16_t result;
+  uint16_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_dimm_power_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->power);
+  {
+    uint16_t * resultptr = (uint16_t *)malloc(sizeof(uint16_t));
+    memmove(resultptr, &result, sizeof(uint16_t));
+    *(uint16_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_dimm_power_t_update_rate_set_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_power_t *_swig_go_0, uint16_t *_swig_go_1) {
+  amdsmi_dimm_power_t *arg1 = (amdsmi_dimm_power_t *) 0 ;
+  uint16_t arg2 ;
+  uint16_t *argp2 ;
+  
+  arg1 = *(amdsmi_dimm_power_t **)&_swig_go_0; 
+  
+  argp2 = (uint16_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint16_t");
+  }
+  arg2 = (uint16_t)*argp2;
+  
+  
+  if (arg1) (arg1)->update_rate = arg2;
+  
+}
+
+
+uint16_t *_wrap_amdsmi_dimm_power_t_update_rate_get_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_power_t *_swig_go_0) {
+  amdsmi_dimm_power_t *arg1 = (amdsmi_dimm_power_t *) 0 ;
+  uint16_t result;
+  uint16_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_dimm_power_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->update_rate);
+  {
+    uint16_t * resultptr = (uint16_t *)malloc(sizeof(uint16_t));
+    memmove(resultptr, &result, sizeof(uint16_t));
+    *(uint16_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_dimm_power_t_dimm_addr_set_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_power_t *_swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_dimm_power_t *arg1 = (amdsmi_dimm_power_t *) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  
+  arg1 = *(amdsmi_dimm_power_t **)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  if (arg1) (arg1)->dimm_addr = arg2;
+  
+}
+
+
+uint8_t *_wrap_amdsmi_dimm_power_t_dimm_addr_get_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_power_t *_swig_go_0) {
+  amdsmi_dimm_power_t *arg1 = (amdsmi_dimm_power_t *) 0 ;
+  uint8_t result;
+  uint8_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_dimm_power_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->dimm_addr);
+  {
+    uint8_t * resultptr = (uint8_t *)malloc(sizeof(uint8_t));
+    memmove(resultptr, &result, sizeof(uint8_t));
+    *(uint8_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+amdsmi_dimm_power_t *_wrap_new_amdsmi_dimm_power_t_amd_smi_bdd6da097c4a93d9() {
+  amdsmi_dimm_power_t *result = 0 ;
+  amdsmi_dimm_power_t *_swig_go_result;
+  
+  
+  result = (amdsmi_dimm_power_t *)calloc(1, sizeof(amdsmi_dimm_power_t));
+  *(amdsmi_dimm_power_t **)&_swig_go_result = (amdsmi_dimm_power_t *)result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_delete_amdsmi_dimm_power_t_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_power_t *_swig_go_0) {
+  amdsmi_dimm_power_t *arg1 = (amdsmi_dimm_power_t *) 0 ;
+  
+  arg1 = *(amdsmi_dimm_power_t **)&_swig_go_0; 
+  
+  free((char *) arg1);
+  
+}
+
+
+void _wrap_amdsmi_dimm_thermal_t_sensor_set_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_thermal_t *_swig_go_0, uint16_t *_swig_go_1) {
+  amdsmi_dimm_thermal_t *arg1 = (amdsmi_dimm_thermal_t *) 0 ;
+  uint16_t arg2 ;
+  uint16_t *argp2 ;
+  
+  arg1 = *(amdsmi_dimm_thermal_t **)&_swig_go_0; 
+  
+  argp2 = (uint16_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint16_t");
+  }
+  arg2 = (uint16_t)*argp2;
+  
+  
+  if (arg1) (arg1)->sensor = arg2;
+  
+}
+
+
+uint16_t *_wrap_amdsmi_dimm_thermal_t_sensor_get_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_thermal_t *_swig_go_0) {
+  amdsmi_dimm_thermal_t *arg1 = (amdsmi_dimm_thermal_t *) 0 ;
+  uint16_t result;
+  uint16_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_dimm_thermal_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->sensor);
+  {
+    uint16_t * resultptr = (uint16_t *)malloc(sizeof(uint16_t));
+    memmove(resultptr, &result, sizeof(uint16_t));
+    *(uint16_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_dimm_thermal_t_update_rate_set_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_thermal_t *_swig_go_0, uint16_t *_swig_go_1) {
+  amdsmi_dimm_thermal_t *arg1 = (amdsmi_dimm_thermal_t *) 0 ;
+  uint16_t arg2 ;
+  uint16_t *argp2 ;
+  
+  arg1 = *(amdsmi_dimm_thermal_t **)&_swig_go_0; 
+  
+  argp2 = (uint16_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint16_t");
+  }
+  arg2 = (uint16_t)*argp2;
+  
+  
+  if (arg1) (arg1)->update_rate = arg2;
+  
+}
+
+
+uint16_t *_wrap_amdsmi_dimm_thermal_t_update_rate_get_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_thermal_t *_swig_go_0) {
+  amdsmi_dimm_thermal_t *arg1 = (amdsmi_dimm_thermal_t *) 0 ;
+  uint16_t result;
+  uint16_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_dimm_thermal_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->update_rate);
+  {
+    uint16_t * resultptr = (uint16_t *)malloc(sizeof(uint16_t));
+    memmove(resultptr, &result, sizeof(uint16_t));
+    *(uint16_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_dimm_thermal_t_dimm_addr_set_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_thermal_t *_swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_dimm_thermal_t *arg1 = (amdsmi_dimm_thermal_t *) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  
+  arg1 = *(amdsmi_dimm_thermal_t **)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  if (arg1) (arg1)->dimm_addr = arg2;
+  
+}
+
+
+uint8_t *_wrap_amdsmi_dimm_thermal_t_dimm_addr_get_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_thermal_t *_swig_go_0) {
+  amdsmi_dimm_thermal_t *arg1 = (amdsmi_dimm_thermal_t *) 0 ;
+  uint8_t result;
+  uint8_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_dimm_thermal_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->dimm_addr);
+  {
+    uint8_t * resultptr = (uint8_t *)malloc(sizeof(uint8_t));
+    memmove(resultptr, &result, sizeof(uint8_t));
+    *(uint8_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_dimm_thermal_t_temp_set_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_thermal_t *_swig_go_0, float _swig_go_1) {
+  amdsmi_dimm_thermal_t *arg1 = (amdsmi_dimm_thermal_t *) 0 ;
+  float arg2 ;
+  
+  arg1 = *(amdsmi_dimm_thermal_t **)&_swig_go_0; 
+  arg2 = (float)_swig_go_1; 
+  
+  if (arg1) (arg1)->temp = arg2;
+  
+}
+
+
+float _wrap_amdsmi_dimm_thermal_t_temp_get_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_thermal_t *_swig_go_0) {
+  amdsmi_dimm_thermal_t *arg1 = (amdsmi_dimm_thermal_t *) 0 ;
+  float result;
+  float _swig_go_result;
+  
+  arg1 = *(amdsmi_dimm_thermal_t **)&_swig_go_0; 
+  
+  result = (float) ((arg1)->temp);
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+amdsmi_dimm_thermal_t *_wrap_new_amdsmi_dimm_thermal_t_amd_smi_bdd6da097c4a93d9() {
+  amdsmi_dimm_thermal_t *result = 0 ;
+  amdsmi_dimm_thermal_t *_swig_go_result;
+  
+  
+  result = (amdsmi_dimm_thermal_t *)calloc(1, sizeof(amdsmi_dimm_thermal_t));
+  *(amdsmi_dimm_thermal_t **)&_swig_go_result = (amdsmi_dimm_thermal_t *)result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_delete_amdsmi_dimm_thermal_t_amd_smi_bdd6da097c4a93d9(amdsmi_dimm_thermal_t *_swig_go_0) {
+  amdsmi_dimm_thermal_t *arg1 = (amdsmi_dimm_thermal_t *) 0 ;
+  
+  arg1 = *(amdsmi_dimm_thermal_t **)&_swig_go_0; 
+  
+  free((char *) arg1);
+  
+}
+
+
+intgo _wrap_AGG_BW0_amd_smi_bdd6da097c4a93d9() {
+  int result;
+  intgo _swig_go_result;
+  
+  
+  result = AGG_BW0;
+  
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_RD_BW0_amd_smi_bdd6da097c4a93d9() {
+  int result;
+  intgo _swig_go_result;
+  
+  
+  result = RD_BW0;
+  
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_WR_BW0_amd_smi_bdd6da097c4a93d9() {
+  int result;
+  intgo _swig_go_result;
+  
+  
+  result = WR_BW0;
+  
+  _swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_link_id_bw_type_t_bw_type_set_amd_smi_bdd6da097c4a93d9(amdsmi_link_id_bw_type_t *_swig_go_0, intgo _swig_go_1) {
+  amdsmi_link_id_bw_type_t *arg1 = (amdsmi_link_id_bw_type_t *) 0 ;
+  amdsmi_io_bw_encoding_t arg2 ;
+  
+  arg1 = *(amdsmi_link_id_bw_type_t **)&_swig_go_0; 
+  arg2 = (amdsmi_io_bw_encoding_t)_swig_go_1; 
+  
+  if (arg1) (arg1)->bw_type = arg2;
+  
+}
+
+
+intgo _wrap_amdsmi_link_id_bw_type_t_bw_type_get_amd_smi_bdd6da097c4a93d9(amdsmi_link_id_bw_type_t *_swig_go_0) {
+  amdsmi_link_id_bw_type_t *arg1 = (amdsmi_link_id_bw_type_t *) 0 ;
+  amdsmi_io_bw_encoding_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_link_id_bw_type_t **)&_swig_go_0; 
+  
+  result = (amdsmi_io_bw_encoding_t) ((arg1)->bw_type);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_link_id_bw_type_t_link_name_set_amd_smi_bdd6da097c4a93d9(amdsmi_link_id_bw_type_t *_swig_go_0, _gostring_ _swig_go_1) {
+  amdsmi_link_id_bw_type_t *arg1 = (amdsmi_link_id_bw_type_t *) 0 ;
+  char *arg2 = (char *) 0 ;
+  
+  arg1 = *(amdsmi_link_id_bw_type_t **)&_swig_go_0; 
+  
+  arg2 = (char *)malloc(_swig_go_1.n + 1);
+  memcpy(arg2, _swig_go_1.p, _swig_go_1.n);
+  arg2[_swig_go_1.n] = '\0';
+  
+  
+  {
+    free(arg1->link_name);
+    if (arg2) {
+      arg1->link_name = (char *) malloc(strlen((const char *)arg2)+1);
+      strcpy((char *)arg1->link_name, (const char *)arg2);
+    } else {
+      arg1->link_name = 0;
+    }
+  }
+  
+  free(arg2); 
+}
+
+
+_gostring_ _wrap_amdsmi_link_id_bw_type_t_link_name_get_amd_smi_bdd6da097c4a93d9(amdsmi_link_id_bw_type_t *_swig_go_0) {
+  amdsmi_link_id_bw_type_t *arg1 = (amdsmi_link_id_bw_type_t *) 0 ;
+  char *result = 0 ;
+  _gostring_ _swig_go_result;
+  
+  arg1 = *(amdsmi_link_id_bw_type_t **)&_swig_go_0; 
+  
+  result = (char *) ((arg1)->link_name);
+  _swig_go_result = Swig_AllocateString((char*)result, result ? strlen((char*)result) : 0); 
+  return _swig_go_result;
+}
+
+
+amdsmi_link_id_bw_type_t *_wrap_new_amdsmi_link_id_bw_type_t_amd_smi_bdd6da097c4a93d9() {
+  amdsmi_link_id_bw_type_t *result = 0 ;
+  amdsmi_link_id_bw_type_t *_swig_go_result;
+  
+  
+  result = (amdsmi_link_id_bw_type_t *)calloc(1, sizeof(amdsmi_link_id_bw_type_t));
+  *(amdsmi_link_id_bw_type_t **)&_swig_go_result = (amdsmi_link_id_bw_type_t *)result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_delete_amdsmi_link_id_bw_type_t_amd_smi_bdd6da097c4a93d9(amdsmi_link_id_bw_type_t *_swig_go_0) {
+  amdsmi_link_id_bw_type_t *arg1 = (amdsmi_link_id_bw_type_t *) 0 ;
+  
+  arg1 = *(amdsmi_link_id_bw_type_t **)&_swig_go_0; 
+  
+  free((char *) arg1);
+  
+}
+
+
+void _wrap_amdsmi_dpm_level_t_max_dpm_level_set_amd_smi_bdd6da097c4a93d9(amdsmi_dpm_level_t *_swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_dpm_level_t *arg1 = (amdsmi_dpm_level_t *) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  
+  arg1 = *(amdsmi_dpm_level_t **)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_dpm_level = arg2;
+  
+}
+
+
+uint8_t *_wrap_amdsmi_dpm_level_t_max_dpm_level_get_amd_smi_bdd6da097c4a93d9(amdsmi_dpm_level_t *_swig_go_0) {
+  amdsmi_dpm_level_t *arg1 = (amdsmi_dpm_level_t *) 0 ;
+  uint8_t result;
+  uint8_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_dpm_level_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_dpm_level);
+  {
+    uint8_t * resultptr = (uint8_t *)malloc(sizeof(uint8_t));
+    memmove(resultptr, &result, sizeof(uint8_t));
+    *(uint8_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_dpm_level_t_min_dpm_level_set_amd_smi_bdd6da097c4a93d9(amdsmi_dpm_level_t *_swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_dpm_level_t *arg1 = (amdsmi_dpm_level_t *) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  
+  arg1 = *(amdsmi_dpm_level_t **)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  if (arg1) (arg1)->min_dpm_level = arg2;
+  
+}
+
+
+uint8_t *_wrap_amdsmi_dpm_level_t_min_dpm_level_get_amd_smi_bdd6da097c4a93d9(amdsmi_dpm_level_t *_swig_go_0) {
+  amdsmi_dpm_level_t *arg1 = (amdsmi_dpm_level_t *) 0 ;
+  uint8_t result;
+  uint8_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_dpm_level_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->min_dpm_level);
+  {
+    uint8_t * resultptr = (uint8_t *)malloc(sizeof(uint8_t));
+    memmove(resultptr, &result, sizeof(uint8_t));
+    *(uint8_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+amdsmi_dpm_level_t *_wrap_new_amdsmi_dpm_level_t_amd_smi_bdd6da097c4a93d9() {
+  amdsmi_dpm_level_t *result = 0 ;
+  amdsmi_dpm_level_t *_swig_go_result;
+  
+  
+  result = (amdsmi_dpm_level_t *)calloc(1, sizeof(amdsmi_dpm_level_t));
+  *(amdsmi_dpm_level_t **)&_swig_go_result = (amdsmi_dpm_level_t *)result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_delete_amdsmi_dpm_level_t_amd_smi_bdd6da097c4a93d9(amdsmi_dpm_level_t *_swig_go_0) {
+  amdsmi_dpm_level_t *arg1 = (amdsmi_dpm_level_t *) 0 ;
+  
+  arg1 = *(amdsmi_dpm_level_t **)&_swig_go_0; 
+  
+  free((char *) arg1);
+  
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_accumulation_counter_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->accumulation_counter = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_accumulation_counter_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->accumulation_counter);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_socket_temperature = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_socket_temperature);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_vr_temperature = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_vr_temperature);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_hbm_temperature = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_hbm_temperature);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_socket_temperature_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_socket_temperature_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_vr_temperature_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_vr_temperature_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_hbm_temperature_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_hbm_temperature_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_socket_power_limit_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->socket_power_limit = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_socket_power_limit_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->socket_power_limit);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_max_socket_power_limit_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_socket_power_limit = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_max_socket_power_limit_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_socket_power_limit);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_socket_power_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->socket_power = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_socket_power_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->socket_power);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_timestamp_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->timestamp = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_timestamp_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->timestamp);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_socket_energy_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->socket_energy_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_socket_energy_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->socket_energy_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_ccd_energy_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->ccd_energy_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_ccd_energy_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->ccd_energy_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_xcd_energy_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->xcd_energy_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_xcd_energy_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->xcd_energy_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_aid_energy_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->aid_energy_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_aid_energy_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->aid_energy_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_hbm_energy_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->hbm_energy_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_hbm_energy_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->hbm_energy_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_limit_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->cclk_frequency_limit = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_limit_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->cclk_frequency_limit);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_limit_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->gfxclk_frequency_limit = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_limit_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->gfxclk_frequency_limit);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->fclk_frequency = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->fclk_frequency);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->uclk_frequency = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->uclk_frequency);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint32_t *b = (uint32_t *) arg1->socclk_frequency;
+    for (ii = 0; ii < (size_t)4; ii++) b[ii] = *((uint32_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint32_t (*_wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[4] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *result = 0 ;
+  uint32_t (*_swig_go_result)[4];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint32_t *)(uint32_t *) ((arg1)->socclk_frequency);
+  *(uint32_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint32_t *b = (uint32_t *) arg1->vclk_frequency;
+    for (ii = 0; ii < (size_t)4; ii++) b[ii] = *((uint32_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint32_t (*_wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[4] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *result = 0 ;
+  uint32_t (*_swig_go_result)[4];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint32_t *)(uint32_t *) ((arg1)->vclk_frequency);
+  *(uint32_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint32_t *b = (uint32_t *) arg1->dclk_frequency;
+    for (ii = 0; ii < (size_t)4; ii++) b[ii] = *((uint32_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint32_t (*_wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[4] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *result = 0 ;
+  uint32_t (*_swig_go_result)[4];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint32_t *)(uint32_t *) ((arg1)->dclk_frequency);
+  *(uint32_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint32_t *b = (uint32_t *) arg1->lclk_frequency;
+    for (ii = 0; ii < (size_t)4; ii++) b[ii] = *((uint32_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint32_t (*_wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[4] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *result = 0 ;
+  uint32_t (*_swig_go_result)[4];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint32_t *)(uint32_t *) ((arg1)->lclk_frequency);
+  *(uint32_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint64_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint64_t *b = (uint64_t *) arg1->gfxclk_frequency_acc;
+    for (ii = 0; ii < (size_t)8; ii++) b[ii] = *((uint64_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint64_t (*_wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[8] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t *result = 0 ;
+  uint64_t (*_swig_go_result)[8];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint64_t *)(uint64_t *) ((arg1)->gfxclk_frequency_acc);
+  *(uint64_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint64_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint64_t *b = (uint64_t *) arg1->cclk_frequency_acc;
+    for (ii = 0; ii < (size_t)96; ii++) b[ii] = *((uint64_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint64_t (*_wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[96] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t *result = 0 ;
+  uint64_t (*_swig_go_result)[96];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint64_t *)(uint64_t *) ((arg1)->cclk_frequency_acc);
+  *(uint64_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_max_cclk_frequency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_cclk_frequency = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_max_cclk_frequency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_cclk_frequency);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_min_cclk_frequency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->min_cclk_frequency = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_min_cclk_frequency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->min_cclk_frequency);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_max_gfxclk_frequency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_gfxclk_frequency = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_max_gfxclk_frequency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_gfxclk_frequency);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_min_gfxclk_frequency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->min_gfxclk_frequency = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_min_gfxclk_frequency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->min_gfxclk_frequency);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint32_t *b = (uint32_t *) arg1->fclk_frequency_table;
+    for (ii = 0; ii < (size_t)4; ii++) b[ii] = *((uint32_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint32_t (*_wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[4] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *result = 0 ;
+  uint32_t (*_swig_go_result)[4];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint32_t *)(uint32_t *) ((arg1)->fclk_frequency_table);
+  *(uint32_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint32_t *b = (uint32_t *) arg1->uclk_frequency_table;
+    for (ii = 0; ii < (size_t)4; ii++) b[ii] = *((uint32_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint32_t (*_wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[4] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *result = 0 ;
+  uint32_t (*_swig_go_result)[4];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint32_t *)(uint32_t *) ((arg1)->uclk_frequency_table);
+  *(uint32_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint32_t *b = (uint32_t *) arg1->socclk_frequency_table;
+    for (ii = 0; ii < (size_t)4; ii++) b[ii] = *((uint32_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint32_t (*_wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[4] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *result = 0 ;
+  uint32_t (*_swig_go_result)[4];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint32_t *)(uint32_t *) ((arg1)->socclk_frequency_table);
+  *(uint32_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint32_t *b = (uint32_t *) arg1->vclk_frequency_table;
+    for (ii = 0; ii < (size_t)4; ii++) b[ii] = *((uint32_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint32_t (*_wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[4] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *result = 0 ;
+  uint32_t (*_swig_go_result)[4];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint32_t *)(uint32_t *) ((arg1)->vclk_frequency_table);
+  *(uint32_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint32_t *b = (uint32_t *) arg1->dclk_frequency_table;
+    for (ii = 0; ii < (size_t)4; ii++) b[ii] = *((uint32_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint32_t (*_wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[4] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *result = 0 ;
+  uint32_t (*_swig_go_result)[4];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint32_t *)(uint32_t *) ((arg1)->dclk_frequency_table);
+  *(uint32_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint32_t *b = (uint32_t *) arg1->lclk_frequency_table;
+    for (ii = 0; ii < (size_t)4; ii++) b[ii] = *((uint32_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint32_t (*_wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[4] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *result = 0 ;
+  uint32_t (*_swig_go_result)[4];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint32_t *)(uint32_t *) ((arg1)->lclk_frequency_table);
+  *(uint32_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_max_lclk_dpm_range_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_lclk_dpm_range = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_max_lclk_dpm_range_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_lclk_dpm_range);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_min_lclk_dpm_range_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->min_lclk_dpm_range = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_min_lclk_dpm_range_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->min_lclk_dpm_range);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_xgmi_width_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->xgmi_width = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_xgmi_width_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->xgmi_width);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_xgmi_bitrate_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->xgmi_bitrate = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_xgmi_bitrate_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->xgmi_bitrate);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_xgmi_read_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint64_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint64_t *b = (uint64_t *) arg1->xgmi_read_bandwidth_acc;
+    for (ii = 0; ii < (size_t)8; ii++) b[ii] = *((uint64_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint64_t (*_wrap_amdsmi_hsmp_metrics_table_t_xgmi_read_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[8] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t *result = 0 ;
+  uint64_t (*_swig_go_result)[8];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint64_t *)(uint64_t *) ((arg1)->xgmi_read_bandwidth_acc);
+  *(uint64_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_xgmi_write_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint64_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint64_t *b = (uint64_t *) arg1->xgmi_write_bandwidth_acc;
+    for (ii = 0; ii < (size_t)8; ii++) b[ii] = *((uint64_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint64_t (*_wrap_amdsmi_hsmp_metrics_table_t_xgmi_write_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[8] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t *result = 0 ;
+  uint64_t (*_swig_go_result)[8];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint64_t *)(uint64_t *) ((arg1)->xgmi_write_bandwidth_acc);
+  *(uint64_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->socket_c0_residency = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->socket_c0_residency);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->socket_gfx_busy = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->socket_gfx_busy);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->dram_bandwidth_utilization = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->dram_bandwidth_utilization);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->socket_c0_residency_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->socket_c0_residency_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->socket_gfx_busy_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->socket_gfx_busy_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->dram_bandwidth_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->dram_bandwidth_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_max_dram_bandwidth_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->max_dram_bandwidth = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_max_dram_bandwidth_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->max_dram_bandwidth);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t arg2 ;
+  uint64_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint64_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint64_t");
+  }
+  arg2 = (uint64_t)*argp2;
+  
+  
+  if (arg1) (arg1)->dram_bandwidth_utilization_acc = arg2;
+  
+}
+
+
+uint64_t *_wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t result;
+  uint64_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->dram_bandwidth_utilization_acc);
+  {
+    uint64_t * resultptr = (uint64_t *)malloc(sizeof(uint64_t));
+    memmove(resultptr, &result, sizeof(uint64_t));
+    *(uint64_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_pcie_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint64_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint64_t *b = (uint64_t *) arg1->pcie_bandwidth_acc;
+    for (ii = 0; ii < (size_t)4; ii++) b[ii] = *((uint64_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint64_t (*_wrap_amdsmi_hsmp_metrics_table_t_pcie_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[4] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint64_t *result = 0 ;
+  uint64_t (*_swig_go_result)[4];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint64_t *)(uint64_t *) ((arg1)->pcie_bandwidth_acc);
+  *(uint64_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_prochot_residency_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->prochot_residency_acc = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_prochot_residency_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->prochot_residency_acc);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_ppt_residency_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->ppt_residency_acc = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_ppt_residency_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->ppt_residency_acc);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_socket_thm_residency_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->socket_thm_residency_acc = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_socket_thm_residency_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->socket_thm_residency_acc);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_vr_thm_residency_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->vr_thm_residency_acc = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_vr_thm_residency_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->vr_thm_residency_acc);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_hbm_thm_residency_acc_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->hbm_thm_residency_acc = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_hbm_thm_residency_acc_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->hbm_thm_residency_acc);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_spare_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  if (arg1) (arg1)->spare = arg2;
+  
+}
+
+
+uint32_t *_wrap_amdsmi_hsmp_metrics_table_t_spare_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t result;
+  uint32_t *_swig_go_result;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result =  ((arg1)->spare);
+  {
+    uint32_t * resultptr = (uint32_t *)malloc(sizeof(uint32_t));
+    memmove(resultptr, &result, sizeof(uint32_t));
+    *(uint32_t **)&_swig_go_result = resultptr;
+  }
+  return _swig_go_result;
+}
+
+
+void _wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_set_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *arg2 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  {
+    size_t ii;
+    uint32_t *b = (uint32_t *) arg1->gfxclk_frequency;
+    for (ii = 0; ii < (size_t)8; ii++) b[ii] = *((uint32_t *) arg2 + ii);
+  }
+  
+}
+
+
+uint32_t (*_wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_get_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0))[8] {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  uint32_t *result = 0 ;
+  uint32_t (*_swig_go_result)[8];
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  result = (uint32_t *)(uint32_t *) ((arg1)->gfxclk_frequency);
+  *(uint32_t **)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
+amdsmi_hsmp_metrics_table_t *_wrap_new_amdsmi_hsmp_metrics_table_t_amd_smi_bdd6da097c4a93d9() {
+  amdsmi_hsmp_metrics_table_t *result = 0 ;
+  amdsmi_hsmp_metrics_table_t *_swig_go_result;
+  
+  
+  result = (amdsmi_hsmp_metrics_table_t *)calloc(1, sizeof(amdsmi_hsmp_metrics_table_t));
+  *(amdsmi_hsmp_metrics_table_t **)&_swig_go_result = (amdsmi_hsmp_metrics_table_t *)result; 
+  return _swig_go_result;
+}
+
+
+void _wrap_delete_amdsmi_hsmp_metrics_table_t_amd_smi_bdd6da097c4a93d9(amdsmi_hsmp_metrics_table_t *_swig_go_0) {
+  amdsmi_hsmp_metrics_table_t *arg1 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  
+  arg1 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_0; 
+  
+  free((char *) arg1);
+  
+}
+
+
+_gostring_* _wrap_amdsmi_hsmp_freqlimit_src_names_get_amd_smi_bdd6da097c4a93d9() {
+  char **result = 0 ;
+  _gostring_* _swig_go_result;
+  
+  
+  result = (char **)(char **)amdsmi_hsmp_freqlimit_src_names;
+  *(char ***)&_swig_go_result = result; 
+  return _swig_go_result;
+}
+
+
 intgo _wrap_amdsmi_init_amd_smi_bdd6da097c4a93d9(uint64_t *_swig_go_0) {
   uint64_t arg1 ;
   uint64_t *argp1 ;
@@ -13884,6 +16775,21 @@ intgo _wrap_amdsmi_get_socket_handles_amd_smi_bdd6da097c4a93d9(uint32_t *_swig_g
 }
 
 
+intgo _wrap_amdsmi_get_cpusocket_handles_amd_smi_bdd6da097c4a93d9(uint32_t *_swig_go_0, amdsmi_cpusocket_handle *_swig_go_1) {
+  uint32_t *arg1 = (uint32_t *) 0 ;
+  amdsmi_cpusocket_handle *arg2 = (amdsmi_cpusocket_handle *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(uint32_t **)&_swig_go_0; 
+  arg2 = *(amdsmi_cpusocket_handle **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpusocket_handles(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
 intgo _wrap_amdsmi_get_socket_info_amd_smi_bdd6da097c4a93d9(amdsmi_socket_handle _swig_go_0, long long _swig_go_1, _gostring_ _swig_go_2) {
   amdsmi_socket_handle arg1 = (amdsmi_socket_handle) 0 ;
   size_t arg2 ;
@@ -13906,6 +16812,68 @@ intgo _wrap_amdsmi_get_socket_info_amd_smi_bdd6da097c4a93d9(amdsmi_socket_handle
 }
 
 
+intgo _wrap_amdsmi_get_processor_info_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, long long _swig_go_1, _gostring_ _swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  size_t arg2 ;
+  char *arg3 = (char *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = (size_t)_swig_go_1; 
+  
+  arg3 = (char *)malloc(_swig_go_2.n + 1);
+  memcpy(arg3, _swig_go_2.p, _swig_go_2.n);
+  arg3[_swig_go_2.n] = '\0';
+  
+  
+  result = (amdsmi_status_t)amdsmi_get_processor_info(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  free(arg3); 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_processor_count_from_handles_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle *_swig_go_0, uint32_t *_swig_go_1, uint32_t *_swig_go_2, uint32_t *_swig_go_3, uint32_t *_swig_go_4) {
+  amdsmi_processor_handle *arg1 = (amdsmi_processor_handle *) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  uint32_t *arg3 = (uint32_t *) 0 ;
+  uint32_t *arg4 = (uint32_t *) 0 ;
+  uint32_t *arg5 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle **)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  arg3 = *(uint32_t **)&_swig_go_2; 
+  arg4 = *(uint32_t **)&_swig_go_3; 
+  arg5 = *(uint32_t **)&_swig_go_4; 
+  
+  result = (amdsmi_status_t)amdsmi_get_processor_count_from_handles(arg1,arg2,arg3,arg4,arg5);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_processor_handles_by_type_amd_smi_bdd6da097c4a93d9(amdsmi_socket_handle _swig_go_0, intgo _swig_go_1, amdsmi_processor_handle *_swig_go_2, uint32_t *_swig_go_3) {
+  amdsmi_socket_handle arg1 = (amdsmi_socket_handle) 0 ;
+  processor_type_t arg2 ;
+  amdsmi_processor_handle *arg3 = (amdsmi_processor_handle *) 0 ;
+  uint32_t *arg4 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_socket_handle *)&_swig_go_0; 
+  arg2 = (processor_type_t)_swig_go_1; 
+  arg3 = *(amdsmi_processor_handle **)&_swig_go_2; 
+  arg4 = *(uint32_t **)&_swig_go_3; 
+  
+  result = (amdsmi_status_t)amdsmi_get_processor_handles_by_type(arg1,arg2,arg3,arg4);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
 intgo _wrap_amdsmi_get_processor_handles_amd_smi_bdd6da097c4a93d9(amdsmi_socket_handle _swig_go_0, uint32_t *_swig_go_1, amdsmi_processor_handle *_swig_go_2) {
   amdsmi_socket_handle arg1 = (amdsmi_socket_handle) 0 ;
   uint32_t *arg2 = (uint32_t *) 0 ;
@@ -13918,6 +16886,23 @@ intgo _wrap_amdsmi_get_processor_handles_amd_smi_bdd6da097c4a93d9(amdsmi_socket_
   arg3 = *(amdsmi_processor_handle **)&_swig_go_2; 
   
   result = (amdsmi_status_t)amdsmi_get_processor_handles(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpucore_handles_amd_smi_bdd6da097c4a93d9(amdsmi_cpusocket_handle _swig_go_0, uint32_t *_swig_go_1, amdsmi_processor_handle *_swig_go_2) {
+  amdsmi_cpusocket_handle arg1 = (amdsmi_cpusocket_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_processor_handle *arg3 = (amdsmi_processor_handle *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_cpusocket_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  arg3 = *(amdsmi_processor_handle **)&_swig_go_2; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpucore_handles(arg1,arg2,arg3);
   _swig_go_result = (intgo)result; 
   return _swig_go_result;
 }
@@ -15928,6 +18913,805 @@ intgo _wrap_amdsmi_get_gpu_total_ecc_count_amd_smi_bdd6da097c4a93d9(amdsmi_proce
   arg2 = *(amdsmi_error_count_t **)&_swig_go_1; 
   
   result = (amdsmi_status_t)amdsmi_get_gpu_total_ecc_count(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_core_energy_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint64_t *arg2 = (uint64_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint64_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_core_energy(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_socket_energy_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint64_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint64_t *arg2 = (uint64_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint64_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_socket_energy(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_threads_per_core_amd_smi_bdd6da097c4a93d9(uint32_t *_swig_go_0) {
+  uint32_t *arg1 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(uint32_t **)&_swig_go_0; 
+  
+  result = (amdsmi_status_t)amdsmi_get_threads_per_core(arg1);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_smu_fw_version_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, amdsmi_smu_fw_version_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  amdsmi_smu_fw_version_t *arg2 = (amdsmi_smu_fw_version_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(amdsmi_smu_fw_version_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_smu_fw_version(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_hsmp_proto_ver_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_hsmp_proto_ver(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_prochot_status_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_prochot_status(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_fclk_mclk_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1, uint32_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  uint32_t *arg3 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  arg3 = *(uint32_t **)&_swig_go_2; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_fclk_mclk(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_cclk_limit_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_cclk_limit(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_socket_current_active_freq_limit_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint16_t *_swig_go_1, _gostring_* _swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint16_t *arg2 = (uint16_t *) 0 ;
+  char **arg3 = (char **) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint16_t **)&_swig_go_1; 
+  arg3 = *(char ***)&_swig_go_2; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_socket_current_active_freq_limit(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_socket_freq_range_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint16_t *_swig_go_1, uint16_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint16_t *arg2 = (uint16_t *) 0 ;
+  uint16_t *arg3 = (uint16_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint16_t **)&_swig_go_1; 
+  arg3 = *(uint16_t **)&_swig_go_2; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_socket_freq_range(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_core_current_freq_limit_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_core_current_freq_limit(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_socket_power_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_socket_power(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_socket_power_cap_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_socket_power_cap(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_socket_power_cap_max_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_socket_power_cap_max(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_pwr_svi_telemetry_all_rails_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_pwr_svi_telemetry_all_rails(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_set_cpu_socket_power_cap_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  result = (amdsmi_status_t)amdsmi_set_cpu_socket_power_cap(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_set_cpu_pwr_efficiency_mode_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  result = (amdsmi_status_t)amdsmi_set_cpu_pwr_efficiency_mode(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_core_boostlimit_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_core_boostlimit(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_socket_c0_residency_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_socket_c0_residency(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_set_cpu_core_boostlimit_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  result = (amdsmi_status_t)amdsmi_set_cpu_core_boostlimit(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_set_cpu_socket_boostlimit_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t arg2 ;
+  uint32_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint32_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint32_t");
+  }
+  arg2 = (uint32_t)*argp2;
+  
+  
+  result = (amdsmi_status_t)amdsmi_set_cpu_socket_boostlimit(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_ddr_bw_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, amdsmi_ddr_bw_metrics_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  amdsmi_ddr_bw_metrics_t *arg2 = (amdsmi_ddr_bw_metrics_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(amdsmi_ddr_bw_metrics_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_ddr_bw(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_socket_temperature_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_socket_temperature(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_dimm_temp_range_and_refresh_rate_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint8_t *_swig_go_1, amdsmi_temp_range_refresh_rate_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint8_t arg2 ;
+  amdsmi_temp_range_refresh_rate_t *arg3 = (amdsmi_temp_range_refresh_rate_t *) 0 ;
+  uint8_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  arg3 = *(amdsmi_temp_range_refresh_rate_t **)&_swig_go_2; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_dimm_temp_range_and_refresh_rate(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_dimm_power_consumption_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint8_t *_swig_go_1, amdsmi_dimm_power_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint8_t arg2 ;
+  amdsmi_dimm_power_t *arg3 = (amdsmi_dimm_power_t *) 0 ;
+  uint8_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  arg3 = *(amdsmi_dimm_power_t **)&_swig_go_2; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_dimm_power_consumption(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_dimm_thermal_sensor_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint8_t *_swig_go_1, amdsmi_dimm_thermal_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint8_t arg2 ;
+  amdsmi_dimm_thermal_t *arg3 = (amdsmi_dimm_thermal_t *) 0 ;
+  uint8_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  arg3 = *(amdsmi_dimm_thermal_t **)&_swig_go_2; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_dimm_thermal_sensor(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_set_cpu_xgmi_width_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint8_t *_swig_go_1, uint8_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint8_t arg2 ;
+  uint8_t arg3 ;
+  uint8_t *argp2 ;
+  uint8_t *argp3 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  argp3 = (uint8_t *)_swig_go_2;
+  if (argp3 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg3 = (uint8_t)*argp3;
+  
+  
+  result = (amdsmi_status_t)amdsmi_set_cpu_xgmi_width(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_set_cpu_gmi3_link_width_range_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint8_t *_swig_go_1, uint8_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint8_t arg2 ;
+  uint8_t arg3 ;
+  uint8_t *argp2 ;
+  uint8_t *argp3 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  argp3 = (uint8_t *)_swig_go_2;
+  if (argp3 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg3 = (uint8_t)*argp3;
+  
+  
+  result = (amdsmi_status_t)amdsmi_set_cpu_gmi3_link_width_range(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_cpu_apb_enable_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  result = (amdsmi_status_t)amdsmi_cpu_apb_enable(arg1);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_cpu_apb_disable_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint8_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint8_t arg2 ;
+  uint8_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  result = (amdsmi_status_t)amdsmi_cpu_apb_disable(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_set_cpu_socket_lclk_dpm_level_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint8_t *_swig_go_1, uint8_t *_swig_go_2, uint8_t *_swig_go_3) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint8_t arg2 ;
+  uint8_t arg3 ;
+  uint8_t arg4 ;
+  uint8_t *argp2 ;
+  uint8_t *argp3 ;
+  uint8_t *argp4 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  argp3 = (uint8_t *)_swig_go_2;
+  if (argp3 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg3 = (uint8_t)*argp3;
+  
+  
+  argp4 = (uint8_t *)_swig_go_3;
+  if (argp4 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg4 = (uint8_t)*argp4;
+  
+  
+  result = (amdsmi_status_t)amdsmi_set_cpu_socket_lclk_dpm_level(arg1,arg2,arg3,arg4);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_socket_lclk_dpm_level_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint8_t *_swig_go_1, amdsmi_dpm_level_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint8_t arg2 ;
+  amdsmi_dpm_level_t *arg3 = (amdsmi_dpm_level_t *) 0 ;
+  uint8_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  arg3 = *(amdsmi_dpm_level_t **)&_swig_go_2; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_socket_lclk_dpm_level(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_set_cpu_pcie_link_rate_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint8_t *_swig_go_1, uint8_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint8_t arg2 ;
+  uint8_t *arg3 = (uint8_t *) 0 ;
+  uint8_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  arg3 = *(uint8_t **)&_swig_go_2; 
+  
+  result = (amdsmi_status_t)amdsmi_set_cpu_pcie_link_rate(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_set_cpu_df_pstate_range_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint8_t *_swig_go_1, uint8_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint8_t arg2 ;
+  uint8_t arg3 ;
+  uint8_t *argp2 ;
+  uint8_t *argp3 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (uint8_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg2 = (uint8_t)*argp2;
+  
+  
+  argp3 = (uint8_t *)_swig_go_2;
+  if (argp3 == NULL) {
+    _swig_gopanic("Attempt to dereference null uint8_t");
+  }
+  arg3 = (uint8_t)*argp3;
+  
+  
+  result = (amdsmi_status_t)amdsmi_set_cpu_df_pstate_range(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_current_io_bandwidth_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, amdsmi_link_id_bw_type_t *_swig_go_1, uint32_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  amdsmi_link_id_bw_type_t arg2 ;
+  uint32_t *arg3 = (uint32_t *) 0 ;
+  amdsmi_link_id_bw_type_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (amdsmi_link_id_bw_type_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null amdsmi_link_id_bw_type_t");
+  }
+  arg2 = (amdsmi_link_id_bw_type_t)*argp2;
+  
+  arg3 = *(uint32_t **)&_swig_go_2; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_current_io_bandwidth(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_current_xgmi_bw_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, amdsmi_link_id_bw_type_t *_swig_go_1, uint32_t *_swig_go_2) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  amdsmi_link_id_bw_type_t arg2 ;
+  uint32_t *arg3 = (uint32_t *) 0 ;
+  amdsmi_link_id_bw_type_t *argp2 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  
+  argp2 = (amdsmi_link_id_bw_type_t *)_swig_go_1;
+  if (argp2 == NULL) {
+    _swig_gopanic("Attempt to dereference null amdsmi_link_id_bw_type_t");
+  }
+  arg2 = (amdsmi_link_id_bw_type_t)*argp2;
+  
+  arg3 = *(uint32_t **)&_swig_go_2; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_current_xgmi_bw(arg1,arg2,arg3);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_hsmp_metrics_table_version_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_hsmp_metrics_table_version(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_hsmp_metrics_table_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, amdsmi_hsmp_metrics_table_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  amdsmi_hsmp_metrics_table_t *arg2 = (amdsmi_hsmp_metrics_table_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(amdsmi_hsmp_metrics_table_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_hsmp_metrics_table(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_first_online_core_on_cpu_socket_amd_smi_bdd6da097c4a93d9(amdsmi_processor_handle _swig_go_0, uint32_t *_swig_go_1) {
+  amdsmi_processor_handle arg1 = (amdsmi_processor_handle) 0 ;
+  uint32_t *arg2 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(amdsmi_processor_handle *)&_swig_go_0; 
+  arg2 = *(uint32_t **)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_first_online_core_on_cpu_socket(arg1,arg2);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_family_amd_smi_bdd6da097c4a93d9(uint32_t *_swig_go_0) {
+  uint32_t *arg1 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(uint32_t **)&_swig_go_0; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_family(arg1);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_cpu_model_amd_smi_bdd6da097c4a93d9(uint32_t *_swig_go_0) {
+  uint32_t *arg1 = (uint32_t *) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = *(uint32_t **)&_swig_go_0; 
+  
+  result = (amdsmi_status_t)amdsmi_get_cpu_model(arg1);
+  _swig_go_result = (intgo)result; 
+  return _swig_go_result;
+}
+
+
+intgo _wrap_amdsmi_get_esmi_err_msg_amd_smi_bdd6da097c4a93d9(intgo _swig_go_0, _gostring_* _swig_go_1) {
+  amdsmi_status_t arg1 ;
+  char **arg2 = (char **) 0 ;
+  amdsmi_status_t result;
+  intgo _swig_go_result;
+  
+  arg1 = (amdsmi_status_t)_swig_go_0; 
+  arg2 = *(char ***)&_swig_go_1; 
+  
+  result = (amdsmi_status_t)amdsmi_get_esmi_err_msg(arg1,(char const **)arg2);
   _swig_go_result = (intgo)result; 
   return _swig_go_result;
 }
