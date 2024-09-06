@@ -1803,8 +1803,8 @@ amdsmi_status_t amdsmi_get_socket_handles(uint32_t *socket_count,
  *
  *  @return ::amdsmi_status_t | ::AMDSMI_STATUS_SUCCESS on success, non-zero on fail
  */
-amdsmi_status_t amdsmi_get_cpusocket_handles(uint32_t *socket_count,
-                amdsmi_cpusocket_handle* socket_handles);
+//amdsmi_status_t amdsmi_get_cpusocket_handles(uint32_t *socket_count,
+//                amdsmi_cpusocket_handle* socket_handles);
 #endif
 
 /**
@@ -1962,9 +1962,9 @@ amdsmi_status_t amdsmi_get_processor_handles(amdsmi_socket_handle socket_handle,
  *
  *  @return ::amdsmi_status_t | ::AMDSMI_STATUS_SUCCESS on success, non-zero on fail
 */
-amdsmi_status_t amdsmi_get_cpucore_handles(amdsmi_cpusocket_handle socket_handle,
-                                    uint32_t *processor_count,
-                                    amdsmi_processor_handle* processor_handles);
+//amdsmi_status_t amdsmi_get_cpucore_handles(amdsmi_cpusocket_handle socket_handle,
+//                                    uint32_t *processor_count,
+//                                    amdsmi_processor_handle* processor_handles);
 #endif
 
 /**
