@@ -1518,7 +1518,7 @@ typedef struct {
 
 //! Place-holder "variant" for functions that have don't have any variants,
 //! but do have monitors or sensors.
-#define AMDSMI_DEFAULT_VARIANT 0xFFFFFFFFFFFFFFFF
+#define AMDSMI_DEFAULT_VARIANT 0xFFFFFFFF
 
 #ifdef ENABLE_ESMI_LIB
 /**
