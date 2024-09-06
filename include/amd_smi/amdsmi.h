@@ -1600,7 +1600,7 @@ typedef struct {
 /**
  * @brief HSMP Metrics table (supported only with hsmp proto version 6).
  */
-typedef struct __attribute__((__packed__)){
+typedef struct {
     uint32_t accumulation_counter;
 
     /* TEMPERATURE */

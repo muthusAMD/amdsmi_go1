@@ -13,8 +13,6 @@
 package amd_smi
 
 /*
-#cgo CFLAGS: -Wall -I/opt/rocm/include
-#cgo LDFLAGS: -L/opt/rocm/lib -L/opt/rocm/lib64 -lamd_smi -Wl,--unresolved-symbols=ignore-in-object-files
 #define intgo swig_intgo
 typedef void *swig_voidp;
 
@@ -72,16 +70,20 @@ typedef _gostring_ swig_type_39;
 typedef _gostring_ swig_type_40;
 typedef _gostring_ swig_type_41;
 typedef _gostring_ swig_type_42;
-typedef long long swig_type_43;
+typedef _gostring_ swig_type_43;
 typedef _gostring_ swig_type_44;
-typedef _gostring_ swig_type_45;
-typedef long long swig_type_46;
-typedef _gostring_ swig_type_47;
+typedef long long swig_type_45;
+typedef _gostring_ swig_type_46;
+typedef long long swig_type_47;
 typedef _gostring_ swig_type_48;
-typedef long long swig_type_49;
-typedef _gostring_ swig_type_50;
+typedef _gostring_ swig_type_49;
+typedef long long swig_type_50;
 typedef _gostring_ swig_type_51;
 typedef _gostring_ swig_type_52;
+typedef long long swig_type_53;
+typedef _gostring_ swig_type_54;
+typedef _gostring_ swig_type_55;
+typedef _gostring_ swig_type_56;
 extern void _wrap_Swig_free_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
 extern uintptr_t _wrap_Swig_malloc_amd_smi_bdd6da097c4a93d9(swig_intgo arg1);
 extern swig_intgo _wrap_AMDSMI_INIT_ALL_PROCESSORS_amd_smi_bdd6da097c4a93d9(void);
@@ -1032,19 +1034,200 @@ extern void _wrap_amdsmi_process_info_t_cu_occupancy_set_amd_smi_bdd6da097c4a93d
 extern uintptr_t _wrap_amdsmi_process_info_t_cu_occupancy_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
 extern uintptr_t _wrap_new_amdsmi_process_info_t_amd_smi_bdd6da097c4a93d9(void);
 extern void _wrap_delete_amdsmi_process_info_t_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_smu_fw_version_t_debug_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_smu_fw_version_t_debug_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_smu_fw_version_t_minor_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_smu_fw_version_t_minor_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_smu_fw_version_t_major_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_smu_fw_version_t_major_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_smu_fw_version_t_unused_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_smu_fw_version_t_unused_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern uintptr_t _wrap_new_amdsmi_smu_fw_version_t_amd_smi_bdd6da097c4a93d9(void);
+extern void _wrap_delete_amdsmi_smu_fw_version_t_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_ddr_bw_metrics_t_max_bw_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_ddr_bw_metrics_t_max_bw_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_ddr_bw_metrics_t_utilized_bw_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_ddr_bw_metrics_t_utilized_bw_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_ddr_bw_metrics_t_utilized_pct_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_ddr_bw_metrics_t_utilized_pct_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern uintptr_t _wrap_new_amdsmi_ddr_bw_metrics_t_amd_smi_bdd6da097c4a93d9(void);
+extern void _wrap_delete_amdsmi_ddr_bw_metrics_t_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_temp_range_refresh_rate_t_Xrange_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_temp_range_refresh_rate_t_Xrange_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_temp_range_refresh_rate_t_ref_rate_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_temp_range_refresh_rate_t_ref_rate_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern uintptr_t _wrap_new_amdsmi_temp_range_refresh_rate_t_amd_smi_bdd6da097c4a93d9(void);
+extern void _wrap_delete_amdsmi_temp_range_refresh_rate_t_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_dimm_power_t_power_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_dimm_power_t_power_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_dimm_power_t_update_rate_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_dimm_power_t_update_rate_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_dimm_power_t_dimm_addr_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_dimm_power_t_dimm_addr_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern uintptr_t _wrap_new_amdsmi_dimm_power_t_amd_smi_bdd6da097c4a93d9(void);
+extern void _wrap_delete_amdsmi_dimm_power_t_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_dimm_thermal_t_sensor_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_dimm_thermal_t_sensor_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_dimm_thermal_t_update_rate_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_dimm_thermal_t_update_rate_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_dimm_thermal_t_dimm_addr_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_dimm_thermal_t_dimm_addr_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_dimm_thermal_t_temp_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, float arg2);
+extern float _wrap_amdsmi_dimm_thermal_t_temp_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern uintptr_t _wrap_new_amdsmi_dimm_thermal_t_amd_smi_bdd6da097c4a93d9(void);
+extern void _wrap_delete_amdsmi_dimm_thermal_t_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern swig_intgo _wrap_AGG_BW0_amd_smi_bdd6da097c4a93d9(void);
+extern swig_intgo _wrap_RD_BW0_amd_smi_bdd6da097c4a93d9(void);
+extern swig_intgo _wrap_WR_BW0_amd_smi_bdd6da097c4a93d9(void);
+extern void _wrap_amdsmi_link_id_bw_type_t_bw_type_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_intgo arg2);
+extern swig_intgo _wrap_amdsmi_link_id_bw_type_t_bw_type_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_link_id_bw_type_t_link_name_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_43 arg2);
+extern swig_type_44 _wrap_amdsmi_link_id_bw_type_t_link_name_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern uintptr_t _wrap_new_amdsmi_link_id_bw_type_t_amd_smi_bdd6da097c4a93d9(void);
+extern void _wrap_delete_amdsmi_link_id_bw_type_t_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_dpm_level_t_max_dpm_level_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_dpm_level_t_max_dpm_level_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_dpm_level_t_min_dpm_level_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_dpm_level_t_min_dpm_level_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern uintptr_t _wrap_new_amdsmi_dpm_level_t_amd_smi_bdd6da097c4a93d9(void);
+extern void _wrap_delete_amdsmi_dpm_level_t_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_accumulation_counter_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_accumulation_counter_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_socket_power_limit_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_socket_power_limit_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_max_socket_power_limit_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_max_socket_power_limit_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_socket_power_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_socket_power_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_timestamp_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_timestamp_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_socket_energy_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_socket_energy_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_ccd_energy_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_ccd_energy_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_xcd_energy_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_xcd_energy_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_aid_energy_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_aid_energy_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_hbm_energy_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_hbm_energy_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_limit_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_limit_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_limit_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_limit_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_max_cclk_frequency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_max_cclk_frequency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_min_cclk_frequency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_min_cclk_frequency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_max_gfxclk_frequency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_max_gfxclk_frequency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_min_gfxclk_frequency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_min_gfxclk_frequency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_max_lclk_dpm_range_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_max_lclk_dpm_range_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_min_lclk_dpm_range_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_min_lclk_dpm_range_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_xgmi_width_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_xgmi_width_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_xgmi_bitrate_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_xgmi_bitrate_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_xgmi_read_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_xgmi_read_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_xgmi_write_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_xgmi_write_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_max_dram_bandwidth_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_max_dram_bandwidth_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_pcie_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_pcie_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_prochot_residency_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_prochot_residency_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_ppt_residency_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_ppt_residency_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_socket_thm_residency_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_socket_thm_residency_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_vr_thm_residency_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_vr_thm_residency_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_hbm_thm_residency_acc_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_hbm_thm_residency_acc_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_spare_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_spare_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern void _wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_set_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern uintptr_t _wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_get_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern uintptr_t _wrap_new_amdsmi_hsmp_metrics_table_t_amd_smi_bdd6da097c4a93d9(void);
+extern void _wrap_delete_amdsmi_hsmp_metrics_table_t_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern swig_voidp _wrap_amdsmi_hsmp_freqlimit_src_names_get_amd_smi_bdd6da097c4a93d9(void);
 extern swig_intgo _wrap_amdsmi_init_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
 extern swig_intgo _wrap_amdsmi_shut_down_amd_smi_bdd6da097c4a93d9(void);
 extern swig_intgo _wrap_amdsmi_get_socket_handles_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_voidp arg2);
-extern swig_intgo _wrap_amdsmi_get_socket_info_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_43 arg2, swig_type_44 arg3);
+extern swig_intgo _wrap_amdsmi_get_cpusocket_handles_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_voidp arg2);
+extern swig_intgo _wrap_amdsmi_get_socket_info_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_45 arg2, swig_type_46 arg3);
+extern swig_intgo _wrap_amdsmi_get_processor_info_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_47 arg2, swig_type_48 arg3);
+extern swig_intgo _wrap_amdsmi_get_processor_count_from_handles_amd_smi_bdd6da097c4a93d9(swig_voidp arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4, uintptr_t arg5);
+extern swig_intgo _wrap_amdsmi_get_processor_handles_by_type_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_intgo arg2, swig_voidp arg3, uintptr_t arg4);
 extern swig_intgo _wrap_amdsmi_get_processor_handles_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, swig_voidp arg3);
+extern swig_intgo _wrap_amdsmi_get_cpucore_handles_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, swig_voidp arg3);
 extern swig_intgo _wrap_amdsmi_get_processor_type_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_voidp arg2);
 extern swig_intgo _wrap_amdsmi_get_processor_handle_from_bdf_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_voidp arg2);
 extern swig_intgo _wrap_amdsmi_get_gpu_id_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
 extern swig_intgo _wrap_amdsmi_get_gpu_revision_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
-extern swig_intgo _wrap_amdsmi_get_gpu_vendor_name_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_45 arg2, swig_type_46 arg3);
-extern swig_intgo _wrap_amdsmi_get_gpu_vram_vendor_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_47 arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_get_gpu_vendor_name_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_49 arg2, swig_type_50 arg3);
+extern swig_intgo _wrap_amdsmi_get_gpu_vram_vendor_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_51 arg2, uintptr_t arg3);
 extern swig_intgo _wrap_amdsmi_get_gpu_subsystem_id_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
-extern swig_intgo _wrap_amdsmi_get_gpu_subsystem_name_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_48 arg2, swig_type_49 arg3);
+extern swig_intgo _wrap_amdsmi_get_gpu_subsystem_name_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_52 arg2, swig_type_53 arg3);
 extern swig_intgo _wrap_amdsmi_get_gpu_pci_bandwidth_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
 extern swig_intgo _wrap_amdsmi_get_gpu_bdf_id_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
 extern swig_intgo _wrap_amdsmi_get_gpu_topo_numa_affinity_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
@@ -1118,10 +1301,10 @@ extern swig_intgo _wrap_amdsmi_topo_get_link_weight_amd_smi_bdd6da097c4a93d9(uin
 extern swig_intgo _wrap_amdsmi_get_minmax_bandwidth_between_processors_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4);
 extern swig_intgo _wrap_amdsmi_topo_get_link_type_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, swig_voidp arg4);
 extern swig_intgo _wrap_amdsmi_is_P2P_accessible_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, swig_voidp arg3);
-extern swig_intgo _wrap_amdsmi_get_gpu_compute_partition_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_50 arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_get_gpu_compute_partition_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_54 arg2, uintptr_t arg3);
 extern swig_intgo _wrap_amdsmi_set_gpu_compute_partition_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_intgo arg2);
 extern swig_intgo _wrap_amdsmi_reset_gpu_compute_partition_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
-extern swig_intgo _wrap_amdsmi_get_gpu_memory_partition_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_51 arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_get_gpu_memory_partition_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_type_55 arg2, uintptr_t arg3);
 extern swig_intgo _wrap_amdsmi_set_gpu_memory_partition_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_intgo arg2);
 extern swig_intgo _wrap_amdsmi_reset_gpu_memory_partition_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
 extern swig_intgo _wrap_amdsmi_init_gpu_event_notification_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
@@ -1129,7 +1312,7 @@ extern swig_intgo _wrap_amdsmi_set_gpu_event_notification_mask_amd_smi_bdd6da097
 extern swig_intgo _wrap_amdsmi_get_gpu_event_notification_amd_smi_bdd6da097c4a93d9(swig_intgo arg1, uintptr_t arg2, uintptr_t arg3);
 extern swig_intgo _wrap_amdsmi_stop_gpu_event_notification_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
 extern swig_intgo _wrap_amdsmi_get_gpu_device_bdf_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
-extern swig_intgo _wrap_amdsmi_get_gpu_device_uuid_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_voidp arg2, swig_type_52 arg3);
+extern swig_intgo _wrap_amdsmi_get_gpu_device_uuid_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, swig_voidp arg2, swig_type_56 arg3);
 extern swig_intgo _wrap_amdsmi_get_gpu_driver_info_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
 extern swig_intgo _wrap_amdsmi_get_gpu_asic_info_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
 extern swig_intgo _wrap_amdsmi_get_gpu_vram_info_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
@@ -1146,6 +1329,48 @@ extern swig_intgo _wrap_amdsmi_get_clock_info_amd_smi_bdd6da097c4a93d9(uintptr_t
 extern swig_intgo _wrap_amdsmi_get_gpu_vram_usage_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
 extern swig_intgo _wrap_amdsmi_get_gpu_process_list_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
 extern swig_intgo _wrap_amdsmi_get_gpu_total_ecc_count_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_core_energy_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_socket_energy_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_threads_per_core_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern swig_intgo _wrap_amdsmi_get_cpu_smu_fw_version_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_hsmp_proto_ver_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_prochot_status_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_fclk_mclk_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_get_cpu_cclk_limit_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_socket_current_active_freq_limit_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, swig_voidp arg3);
+extern swig_intgo _wrap_amdsmi_get_cpu_socket_freq_range_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_get_cpu_core_current_freq_limit_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_socket_power_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_socket_power_cap_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_socket_power_cap_max_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_pwr_svi_telemetry_all_rails_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_set_cpu_socket_power_cap_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_set_cpu_pwr_efficiency_mode_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_core_boostlimit_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_socket_c0_residency_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_set_cpu_core_boostlimit_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_set_cpu_socket_boostlimit_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_ddr_bw_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_socket_temperature_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_dimm_temp_range_and_refresh_rate_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_get_cpu_dimm_power_consumption_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_get_cpu_dimm_thermal_sensor_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_set_cpu_xgmi_width_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_set_cpu_gmi3_link_width_range_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_cpu_apb_enable_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern swig_intgo _wrap_amdsmi_cpu_apb_disable_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_set_cpu_socket_lclk_dpm_level_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3, uintptr_t arg4);
+extern swig_intgo _wrap_amdsmi_get_cpu_socket_lclk_dpm_level_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_set_cpu_pcie_link_rate_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_set_cpu_df_pstate_range_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_get_cpu_current_io_bandwidth_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_get_cpu_current_xgmi_bw_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2, uintptr_t arg3);
+extern swig_intgo _wrap_amdsmi_get_hsmp_metrics_table_version_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_hsmp_metrics_table_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_first_online_core_on_cpu_socket_amd_smi_bdd6da097c4a93d9(uintptr_t arg1, uintptr_t arg2);
+extern swig_intgo _wrap_amdsmi_get_cpu_family_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern swig_intgo _wrap_amdsmi_get_cpu_model_amd_smi_bdd6da097c4a93d9(uintptr_t arg1);
+extern swig_intgo _wrap_amdsmi_get_esmi_err_msg_amd_smi_bdd6da097c4a93d9(swig_intgo arg1, swig_voidp arg2);
 #undef intgo
 */
 import "C"
@@ -8772,8 +8997,1411 @@ type Amdsmi_process_info_t interface {
 	GetCu_occupancy() (_swig_ret Uint32_t)
 }
 
-//const AMDSMI_DEFAULT_VARIANT int = 0xFFFFFFFFFFFFFFFF
-const AMDSMI_DEFAULT_VARIANT int = 0xFFFFFFFF
+const AMDSMI_DEFAULT_VARIANT int = 0xFFFFFFFFFFFFFFFF
+type SwigcptrAmdsmi_smu_fw_version_t uintptr
+
+func (p SwigcptrAmdsmi_smu_fw_version_t) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAmdsmi_smu_fw_version_t) SwigIsAmdsmi_smu_fw_version_t() {
+}
+
+func (arg1 SwigcptrAmdsmi_smu_fw_version_t) SetDebug(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_smu_fw_version_t_debug_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_smu_fw_version_t) GetDebug() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	_swig_i_0 := arg1
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_amdsmi_smu_fw_version_t_debug_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_smu_fw_version_t) SetMinor(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_smu_fw_version_t_minor_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_smu_fw_version_t) GetMinor() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	_swig_i_0 := arg1
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_amdsmi_smu_fw_version_t_minor_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_smu_fw_version_t) SetMajor(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_smu_fw_version_t_major_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_smu_fw_version_t) GetMajor() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	_swig_i_0 := arg1
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_amdsmi_smu_fw_version_t_major_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_smu_fw_version_t) SetUnused(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_smu_fw_version_t_unused_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_smu_fw_version_t) GetUnused() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	_swig_i_0 := arg1
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_amdsmi_smu_fw_version_t_unused_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func NewAmdsmi_smu_fw_version_t() (_swig_ret Amdsmi_smu_fw_version_t) {
+	var swig_r Amdsmi_smu_fw_version_t
+	swig_r = (Amdsmi_smu_fw_version_t)(SwigcptrAmdsmi_smu_fw_version_t(C._wrap_new_amdsmi_smu_fw_version_t_amd_smi_bdd6da097c4a93d9()))
+	return swig_r
+}
+
+func DeleteAmdsmi_smu_fw_version_t(arg1 Amdsmi_smu_fw_version_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_amdsmi_smu_fw_version_t_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))
+}
+
+type Amdsmi_smu_fw_version_t interface {
+	Swigcptr() uintptr
+	SwigIsAmdsmi_smu_fw_version_t()
+	SetDebug(arg2 Uint8_t)
+	GetDebug() (_swig_ret Uint8_t)
+	SetMinor(arg2 Uint8_t)
+	GetMinor() (_swig_ret Uint8_t)
+	SetMajor(arg2 Uint8_t)
+	GetMajor() (_swig_ret Uint8_t)
+	SetUnused(arg2 Uint8_t)
+	GetUnused() (_swig_ret Uint8_t)
+}
+
+type SwigcptrAmdsmi_ddr_bw_metrics_t uintptr
+
+func (p SwigcptrAmdsmi_ddr_bw_metrics_t) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAmdsmi_ddr_bw_metrics_t) SwigIsAmdsmi_ddr_bw_metrics_t() {
+}
+
+func (arg1 SwigcptrAmdsmi_ddr_bw_metrics_t) SetMax_bw(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_ddr_bw_metrics_t_max_bw_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_ddr_bw_metrics_t) GetMax_bw() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_ddr_bw_metrics_t_max_bw_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_ddr_bw_metrics_t) SetUtilized_bw(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_ddr_bw_metrics_t_utilized_bw_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_ddr_bw_metrics_t) GetUtilized_bw() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_ddr_bw_metrics_t_utilized_bw_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_ddr_bw_metrics_t) SetUtilized_pct(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_ddr_bw_metrics_t_utilized_pct_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_ddr_bw_metrics_t) GetUtilized_pct() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_ddr_bw_metrics_t_utilized_pct_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func NewAmdsmi_ddr_bw_metrics_t() (_swig_ret Amdsmi_ddr_bw_metrics_t) {
+	var swig_r Amdsmi_ddr_bw_metrics_t
+	swig_r = (Amdsmi_ddr_bw_metrics_t)(SwigcptrAmdsmi_ddr_bw_metrics_t(C._wrap_new_amdsmi_ddr_bw_metrics_t_amd_smi_bdd6da097c4a93d9()))
+	return swig_r
+}
+
+func DeleteAmdsmi_ddr_bw_metrics_t(arg1 Amdsmi_ddr_bw_metrics_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_amdsmi_ddr_bw_metrics_t_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))
+}
+
+type Amdsmi_ddr_bw_metrics_t interface {
+	Swigcptr() uintptr
+	SwigIsAmdsmi_ddr_bw_metrics_t()
+	SetMax_bw(arg2 Uint32_t)
+	GetMax_bw() (_swig_ret Uint32_t)
+	SetUtilized_bw(arg2 Uint32_t)
+	GetUtilized_bw() (_swig_ret Uint32_t)
+	SetUtilized_pct(arg2 Uint32_t)
+	GetUtilized_pct() (_swig_ret Uint32_t)
+}
+
+type SwigcptrAmdsmi_temp_range_refresh_rate_t uintptr
+
+func (p SwigcptrAmdsmi_temp_range_refresh_rate_t) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAmdsmi_temp_range_refresh_rate_t) SwigIsAmdsmi_temp_range_refresh_rate_t() {
+}
+
+func (arg1 SwigcptrAmdsmi_temp_range_refresh_rate_t) SetXrange(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_temp_range_refresh_rate_t_Xrange_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_temp_range_refresh_rate_t) GetXrange() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	_swig_i_0 := arg1
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_amdsmi_temp_range_refresh_rate_t_Xrange_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_temp_range_refresh_rate_t) SetRef_rate(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_temp_range_refresh_rate_t_ref_rate_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_temp_range_refresh_rate_t) GetRef_rate() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	_swig_i_0 := arg1
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_amdsmi_temp_range_refresh_rate_t_ref_rate_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func NewAmdsmi_temp_range_refresh_rate_t() (_swig_ret Amdsmi_temp_range_refresh_rate_t) {
+	var swig_r Amdsmi_temp_range_refresh_rate_t
+	swig_r = (Amdsmi_temp_range_refresh_rate_t)(SwigcptrAmdsmi_temp_range_refresh_rate_t(C._wrap_new_amdsmi_temp_range_refresh_rate_t_amd_smi_bdd6da097c4a93d9()))
+	return swig_r
+}
+
+func DeleteAmdsmi_temp_range_refresh_rate_t(arg1 Amdsmi_temp_range_refresh_rate_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_amdsmi_temp_range_refresh_rate_t_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))
+}
+
+type Amdsmi_temp_range_refresh_rate_t interface {
+	Swigcptr() uintptr
+	SwigIsAmdsmi_temp_range_refresh_rate_t()
+	SetXrange(arg2 Uint8_t)
+	GetXrange() (_swig_ret Uint8_t)
+	SetRef_rate(arg2 Uint8_t)
+	GetRef_rate() (_swig_ret Uint8_t)
+}
+
+type SwigcptrAmdsmi_dimm_power_t uintptr
+
+func (p SwigcptrAmdsmi_dimm_power_t) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAmdsmi_dimm_power_t) SwigIsAmdsmi_dimm_power_t() {
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_power_t) SetPower(arg2 Uint16_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_dimm_power_t_power_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_power_t) GetPower() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	_swig_i_0 := arg1
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_amdsmi_dimm_power_t_power_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_power_t) SetUpdate_rate(arg2 Uint16_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_dimm_power_t_update_rate_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_power_t) GetUpdate_rate() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	_swig_i_0 := arg1
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_amdsmi_dimm_power_t_update_rate_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_power_t) SetDimm_addr(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_dimm_power_t_dimm_addr_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_power_t) GetDimm_addr() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	_swig_i_0 := arg1
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_amdsmi_dimm_power_t_dimm_addr_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func NewAmdsmi_dimm_power_t() (_swig_ret Amdsmi_dimm_power_t) {
+	var swig_r Amdsmi_dimm_power_t
+	swig_r = (Amdsmi_dimm_power_t)(SwigcptrAmdsmi_dimm_power_t(C._wrap_new_amdsmi_dimm_power_t_amd_smi_bdd6da097c4a93d9()))
+	return swig_r
+}
+
+func DeleteAmdsmi_dimm_power_t(arg1 Amdsmi_dimm_power_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_amdsmi_dimm_power_t_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))
+}
+
+type Amdsmi_dimm_power_t interface {
+	Swigcptr() uintptr
+	SwigIsAmdsmi_dimm_power_t()
+	SetPower(arg2 Uint16_t)
+	GetPower() (_swig_ret Uint16_t)
+	SetUpdate_rate(arg2 Uint16_t)
+	GetUpdate_rate() (_swig_ret Uint16_t)
+	SetDimm_addr(arg2 Uint8_t)
+	GetDimm_addr() (_swig_ret Uint8_t)
+}
+
+type SwigcptrAmdsmi_dimm_thermal_t uintptr
+
+func (p SwigcptrAmdsmi_dimm_thermal_t) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAmdsmi_dimm_thermal_t) SwigIsAmdsmi_dimm_thermal_t() {
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_thermal_t) SetSensor(arg2 Uint16_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_dimm_thermal_t_sensor_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_thermal_t) GetSensor() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	_swig_i_0 := arg1
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_amdsmi_dimm_thermal_t_sensor_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_thermal_t) SetUpdate_rate(arg2 Uint16_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_dimm_thermal_t_update_rate_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_thermal_t) GetUpdate_rate() (_swig_ret Uint16_t) {
+	var swig_r Uint16_t
+	_swig_i_0 := arg1
+	swig_r = (Uint16_t)(SwigcptrUint16_t(C._wrap_amdsmi_dimm_thermal_t_update_rate_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_thermal_t) SetDimm_addr(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_dimm_thermal_t_dimm_addr_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_thermal_t) GetDimm_addr() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	_swig_i_0 := arg1
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_amdsmi_dimm_thermal_t_dimm_addr_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_thermal_t) SetTemp(arg2 float32) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	C._wrap_amdsmi_dimm_thermal_t_temp_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.float(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_dimm_thermal_t) GetTemp() (_swig_ret float32) {
+	var swig_r float32
+	_swig_i_0 := arg1
+	swig_r = (float32)(C._wrap_amdsmi_dimm_thermal_t_temp_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func NewAmdsmi_dimm_thermal_t() (_swig_ret Amdsmi_dimm_thermal_t) {
+	var swig_r Amdsmi_dimm_thermal_t
+	swig_r = (Amdsmi_dimm_thermal_t)(SwigcptrAmdsmi_dimm_thermal_t(C._wrap_new_amdsmi_dimm_thermal_t_amd_smi_bdd6da097c4a93d9()))
+	return swig_r
+}
+
+func DeleteAmdsmi_dimm_thermal_t(arg1 Amdsmi_dimm_thermal_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_amdsmi_dimm_thermal_t_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))
+}
+
+type Amdsmi_dimm_thermal_t interface {
+	Swigcptr() uintptr
+	SwigIsAmdsmi_dimm_thermal_t()
+	SetSensor(arg2 Uint16_t)
+	GetSensor() (_swig_ret Uint16_t)
+	SetUpdate_rate(arg2 Uint16_t)
+	GetUpdate_rate() (_swig_ret Uint16_t)
+	SetDimm_addr(arg2 Uint8_t)
+	GetDimm_addr() (_swig_ret Uint8_t)
+	SetTemp(arg2 float32)
+	GetTemp() (_swig_ret float32)
+}
+
+type Amdsmi_io_bw_encoding_t int
+func _swig_getAGG_BW0() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_AGG_BW0_amd_smi_bdd6da097c4a93d9())
+	return swig_r
+}
+
+var AGG_BW0 int = _swig_getAGG_BW0()
+func _swig_getRD_BW0() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_RD_BW0_amd_smi_bdd6da097c4a93d9())
+	return swig_r
+}
+
+var RD_BW0 int = _swig_getRD_BW0()
+func _swig_getWR_BW0() (_swig_ret int) {
+	var swig_r int
+	swig_r = (int)(C._wrap_WR_BW0_amd_smi_bdd6da097c4a93d9())
+	return swig_r
+}
+
+var WR_BW0 int = _swig_getWR_BW0()
+type SwigcptrAmdsmi_link_id_bw_type_t uintptr
+
+func (p SwigcptrAmdsmi_link_id_bw_type_t) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAmdsmi_link_id_bw_type_t) SwigIsAmdsmi_link_id_bw_type_t() {
+}
+
+func (arg1 SwigcptrAmdsmi_link_id_bw_type_t) SetBw_type(arg2 Amdsmi_io_bw_encoding_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	C._wrap_amdsmi_link_id_bw_type_t_bw_type_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_link_id_bw_type_t) GetBw_type() (_swig_ret Amdsmi_io_bw_encoding_t) {
+	var swig_r Amdsmi_io_bw_encoding_t
+	_swig_i_0 := arg1
+	swig_r = (Amdsmi_io_bw_encoding_t)(C._wrap_amdsmi_link_id_bw_type_t_bw_type_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_link_id_bw_type_t) SetLink_name(arg2 string) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	C._wrap_amdsmi_link_id_bw_type_t_link_name_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), *(*C.swig_type_43)(unsafe.Pointer(&_swig_i_1)))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg2
+	}
+}
+
+func (arg1 SwigcptrAmdsmi_link_id_bw_type_t) GetLink_name() (_swig_ret string) {
+	var swig_r string
+	_swig_i_0 := arg1
+	swig_r_p := C._wrap_amdsmi_link_id_bw_type_t_link_name_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))
+	swig_r = *(*string)(unsafe.Pointer(&swig_r_p))
+	var swig_r_1 string
+ swig_r_1 = swigCopyString(swig_r) 
+	return swig_r_1
+}
+
+func NewAmdsmi_link_id_bw_type_t() (_swig_ret Amdsmi_link_id_bw_type_t) {
+	var swig_r Amdsmi_link_id_bw_type_t
+	swig_r = (Amdsmi_link_id_bw_type_t)(SwigcptrAmdsmi_link_id_bw_type_t(C._wrap_new_amdsmi_link_id_bw_type_t_amd_smi_bdd6da097c4a93d9()))
+	return swig_r
+}
+
+func DeleteAmdsmi_link_id_bw_type_t(arg1 Amdsmi_link_id_bw_type_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_amdsmi_link_id_bw_type_t_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))
+}
+
+type Amdsmi_link_id_bw_type_t interface {
+	Swigcptr() uintptr
+	SwigIsAmdsmi_link_id_bw_type_t()
+	SetBw_type(arg2 Amdsmi_io_bw_encoding_t)
+	GetBw_type() (_swig_ret Amdsmi_io_bw_encoding_t)
+	SetLink_name(arg2 string)
+	GetLink_name() (_swig_ret string)
+}
+
+type SwigcptrAmdsmi_dpm_level_t uintptr
+
+func (p SwigcptrAmdsmi_dpm_level_t) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAmdsmi_dpm_level_t) SwigIsAmdsmi_dpm_level_t() {
+}
+
+func (arg1 SwigcptrAmdsmi_dpm_level_t) SetMax_dpm_level(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_dpm_level_t_max_dpm_level_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_dpm_level_t) GetMax_dpm_level() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	_swig_i_0 := arg1
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_amdsmi_dpm_level_t_max_dpm_level_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_dpm_level_t) SetMin_dpm_level(arg2 Uint8_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_dpm_level_t_min_dpm_level_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_dpm_level_t) GetMin_dpm_level() (_swig_ret Uint8_t) {
+	var swig_r Uint8_t
+	_swig_i_0 := arg1
+	swig_r = (Uint8_t)(SwigcptrUint8_t(C._wrap_amdsmi_dpm_level_t_min_dpm_level_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func NewAmdsmi_dpm_level_t() (_swig_ret Amdsmi_dpm_level_t) {
+	var swig_r Amdsmi_dpm_level_t
+	swig_r = (Amdsmi_dpm_level_t)(SwigcptrAmdsmi_dpm_level_t(C._wrap_new_amdsmi_dpm_level_t_amd_smi_bdd6da097c4a93d9()))
+	return swig_r
+}
+
+func DeleteAmdsmi_dpm_level_t(arg1 Amdsmi_dpm_level_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_amdsmi_dpm_level_t_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))
+}
+
+type Amdsmi_dpm_level_t interface {
+	Swigcptr() uintptr
+	SwigIsAmdsmi_dpm_level_t()
+	SetMax_dpm_level(arg2 Uint8_t)
+	GetMax_dpm_level() (_swig_ret Uint8_t)
+	SetMin_dpm_level(arg2 Uint8_t)
+	GetMin_dpm_level() (_swig_ret Uint8_t)
+}
+
+type SwigcptrAmdsmi_hsmp_metrics_table_t uintptr
+
+func (p SwigcptrAmdsmi_hsmp_metrics_table_t) Swigcptr() uintptr {
+	return (uintptr)(p)
+}
+
+func (p SwigcptrAmdsmi_hsmp_metrics_table_t) SwigIsAmdsmi_hsmp_metrics_table_t() {
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetAccumulation_counter(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_accumulation_counter_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetAccumulation_counter() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_accumulation_counter_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMax_socket_temperature(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMax_socket_temperature() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMax_vr_temperature(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMax_vr_temperature() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMax_hbm_temperature(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMax_hbm_temperature() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMax_socket_temperature_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMax_socket_temperature_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_max_socket_temperature_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMax_vr_temperature_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMax_vr_temperature_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_max_vr_temperature_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMax_hbm_temperature_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMax_hbm_temperature_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_max_hbm_temperature_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetSocket_power_limit(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_socket_power_limit_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetSocket_power_limit() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_socket_power_limit_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMax_socket_power_limit(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_max_socket_power_limit_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMax_socket_power_limit() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_max_socket_power_limit_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetSocket_power(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_socket_power_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetSocket_power() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_socket_power_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetTimestamp(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_timestamp_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetTimestamp() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_timestamp_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetSocket_energy_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_socket_energy_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetSocket_energy_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_socket_energy_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetCcd_energy_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_ccd_energy_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetCcd_energy_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_ccd_energy_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetXcd_energy_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_xcd_energy_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetXcd_energy_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_xcd_energy_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetAid_energy_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_aid_energy_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetAid_energy_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_aid_energy_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetHbm_energy_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_hbm_energy_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetHbm_energy_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_hbm_energy_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetCclk_frequency_limit(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_limit_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetCclk_frequency_limit() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_limit_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetGfxclk_frequency_limit(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_limit_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetGfxclk_frequency_limit() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_limit_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetFclk_frequency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetFclk_frequency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetUclk_frequency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetUclk_frequency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetSocclk_frequency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetSocclk_frequency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetVclk_frequency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetVclk_frequency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetDclk_frequency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetDclk_frequency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetLclk_frequency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetLclk_frequency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetGfxclk_frequency_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetGfxclk_frequency_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetCclk_frequency_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetCclk_frequency_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_cclk_frequency_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMax_cclk_frequency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_max_cclk_frequency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMax_cclk_frequency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_max_cclk_frequency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMin_cclk_frequency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_min_cclk_frequency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMin_cclk_frequency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_min_cclk_frequency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMax_gfxclk_frequency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_max_gfxclk_frequency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMax_gfxclk_frequency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_max_gfxclk_frequency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMin_gfxclk_frequency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_min_gfxclk_frequency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMin_gfxclk_frequency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_min_gfxclk_frequency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetFclk_frequency_table(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetFclk_frequency_table() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_fclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetUclk_frequency_table(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetUclk_frequency_table() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_uclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetSocclk_frequency_table(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetSocclk_frequency_table() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_socclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetVclk_frequency_table(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetVclk_frequency_table() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_vclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetDclk_frequency_table(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetDclk_frequency_table() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_dclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetLclk_frequency_table(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_table_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetLclk_frequency_table() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_lclk_frequency_table_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMax_lclk_dpm_range(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_max_lclk_dpm_range_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMax_lclk_dpm_range() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_max_lclk_dpm_range_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMin_lclk_dpm_range(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_min_lclk_dpm_range_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMin_lclk_dpm_range() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_min_lclk_dpm_range_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetXgmi_width(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_xgmi_width_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetXgmi_width() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_xgmi_width_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetXgmi_bitrate(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_xgmi_bitrate_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetXgmi_bitrate() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_xgmi_bitrate_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetXgmi_read_bandwidth_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_xgmi_read_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetXgmi_read_bandwidth_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_xgmi_read_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetXgmi_write_bandwidth_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_xgmi_write_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetXgmi_write_bandwidth_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_xgmi_write_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetSocket_c0_residency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetSocket_c0_residency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetSocket_gfx_busy(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetSocket_gfx_busy() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetDram_bandwidth_utilization(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetDram_bandwidth_utilization() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetSocket_c0_residency_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetSocket_c0_residency_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_socket_c0_residency_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetSocket_gfx_busy_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetSocket_gfx_busy_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_socket_gfx_busy_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetDram_bandwidth_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetDram_bandwidth_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetMax_dram_bandwidth(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_max_dram_bandwidth_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetMax_dram_bandwidth() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_max_dram_bandwidth_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetDram_bandwidth_utilization_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetDram_bandwidth_utilization_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_dram_bandwidth_utilization_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetPcie_bandwidth_acc(arg2 Uint64_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_pcie_bandwidth_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetPcie_bandwidth_acc() (_swig_ret Uint64_t) {
+	var swig_r Uint64_t
+	_swig_i_0 := arg1
+	swig_r = (Uint64_t)(SwigcptrUint64_t(C._wrap_amdsmi_hsmp_metrics_table_t_pcie_bandwidth_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetProchot_residency_acc(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_prochot_residency_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetProchot_residency_acc() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_prochot_residency_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetPpt_residency_acc(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_ppt_residency_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetPpt_residency_acc() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_ppt_residency_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetSocket_thm_residency_acc(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_socket_thm_residency_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetSocket_thm_residency_acc() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_socket_thm_residency_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetVr_thm_residency_acc(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_vr_thm_residency_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetVr_thm_residency_acc() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_vr_thm_residency_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetHbm_thm_residency_acc(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_hbm_thm_residency_acc_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetHbm_thm_residency_acc() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_hbm_thm_residency_acc_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetSpare(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_spare_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetSpare() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_spare_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) SetGfxclk_frequency(arg2 Uint32_t) {
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	C._wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_set_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1))
+}
+
+func (arg1 SwigcptrAmdsmi_hsmp_metrics_table_t) GetGfxclk_frequency() (_swig_ret Uint32_t) {
+	var swig_r Uint32_t
+	_swig_i_0 := arg1
+	swig_r = (Uint32_t)(SwigcptrUint32_t(C._wrap_amdsmi_hsmp_metrics_table_t_gfxclk_frequency_get_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))))
+	return swig_r
+}
+
+func NewAmdsmi_hsmp_metrics_table_t() (_swig_ret Amdsmi_hsmp_metrics_table_t) {
+	var swig_r Amdsmi_hsmp_metrics_table_t
+	swig_r = (Amdsmi_hsmp_metrics_table_t)(SwigcptrAmdsmi_hsmp_metrics_table_t(C._wrap_new_amdsmi_hsmp_metrics_table_t_amd_smi_bdd6da097c4a93d9()))
+	return swig_r
+}
+
+func DeleteAmdsmi_hsmp_metrics_table_t(arg1 Amdsmi_hsmp_metrics_table_t) {
+	_swig_i_0 := arg1.Swigcptr()
+	C._wrap_delete_amdsmi_hsmp_metrics_table_t_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0))
+}
+
+type Amdsmi_hsmp_metrics_table_t interface {
+	Swigcptr() uintptr
+	SwigIsAmdsmi_hsmp_metrics_table_t()
+	SetAccumulation_counter(arg2 Uint32_t)
+	GetAccumulation_counter() (_swig_ret Uint32_t)
+	SetMax_socket_temperature(arg2 Uint32_t)
+	GetMax_socket_temperature() (_swig_ret Uint32_t)
+	SetMax_vr_temperature(arg2 Uint32_t)
+	GetMax_vr_temperature() (_swig_ret Uint32_t)
+	SetMax_hbm_temperature(arg2 Uint32_t)
+	GetMax_hbm_temperature() (_swig_ret Uint32_t)
+	SetMax_socket_temperature_acc(arg2 Uint64_t)
+	GetMax_socket_temperature_acc() (_swig_ret Uint64_t)
+	SetMax_vr_temperature_acc(arg2 Uint64_t)
+	GetMax_vr_temperature_acc() (_swig_ret Uint64_t)
+	SetMax_hbm_temperature_acc(arg2 Uint64_t)
+	GetMax_hbm_temperature_acc() (_swig_ret Uint64_t)
+	SetSocket_power_limit(arg2 Uint32_t)
+	GetSocket_power_limit() (_swig_ret Uint32_t)
+	SetMax_socket_power_limit(arg2 Uint32_t)
+	GetMax_socket_power_limit() (_swig_ret Uint32_t)
+	SetSocket_power(arg2 Uint32_t)
+	GetSocket_power() (_swig_ret Uint32_t)
+	SetTimestamp(arg2 Uint64_t)
+	GetTimestamp() (_swig_ret Uint64_t)
+	SetSocket_energy_acc(arg2 Uint64_t)
+	GetSocket_energy_acc() (_swig_ret Uint64_t)
+	SetCcd_energy_acc(arg2 Uint64_t)
+	GetCcd_energy_acc() (_swig_ret Uint64_t)
+	SetXcd_energy_acc(arg2 Uint64_t)
+	GetXcd_energy_acc() (_swig_ret Uint64_t)
+	SetAid_energy_acc(arg2 Uint64_t)
+	GetAid_energy_acc() (_swig_ret Uint64_t)
+	SetHbm_energy_acc(arg2 Uint64_t)
+	GetHbm_energy_acc() (_swig_ret Uint64_t)
+	SetCclk_frequency_limit(arg2 Uint32_t)
+	GetCclk_frequency_limit() (_swig_ret Uint32_t)
+	SetGfxclk_frequency_limit(arg2 Uint32_t)
+	GetGfxclk_frequency_limit() (_swig_ret Uint32_t)
+	SetFclk_frequency(arg2 Uint32_t)
+	GetFclk_frequency() (_swig_ret Uint32_t)
+	SetUclk_frequency(arg2 Uint32_t)
+	GetUclk_frequency() (_swig_ret Uint32_t)
+	SetSocclk_frequency(arg2 Uint32_t)
+	GetSocclk_frequency() (_swig_ret Uint32_t)
+	SetVclk_frequency(arg2 Uint32_t)
+	GetVclk_frequency() (_swig_ret Uint32_t)
+	SetDclk_frequency(arg2 Uint32_t)
+	GetDclk_frequency() (_swig_ret Uint32_t)
+	SetLclk_frequency(arg2 Uint32_t)
+	GetLclk_frequency() (_swig_ret Uint32_t)
+	SetGfxclk_frequency_acc(arg2 Uint64_t)
+	GetGfxclk_frequency_acc() (_swig_ret Uint64_t)
+	SetCclk_frequency_acc(arg2 Uint64_t)
+	GetCclk_frequency_acc() (_swig_ret Uint64_t)
+	SetMax_cclk_frequency(arg2 Uint32_t)
+	GetMax_cclk_frequency() (_swig_ret Uint32_t)
+	SetMin_cclk_frequency(arg2 Uint32_t)
+	GetMin_cclk_frequency() (_swig_ret Uint32_t)
+	SetMax_gfxclk_frequency(arg2 Uint32_t)
+	GetMax_gfxclk_frequency() (_swig_ret Uint32_t)
+	SetMin_gfxclk_frequency(arg2 Uint32_t)
+	GetMin_gfxclk_frequency() (_swig_ret Uint32_t)
+	SetFclk_frequency_table(arg2 Uint32_t)
+	GetFclk_frequency_table() (_swig_ret Uint32_t)
+	SetUclk_frequency_table(arg2 Uint32_t)
+	GetUclk_frequency_table() (_swig_ret Uint32_t)
+	SetSocclk_frequency_table(arg2 Uint32_t)
+	GetSocclk_frequency_table() (_swig_ret Uint32_t)
+	SetVclk_frequency_table(arg2 Uint32_t)
+	GetVclk_frequency_table() (_swig_ret Uint32_t)
+	SetDclk_frequency_table(arg2 Uint32_t)
+	GetDclk_frequency_table() (_swig_ret Uint32_t)
+	SetLclk_frequency_table(arg2 Uint32_t)
+	GetLclk_frequency_table() (_swig_ret Uint32_t)
+	SetMax_lclk_dpm_range(arg2 Uint32_t)
+	GetMax_lclk_dpm_range() (_swig_ret Uint32_t)
+	SetMin_lclk_dpm_range(arg2 Uint32_t)
+	GetMin_lclk_dpm_range() (_swig_ret Uint32_t)
+	SetXgmi_width(arg2 Uint32_t)
+	GetXgmi_width() (_swig_ret Uint32_t)
+	SetXgmi_bitrate(arg2 Uint32_t)
+	GetXgmi_bitrate() (_swig_ret Uint32_t)
+	SetXgmi_read_bandwidth_acc(arg2 Uint64_t)
+	GetXgmi_read_bandwidth_acc() (_swig_ret Uint64_t)
+	SetXgmi_write_bandwidth_acc(arg2 Uint64_t)
+	GetXgmi_write_bandwidth_acc() (_swig_ret Uint64_t)
+	SetSocket_c0_residency(arg2 Uint32_t)
+	GetSocket_c0_residency() (_swig_ret Uint32_t)
+	SetSocket_gfx_busy(arg2 Uint32_t)
+	GetSocket_gfx_busy() (_swig_ret Uint32_t)
+	SetDram_bandwidth_utilization(arg2 Uint32_t)
+	GetDram_bandwidth_utilization() (_swig_ret Uint32_t)
+	SetSocket_c0_residency_acc(arg2 Uint64_t)
+	GetSocket_c0_residency_acc() (_swig_ret Uint64_t)
+	SetSocket_gfx_busy_acc(arg2 Uint64_t)
+	GetSocket_gfx_busy_acc() (_swig_ret Uint64_t)
+	SetDram_bandwidth_acc(arg2 Uint64_t)
+	GetDram_bandwidth_acc() (_swig_ret Uint64_t)
+	SetMax_dram_bandwidth(arg2 Uint32_t)
+	GetMax_dram_bandwidth() (_swig_ret Uint32_t)
+	SetDram_bandwidth_utilization_acc(arg2 Uint64_t)
+	GetDram_bandwidth_utilization_acc() (_swig_ret Uint64_t)
+	SetPcie_bandwidth_acc(arg2 Uint64_t)
+	GetPcie_bandwidth_acc() (_swig_ret Uint64_t)
+	SetProchot_residency_acc(arg2 Uint32_t)
+	GetProchot_residency_acc() (_swig_ret Uint32_t)
+	SetPpt_residency_acc(arg2 Uint32_t)
+	GetPpt_residency_acc() (_swig_ret Uint32_t)
+	SetSocket_thm_residency_acc(arg2 Uint32_t)
+	GetSocket_thm_residency_acc() (_swig_ret Uint32_t)
+	SetVr_thm_residency_acc(arg2 Uint32_t)
+	GetVr_thm_residency_acc() (_swig_ret Uint32_t)
+	SetHbm_thm_residency_acc(arg2 Uint32_t)
+	GetHbm_thm_residency_acc() (_swig_ret Uint32_t)
+	SetSpare(arg2 Uint32_t)
+	GetSpare() (_swig_ret Uint32_t)
+	SetGfxclk_frequency(arg2 Uint32_t)
+	GetGfxclk_frequency() (_swig_ret Uint32_t)
+}
+
+func GetAmdsmi_hsmp_freqlimit_src_names() (_swig_ret *string) {
+	var swig_r *string
+	swig_r = (*string)(C._wrap_amdsmi_hsmp_freqlimit_src_names_get_amd_smi_bdd6da097c4a93d9())
+	return swig_r
+}
+
 func Amdsmi_init(arg1 Uint64_t) (_swig_ret Amdsmi_status_t) {
 	var swig_r Amdsmi_status_t
 	_swig_i_0 := arg1.Swigcptr()
@@ -8795,15 +10423,56 @@ func Amdsmi_get_socket_handles(arg1 Uint32_t, arg2 *uintptr) (_swig_ret Amdsmi_s
 	return swig_r
 }
 
+func Amdsmi_get_cpusocket_handles(arg1 Uint32_t, arg2 *uintptr) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1.Swigcptr()
+	_swig_i_1 := arg2
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpusocket_handles_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.swig_voidp(_swig_i_1)))
+	return swig_r
+}
+
 func Amdsmi_get_socket_info(arg1 uintptr, arg2 int64, arg3 string) (_swig_ret Amdsmi_status_t) {
 	var swig_r Amdsmi_status_t
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_socket_info_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.swig_type_43(_swig_i_1), *(*C.swig_type_44)(unsafe.Pointer(&_swig_i_2))))
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_socket_info_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.swig_type_45(_swig_i_1), *(*C.swig_type_46)(unsafe.Pointer(&_swig_i_2))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg3
 	}
+	return swig_r
+}
+
+func Amdsmi_get_processor_info(arg1 uintptr, arg2 int64, arg3 string) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_processor_info_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.swig_type_47(_swig_i_1), *(*C.swig_type_48)(unsafe.Pointer(&_swig_i_2))))
+	if Swig_escape_always_false {
+		Swig_escape_val = arg3
+	}
+	return swig_r
+}
+
+func Amdsmi_get_processor_count_from_handles(arg1 *uintptr, arg2 Uint32_t, arg3 Uint32_t, arg4 Uint32_t, arg5 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	_swig_i_4 := arg5.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_processor_count_from_handles_amd_smi_bdd6da097c4a93d9(C.swig_voidp(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3), C.uintptr_t(_swig_i_4)))
+	return swig_r
+}
+
+func Amdsmi_get_processor_handles_by_type(arg1 uintptr, arg2 Processor_type_t, arg3 *uintptr, arg4 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	_swig_i_2 := arg3
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_processor_handles_by_type_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.swig_intgo(_swig_i_1), C.swig_voidp(_swig_i_2), C.uintptr_t(_swig_i_3)))
 	return swig_r
 }
 
@@ -8813,6 +10482,15 @@ func Amdsmi_get_processor_handles(arg1 uintptr, arg2 Uint32_t, arg3 *uintptr) (_
 	_swig_i_1 := arg2.Swigcptr()
 	_swig_i_2 := arg3
 	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_processor_handles_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_voidp(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_get_cpucore_handles(arg1 uintptr, arg2 Uint32_t, arg3 *uintptr) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpucore_handles_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_voidp(_swig_i_2)))
 	return swig_r
 }
 
@@ -8853,7 +10531,7 @@ func Amdsmi_get_gpu_vendor_name(arg1 uintptr, arg2 string, arg3 int64) (_swig_re
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_vendor_name_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), *(*C.swig_type_45)(unsafe.Pointer(&_swig_i_1)), C.swig_type_46(_swig_i_2)))
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_vendor_name_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), *(*C.swig_type_49)(unsafe.Pointer(&_swig_i_1)), C.swig_type_50(_swig_i_2)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -8865,7 +10543,7 @@ func Amdsmi_get_gpu_vram_vendor(arg1 uintptr, arg2 string, arg3 Uint32_t) (_swig
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3.Swigcptr()
-	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_vram_vendor_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), *(*C.swig_type_47)(unsafe.Pointer(&_swig_i_1)), C.uintptr_t(_swig_i_2)))
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_vram_vendor_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), *(*C.swig_type_51)(unsafe.Pointer(&_swig_i_1)), C.uintptr_t(_swig_i_2)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -8885,7 +10563,7 @@ func Amdsmi_get_gpu_subsystem_name(arg1 uintptr, arg2 string, arg3 int64) (_swig
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_subsystem_name_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), *(*C.swig_type_48)(unsafe.Pointer(&_swig_i_1)), C.swig_type_49(_swig_i_2)))
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_subsystem_name_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), *(*C.swig_type_52)(unsafe.Pointer(&_swig_i_1)), C.swig_type_53(_swig_i_2)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -9521,7 +11199,7 @@ func Amdsmi_get_gpu_compute_partition(arg1 uintptr, arg2 string, arg3 Uint32_t) 
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3.Swigcptr()
-	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_compute_partition_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), *(*C.swig_type_50)(unsafe.Pointer(&_swig_i_1)), C.uintptr_t(_swig_i_2)))
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_compute_partition_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), *(*C.swig_type_54)(unsafe.Pointer(&_swig_i_1)), C.uintptr_t(_swig_i_2)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -9548,7 +11226,7 @@ func Amdsmi_get_gpu_memory_partition(arg1 uintptr, arg2 string, arg3 Uint32_t) (
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3.Swigcptr()
-	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_memory_partition_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), *(*C.swig_type_51)(unsafe.Pointer(&_swig_i_1)), C.uintptr_t(_swig_i_2)))
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_memory_partition_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), *(*C.swig_type_55)(unsafe.Pointer(&_swig_i_1)), C.uintptr_t(_swig_i_2)))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg2
 	}
@@ -9614,7 +11292,7 @@ func Amdsmi_get_gpu_device_uuid(arg1 uintptr, arg2 *uint, arg3 string) (_swig_re
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2
 	_swig_i_2 := arg3
-	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_device_uuid_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.swig_voidp(_swig_i_1), *(*C.swig_type_52)(unsafe.Pointer(&_swig_i_2))))
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_device_uuid_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.swig_voidp(_swig_i_1), *(*C.swig_type_56)(unsafe.Pointer(&_swig_i_2))))
 	if Swig_escape_always_false {
 		Swig_escape_val = arg3
 	}
@@ -9749,6 +11427,353 @@ func Amdsmi_get_gpu_total_ecc_count(arg1 uintptr, arg2 Amdsmi_error_count_t) (_s
 	_swig_i_0 := arg1
 	_swig_i_1 := arg2.Swigcptr()
 	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_gpu_total_ecc_count_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_core_energy(arg1 uintptr, arg2 Uint64_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_core_energy_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_socket_energy(arg1 uintptr, arg2 Uint64_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_socket_energy_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_threads_per_core(arg1 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_threads_per_core_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_smu_fw_version(arg1 uintptr, arg2 Amdsmi_smu_fw_version_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_smu_fw_version_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_hsmp_proto_ver(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_hsmp_proto_ver_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_prochot_status(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_prochot_status_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_fclk_mclk(arg1 uintptr, arg2 Uint32_t, arg3 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_fclk_mclk_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_cclk_limit(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_cclk_limit_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_socket_current_active_freq_limit(arg1 uintptr, arg2 Uint16_t, arg3 *string) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_socket_current_active_freq_limit_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.swig_voidp(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_socket_freq_range(arg1 uintptr, arg2 Uint16_t, arg3 Uint16_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_socket_freq_range_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_core_current_freq_limit(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_core_current_freq_limit_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_socket_power(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_socket_power_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_socket_power_cap(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_socket_power_cap_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_socket_power_cap_max(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_socket_power_cap_max_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_pwr_svi_telemetry_all_rails(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_pwr_svi_telemetry_all_rails_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_set_cpu_socket_power_cap(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_set_cpu_socket_power_cap_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_set_cpu_pwr_efficiency_mode(arg1 uintptr, arg2 Uint8_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_set_cpu_pwr_efficiency_mode_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_core_boostlimit(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_core_boostlimit_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_socket_c0_residency(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_socket_c0_residency_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_set_cpu_core_boostlimit(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_set_cpu_core_boostlimit_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_set_cpu_socket_boostlimit(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_set_cpu_socket_boostlimit_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_ddr_bw(arg1 uintptr, arg2 Amdsmi_ddr_bw_metrics_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_ddr_bw_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_socket_temperature(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_socket_temperature_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_dimm_temp_range_and_refresh_rate(arg1 uintptr, arg2 Uint8_t, arg3 Amdsmi_temp_range_refresh_rate_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_dimm_temp_range_and_refresh_rate_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_dimm_power_consumption(arg1 uintptr, arg2 Uint8_t, arg3 Amdsmi_dimm_power_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_dimm_power_consumption_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_dimm_thermal_sensor(arg1 uintptr, arg2 Uint8_t, arg3 Amdsmi_dimm_thermal_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_dimm_thermal_sensor_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_set_cpu_xgmi_width(arg1 uintptr, arg2 Uint8_t, arg3 Uint8_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_set_cpu_xgmi_width_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_set_cpu_gmi3_link_width_range(arg1 uintptr, arg2 Uint8_t, arg3 Uint8_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_set_cpu_gmi3_link_width_range_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_cpu_apb_enable(arg1 uintptr) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_cpu_apb_enable_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func Amdsmi_cpu_apb_disable(arg1 uintptr, arg2 Uint8_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_cpu_apb_disable_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_set_cpu_socket_lclk_dpm_level(arg1 uintptr, arg2 Uint8_t, arg3 Uint8_t, arg4 Uint8_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	_swig_i_3 := arg4.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_set_cpu_socket_lclk_dpm_level_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2), C.uintptr_t(_swig_i_3)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_socket_lclk_dpm_level(arg1 uintptr, arg2 Uint8_t, arg3 Amdsmi_dpm_level_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_socket_lclk_dpm_level_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_set_cpu_pcie_link_rate(arg1 uintptr, arg2 Uint8_t, arg3 Uint8_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_set_cpu_pcie_link_rate_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_set_cpu_df_pstate_range(arg1 uintptr, arg2 Uint8_t, arg3 Uint8_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_set_cpu_df_pstate_range_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_current_io_bandwidth(arg1 uintptr, arg2 Amdsmi_link_id_bw_type_t, arg3 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_current_io_bandwidth_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_current_xgmi_bw(arg1 uintptr, arg2 Amdsmi_link_id_bw_type_t, arg3 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	_swig_i_2 := arg3.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_current_xgmi_bw_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1), C.uintptr_t(_swig_i_2)))
+	return swig_r
+}
+
+func Amdsmi_get_hsmp_metrics_table_version(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_hsmp_metrics_table_version_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_hsmp_metrics_table(arg1 uintptr, arg2 Amdsmi_hsmp_metrics_table_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_hsmp_metrics_table_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_first_online_core_on_cpu_socket(arg1 uintptr, arg2 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_first_online_core_on_cpu_socket_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0), C.uintptr_t(_swig_i_1)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_family(arg1 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_family_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func Amdsmi_get_cpu_model(arg1 Uint32_t) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1.Swigcptr()
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_cpu_model_amd_smi_bdd6da097c4a93d9(C.uintptr_t(_swig_i_0)))
+	return swig_r
+}
+
+func Amdsmi_get_esmi_err_msg(arg1 Amdsmi_status_t, arg2 *string) (_swig_ret Amdsmi_status_t) {
+	var swig_r Amdsmi_status_t
+	_swig_i_0 := arg1
+	_swig_i_1 := arg2
+	swig_r = (Amdsmi_status_t)(C._wrap_amdsmi_get_esmi_err_msg_amd_smi_bdd6da097c4a93d9(C.swig_intgo(_swig_i_0), C.swig_voidp(_swig_i_1)))
 	return swig_r
 }
 
