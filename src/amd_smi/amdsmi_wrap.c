@@ -176,10 +176,10 @@ swiggo_size_assert(double, 8)
 #ifdef __cplusplus
 extern "C" {
 #endif
-extern void crosscall2(void (*fn)(void *, int), void *, int);
+//extern void crosscall2(void (*fn)(void *, int), void *, int);
 extern char* _cgo_topofstack(void) __attribute__ ((weak));
 extern void _cgo_allocate(void *, int);
-extern void _cgo_panic(void *, int);
+//extern void _cgo_panic(void *, int);
 #ifdef __cplusplus
 }
 #endif
@@ -197,7 +197,7 @@ static void _swig_gopanic(const char *p) {
     const char *p;
   } SWIGSTRUCTPACKED a;
   a.p = p;
-  crosscall2(_cgo_panic, &a, (int) sizeof a);
+  //crosscall2(_cgo_panic, &a, (int) sizeof a);
 }
 
 
