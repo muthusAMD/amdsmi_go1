@@ -8772,7 +8772,8 @@ type Amdsmi_process_info_t interface {
 	GetCu_occupancy() (_swig_ret Uint32_t)
 }
 
-const AMDSMI_DEFAULT_VARIANT int = 0xFFFFFFFFFFFFFFFF
+//const AMDSMI_DEFAULT_VARIANT int = 0xFFFFFFFFFFFFFFFF
+const AMDSMI_DEFAULT_VARIANT int = 0xFFFFFFFF
 func Amdsmi_init(arg1 Uint64_t) (_swig_ret Amdsmi_status_t) {
 	var swig_r Amdsmi_status_t
 	_swig_i_0 := arg1.Swigcptr()
